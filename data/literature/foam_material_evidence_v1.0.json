@@ -1,0 +1,116 @@
+{
+  "status": "published_aggregate_transcription",
+  "sources": {
+    "japanese_proteome": "https://doi.org/10.2108/zs200113",
+    "japanese_pdf": "https://bioone.org/journals/zoological-science/volume-38/issue-1/zs200113/Identification-of-Novel-Proteins-in-Foam-Nests-of-the-Japanese/10.2108/zs200113.pdf",
+    "foam_surface_tension": "https://doi.org/10.1529/biophysj.104.046268",
+    "foam_chemistry": "https://doi.org/10.3390/microorganisms11040900",
+    "proboscis": "https://doi.org/10.1038/srep06934",
+    "pieris_sodium": "https://academic.oup.com/ee/article/33/4/1020/449418",
+    "japanese_papilio_ions": "https://doi.org/10.1007/s00114-012-0976-3"
+  },
+  "japanese_foam": {
+    "taxon": "Zhangixalus arboreus",
+    "sample_preparation": "Female-laid foam in captivity without males; eggs separated; stored at -80 C; 10.02 mg wet foam hydrolyzed in 6 M HCl at 110 C for 24 h",
+    "amino_acid_residues_per_1000": {
+      "A": 39.6,
+      "C": 57.5,
+      "DN": 125,
+      "EQ": 111.9,
+      "F": 33.9,
+      "G": 90,
+      "H": 18,
+      "I": 59.1,
+      "K": 90.4,
+      "L": 70.9,
+      "M": 14.6,
+      "P": 51.7,
+      "R": 21,
+      "S": 58.1,
+      "T": 66.8,
+      "V": 50.4,
+      "Y": 40.9
+    },
+    "published_total": 1000,
+    "frog_meat_cysteine_residues_per_1000": 14.3,
+    "proteins_identified_by_homology": 22,
+    "free_amino_acid_mM": null,
+    "accessible_sodium_mM": null,
+    "free_sugar_mM": null,
+    "accessible_surface_tension_mN_m": null,
+    "reflectance_UV_vis": null,
+    "sequence_accessions": {
+      "study": "PRJDB10049",
+      "sample": "SAMD00232153",
+      "reads": "DRA010399",
+      "TSA": "ICQQ01000001–ICQQ01000022"
+    },
+    "caveats": [
+      "Acid hydrolysis does not distinguish free amino acids from protein-bound residues; tryptophan lost and asparagine/glutamine merged with their acids.",
+      "Sodium citrate buffer in amino-acid analysis is an added reagent, not a measured foam sodium concentration.",
+      "Do not treat published residue proportions as concentrations or accessible nutrients.",
+      "PDF text table retrieved; screenshot route returned HTML rather than verifiable page image."
+    ]
+  },
+  "tungara": {
+    "taxon": "Engystomops pustulosus",
+    "water_surface_tension_approx_mN_m": 74,
+    "foam_fluid_surface_tension_approx_mN_m": 50,
+    "protein_at_natural_fluid_concentration_approx_mg_ml": 1
+  },
+  "neotropical": {
+    "water_control_approx_mN_m": 71,
+    "table1": [
+      {
+        "taxon": "Physalaemus cuvieri",
+        "protein_mg_ml": 2.27,
+        "carbohydrate_mg_ml": 1.16,
+        "surface_tension_mN_m": 39.66
+      },
+      {
+        "taxon": "Leptodactylus vastus",
+        "protein_mg_ml": 1.37,
+        "carbohydrate_mg_ml": 0.23,
+        "surface_tension_mN_m": 45.34
+      },
+      {
+        "taxon": "Adenomera hylaedactyla",
+        "protein_mg_ml": 0.75,
+        "carbohydrate_mg_ml": null,
+        "surface_tension_mN_m": 50.73
+      }
+    ]
+  },
+  "proboscis": {
+    "condition": "liquid sheet on cover slip at same experimental condition; published approximate areal rates, not volume rates or population means inferred by us",
+    "rows": [
+      {
+        "taxon": "Polygonia c-aureum",
+        "areal_uptake_mm2_s": 0.454,
+        "maximum_flow_velocity_mm_s": 1.15,
+        "tip": "brush-like",
+        "retained_liquid_after_agarose_detachment": true
+      },
+      {
+        "taxon": "Pieris rapae",
+        "areal_uptake_mm2_s": 0.239,
+        "maximum_flow_velocity_mm_s": 0.845,
+        "tip": "pipette-like",
+        "retained_liquid_after_agarose_detachment": false
+      }
+    ]
+  },
+  "ion_reference": {
+    "pieris_napi_as_published_low_mM": [
+      1,
+      10
+    ],
+    "japanese_Papilio_preferred_in_test_mM": 10,
+    "japanese_Papilio_field_max_reported_mM": 6,
+    "caveats": [
+      "Colorado Pieris taxon as published, not P. melete.",
+      "Japanese Papilio results are not Pieridae estimates; field maximum is from the sampled sites, not universal.",
+      "These are solution concentrations, not dry mass composition or a recommended field treatment."
+    ]
+  }
+}
