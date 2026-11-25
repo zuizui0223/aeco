@@ -2,6 +2,16 @@
 
 **Status (2026-11-25): exploratory. No demonstrated frog-to-butterfly mating effect.**
 
+## v1.0 — material accessibility as a reproductive-site gate (2026-11-25)
+
+- [Foam material evidence, physical limits and focused empirical protocol](docs/foam_nest_v1.0.md)
+- [Published numerical evidence and missing-parameter ledger](data/literature/foam_material_evidence_v1.0.json)
+- [Reproducible numerical benchmark](scripts/foam_material_benchmark.mjs)
+- [Calculated results](results/foam_material_benchmark_v1.0.json)
+- [Header-only material characterization template](data/templates/foam_material_assay_v1.0.csv)
+
+Shigeri et al. (2021) measured acid-hydrolyzed amino-acid residues of Z. arboreus foam, not accessible free amino acids or sodium. Lee & Lee (2014) directly compared P. rapae with the brush-tipped Polygonia c-aureum: approximate wet-film areal uptake rates 0.239 and 0.454 mm²/s, respectively. Other frog species have measured surface-tension reductions; these do not establish Japanese foam properties or butterfly feeding. A passive capillary illustration explicitly shows why the direction of a surface-tension effect depends on wettability and viscosity. Retain visual landmark, soluble chemistry, physical accessibility and runoff pathways separately. Prioritize matched natural observation and permitted material characterization of confirmed abandoned foam; no active nest manipulation. The primary endpoint remains confirmed fertilization across initially unmated Pieris females. No new target contact, mating, or fertility event verified. Published aggregates were transcribed and arithmetic executed in JavaScript, including sanity checks; the committed Node script was not separately executed. Japanese proteome PDF page screenshot failed to return a verifiable image; table and methods were read in extracted text. No new raw field data or chemical assays acquired.
+
 ## v0.9 — stage-dependent use and postdeparture foam legacy (2026-11-25)
 
 - [Focused literature and revised observation protocol](docs/foam_nest_v0.9.md)
