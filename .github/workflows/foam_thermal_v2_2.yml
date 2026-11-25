@@ -1,0 +1,27 @@
+name: AECO v2.2 nest-level thermal transfer
+on:
+  pull_request:
+    branches: [analysis/foam-legacy-v2.1]
+    paths:
+      - 'scripts/foam_thermal_v2_2.py'
+      - '.github/workflows/foam_thermal_v2_2.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  thermal:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install openpyxl==3.1.5 numpy==2.2.6 pandas==2.2.3
+      - run: python scripts/foam_thermal_v2_2.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: v22-thermal-results
+          path: results/v2.2/
+          if-no-files-found: error
