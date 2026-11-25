@@ -1,0 +1,191 @@
+{
+  "status": "published_aggregate_and_prospective_design_only",
+  "source": "https://doi.org/10.1093/evolut/qpag071",
+  "species": "Chiromantis xerampelina",
+  "reported_nests": 134,
+  "reported_failure_count": 44,
+  "overall_failure_fraction_recomputed": 0.3283582089552239,
+  "published_overall_failure_percentage": 30.55,
+  "discrepancy_percentage_points": 2.285820895522388,
+  "desiccation_count": 40,
+  "wind_failure_count": 4,
+  "desiccation_fraction_all": 0.29850746268656714,
+  "desiccation_fraction_excluding_wind": 0.3076923076923077,
+  "single_male_fraction_among_desiccated": 0.825,
+  "min_volume_ml": 47.12,
+  "max_volume_ml": 1319.47,
+  "volume_range_ratio": 28.002334465195247,
+  "projected_area_range_ratio_if_geometrically_similar": 9.221385096188653,
+  "male_number_volume_simple_regression_r2_from_F": 0.7108053632459908,
+  "monitoring_zero_detection_scenarios": [
+    {
+      "independent_units": 6,
+      "conditional_detection": 0.25,
+      "upper_use_given_zero": 1
+    },
+    {
+      "independent_units": 6,
+      "conditional_detection": 0.5,
+      "upper_use_given_zero": 0.7860755379941655
+    },
+    {
+      "independent_units": 6,
+      "conditional_detection": 0.8,
+      "upper_use_given_zero": 0.49129721124635345
+    },
+    {
+      "independent_units": 6,
+      "conditional_detection": 1,
+      "upper_use_given_zero": 0.39303776899708276
+    },
+    {
+      "independent_units": 12,
+      "conditional_detection": 0.25,
+      "upper_use_given_zero": 0.8836887677822236
+    },
+    {
+      "independent_units": 12,
+      "conditional_detection": 0.5,
+      "upper_use_given_zero": 0.4418443838911118
+    },
+    {
+      "independent_units": 12,
+      "conditional_detection": 0.8,
+      "upper_use_given_zero": 0.27615273993194484
+    },
+    {
+      "independent_units": 12,
+      "conditional_detection": 1,
+      "upper_use_given_zero": 0.2209221919455559
+    },
+    {
+      "independent_units": 24,
+      "conditional_detection": 0.25,
+      "upper_use_given_zero": 0.469384624619795
+    },
+    {
+      "independent_units": 24,
+      "conditional_detection": 0.5,
+      "upper_use_given_zero": 0.2346923123098975
+    },
+    {
+      "independent_units": 24,
+      "conditional_detection": 0.8,
+      "upper_use_given_zero": 0.14668269519368593
+    },
+    {
+      "independent_units": 24,
+      "conditional_detection": 1,
+      "upper_use_given_zero": 0.11734615615494876
+    },
+    {
+      "independent_units": 48,
+      "conditional_detection": 0.25,
+      "upper_use_given_zero": 0.24201363739557724
+    },
+    {
+      "independent_units": 48,
+      "conditional_detection": 0.5,
+      "upper_use_given_zero": 0.12100681869778862
+    },
+    {
+      "independent_units": 48,
+      "conditional_detection": 0.8,
+      "upper_use_given_zero": 0.07562926168611789
+    },
+    {
+      "independent_units": 48,
+      "conditional_detection": 1,
+      "upper_use_given_zero": 0.06050340934889431
+    },
+    {
+      "independent_units": 72,
+      "conditional_detection": 0.25,
+      "upper_use_given_zero": 0.1630147449225597
+    },
+    {
+      "independent_units": 72,
+      "conditional_detection": 0.5,
+      "upper_use_given_zero": 0.08150737246127986
+    },
+    {
+      "independent_units": 72,
+      "conditional_detection": 0.8,
+      "upper_use_given_zero": 0.050942107788299905
+    },
+    {
+      "independent_units": 72,
+      "conditional_detection": 1,
+      "upper_use_given_zero": 0.04075368623063993
+    }
+  ],
+  "monitoring_sample_size_scenarios": [
+    {
+      "target_use": 0.05,
+      "conditional_detection": 0.25,
+      "required_independent_units": 239
+    },
+    {
+      "target_use": 0.05,
+      "conditional_detection": 0.5,
+      "required_independent_units": 119
+    },
+    {
+      "target_use": 0.05,
+      "conditional_detection": 0.8,
+      "required_independent_units": 74
+    },
+    {
+      "target_use": 0.05,
+      "conditional_detection": 1,
+      "required_independent_units": 59
+    },
+    {
+      "target_use": 0.1,
+      "conditional_detection": 0.25,
+      "required_independent_units": 119
+    },
+    {
+      "target_use": 0.1,
+      "conditional_detection": 0.5,
+      "required_independent_units": 59
+    },
+    {
+      "target_use": 0.1,
+      "conditional_detection": 0.8,
+      "required_independent_units": 36
+    },
+    {
+      "target_use": 0.1,
+      "conditional_detection": 1,
+      "required_independent_units": 29
+    },
+    {
+      "target_use": 0.2,
+      "conditional_detection": 0.25,
+      "required_independent_units": 59
+    },
+    {
+      "target_use": 0.2,
+      "conditional_detection": 0.5,
+      "required_independent_units": 29
+    },
+    {
+      "target_use": 0.2,
+      "conditional_detection": 0.8,
+      "required_independent_units": 18
+    },
+    {
+      "target_use": 0.2,
+      "conditional_detection": 1,
+      "required_independent_units": 14
+    }
+  ],
+  "caveats": [
+    "African frog results do not parameterize Japanese frog or butterfly attraction.",
+    "Failure count and printed percent disagree; use counts provisionally and seek raw data.",
+    "Projected area ratio is a geometric hypothetical, not measured visible area or effect on butterflies.",
+    "Zero-detection bounds assume independent units, common use probability and known conditional detection; repeated nest-hours or nests in one pond are not independent units.",
+    "Use means at least one target visit during a standardized observation window; not lifetime utilization or fertilization."
+  ]
+}
