@@ -1,0 +1,93 @@
+{
+  "status": "published_aggregate_transcription",
+  "sources": {
+    "lin2000": "https://doi.org/10.6660/TESFE.2000027",
+    "lin_pdf": "https://entsocjournal.yabee.com.tw/AlldataPos/JournalPos/Vol20/No4/TESFE.2000027.PDF",
+    "toda2014": "https://kanazawa-u.repo.nii.ac.jp/record/35946/files/Full-N-toda-mitsuhiko.pdf"
+  },
+  "frogfly": {
+    "taxon_as_published": "Caiusa coomani",
+    "frog_taxa_as_published": [
+      "Rhacophorus prasinatus",
+      "Polypedates megacephalus"
+    ],
+    "choice_experiments": [
+      {
+        "comparison": "fresh_vs_whipped_egg_white",
+        "trials": 5,
+        "fresh_oviposition": 5,
+        "alternative_oviposition": 0,
+        "alternative_hover": 3
+      },
+      {
+        "comparison": "fresh_vs_decayed_beef",
+        "trials": 5,
+        "fresh_oviposition": 5,
+        "alternative_oviposition": 0,
+        "alternative_hover": null
+      },
+      {
+        "comparison": "fresh_vs_already_infested",
+        "trials": 5,
+        "fresh_oviposition": 5,
+        "alternative_oviposition": 0,
+        "alternative_hover": null
+      }
+    ],
+    "oviposition_duration_minutes": [
+      35,
+      16,
+      14,
+      12,
+      5,
+      4
+    ],
+    "infested_nests_by_stage": [
+      {
+        "stage": "7-8",
+        "n": 12,
+        "mean_embryo_mortality": 1
+      },
+      {
+        "stage": "15-16",
+        "n": 5,
+        "mean_embryo_mortality": 1
+      },
+      {
+        "stage": "17-18",
+        "n": 3,
+        "mean_embryo_mortality": 0.5
+      }
+    ],
+    "uninfested_nests": 29,
+    "uninfested_mean_embryo_mortality": 0.053,
+    "reported_infested_mean_embryo_mortality": 0.925,
+    "observed_oviposition_clock_window_local": "05:00–08:00",
+    "caveats": [
+      "Three paired choice assays, each repeated five times; not 15 independently identified flies; trial-level identity and randomization unclear.",
+      "Whipped egg white differed in chemistry and texture as well as potential optical features. Hovering is not proof of purely visual attraction.",
+      "Stage distribution among infested nests lacks exposure denominators; not a stage-specific infestation probability.",
+      "Mortality comparison is observational with potential host/stage/collection confounding; not recipient fertilization."
+    ]
+  },
+  "japanese_frog": {
+    "taxon": "Zhangixalus arboreus",
+    "source_page": 45,
+    "larval_departure_days": [
+      7,
+      10
+    ],
+    "dry_foam_residue_days_after_departure": [
+      14,
+      21
+    ],
+    "calibration_n": 23,
+    "seasonal_nest_count_regression_slope": 2.3058,
+    "reported_r2": 0.8637,
+    "caveats": [
+      "Qualitative duration ranges at one historical study area, not distributional bounds or species-wide estimates.",
+      "The visible residue period does not establish chemical availability, continued insect use, or persistence after frog population-wide breeding cessation.",
+      "Seasonal count calibration includes repeated ponds/years and cannot be transferred without new validation."
+    ]
+  }
+}
