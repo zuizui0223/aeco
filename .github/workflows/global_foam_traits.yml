@@ -1,0 +1,29 @@
+name: AECO global foam trait acquisition
+on:
+  push:
+    branches: [main]
+    paths:
+      - scripts/global_foam_traits.py
+      - data/literature/foam_mode_crosswalk_v1.2.csv
+      - .github/workflows/global_foam_traits.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install openpyxl==3.1.5
+      - name: Acquire source and inspect schema
+        run: python scripts/global_foam_traits.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: foam-trait-schema-audit
+          path: results/global_trait_audit_v1.2.json
+          if-no-files-found: error
