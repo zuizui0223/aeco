@@ -1,0 +1,28 @@
+name: AECO v1.9 reproductive behavior source audit
+on:
+  pull_request:
+    branches: [analysis/foam-replication-v1.8]
+    paths:
+      - 'scripts/forti_audit_v1_9.py'
+      - 'scripts/forti_analysis_v1_9.py'
+      - '.github/workflows/forti_v1_9.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install openpyxl==3.1.5 numpy pandas
+      - run: python scripts/forti_audit_v1_9.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: v19-forti-schema
+          path: results/v1.9/
+          if-no-files-found: error
