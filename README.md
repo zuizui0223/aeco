@@ -2,6 +2,16 @@
 
 **Status (2026-11-25): exploratory. No demonstrated frog-to-butterfly mating effect.**
 
+## v0.2 — fertilization-centered extension (2026-11-25)
+
+The primary biological question is now **heterospecific-mediated fertilization opportunity**, not just mating-site formation. Track the proportion of initially unmated females producing at least one confirmed fertilized egg within a fixed horizon. Copulation, insemination, fertilization and hatch are distinct endpoints. The v0.1 observational audit remains useful for upstream mechanism discovery only.
+
+- [Fertilization protocol and evidence](docs/fertilization_v0.2.md)
+- [Analytic toy model](scripts/encounter_model.py)
+- [Calculated theoretical scenarios](results/encounter_scenarios.json)
+
+The model predicts that male aggregation with uniform receptive female distribution leaves the total expected encounter rate unchanged under local linear mixing, but lowers first-mating coverage under saturation. Even higher total encounters can coexist with lower realized fertilization coverage. These are conditional mathematical predictions, not frog or butterfly field results. Open Pieris napi thermal reproduction data are identified (Dryad DOI 10.5061/dryad.dfn2z35cj), but raw files were not retrieved through the current web route (403). No new empirical fertility effect is claimed.
+
 ## Question
 
 Can frogs or frog-derived resources organize where pierid butterflies encounter potential mates, independently of changing their physiological reproductive capacity?
