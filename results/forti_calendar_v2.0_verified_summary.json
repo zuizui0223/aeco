@@ -1,0 +1,452 @@
+{
+  "status": "verified_reported_breeding_calendar_comparison",
+  "run_id": 45657627552,
+  "job_id": 139358477967,
+  "source_commit": "1e1eff35eeaf264c0aefc8809ffba64b932bbe99",
+  "artifact_id": 15042962788,
+  "artifact_zip_sha256": "f90cc63e4b7fba6aa06664d92767c6c84dd96c1c157c88847e1cee45cab6aec6",
+  "local_audit": {
+    "zip_digest_matches_api": true,
+    "member_sha256": {
+      "calendar_summary.json": "d778f65b4f1e4b39ed412d2c3188f1bce64cdc42636aad142cb8304afd0d7ae2",
+      "study_site_contrasts.csv": "9f99b3ad8875452f54482ed6516ddccfd7424273ffd7310c3f1ba786dd4d9f6b"
+    },
+    "contrast_rows": 92,
+    "all_five_available_study_balanced_contrasts_and_signs_recomputed": true,
+    "scope": "Independent reaggregation of CI-produced contrasts; original workbook was acquired by CI, not independently reread in local runtime."
+  },
+  "posthoc_common_study_diagnostic": {
+    "status": "exploratory_composition_diagnostic_not_independent_replication",
+    "common_studies": 11,
+    "all_genera_study_balanced_delta_months": 0.09848484848484845,
+    "within_genus_study_balanced_delta_months": -1.2727272727272727,
+    "all_minus_within": 1.371212121212121,
+    "all_genera_positive_studies": 7,
+    "within_genus_positive_studies": 2,
+    "all_minus_within_positive_studies": 6,
+    "all_minus_within_negative_studies": 0,
+    "all_minus_within_equal_studies": 5,
+    "other_studies": 14,
+    "other_studies_all_genera_mean": 0.5976190476190475,
+    "interpretation": "Direction changes even restricting to the same publications; species composition and genus restriction matter. The within-genus subset contains only two exposed species, and different species weighting; not evidence of a causal negative effect. Same publication/municipality does not guarantee identical pond or year."
+  },
+  "ci_result": {
+    "status": "reported_month_calendar_comparison",
+    "audit": {
+      "source": {
+        "url": "https://zenodo.org/records/6811407/files/TableS2.xlsx?download=1",
+        "final_url": "https://zenodo.org/records/6811407/files/TableS2.xlsx?download=1",
+        "md5": "1da34c8eda2252cfb2bb12a4e9055555",
+        "sha256": "472ac7f596b16d09559295c622fa4b17de735391ddc88fd5d08a24ef70d81430",
+        "bytes": 1244067,
+        "previous_errors": []
+      },
+      "n_rows": 760,
+      "n_raw_names": 427,
+      "n_checked_names": 251,
+      "n_citations": 79,
+      "n_links": 360,
+      "n_complete_binary": 752,
+      "n_complete_positive": 748,
+      "n_complete_zero": 4,
+      "source_nonmissing_ones": 4039,
+      "n_nonbinary_nonmissing_cells": 0,
+      "n_missing_month_cells": 8,
+      "valid_municipality_rows": 735,
+      "plausible_numeric_coord_rows": 0,
+      "multiple_links_per_citation": 15,
+      "multiple_citations_per_link": 12,
+      "matched_name_rows": 472,
+      "matched_name_family_rows": 468,
+      "name_family_conflict_rows": 4,
+      "original_name_matches_checked_name": 395,
+      "valid_rows_before_duplicate_removal": 748,
+      "exact_calendar_duplicate_rows_removed": 5,
+      "valid_rows": 743,
+      "valid_matched_rows": 459
+    },
+    "all_class_summary": {
+      "froth_mixed_exposure": {
+        "rows": 13,
+        "species": 3,
+        "studies": 13,
+        "mean_months_species_balanced": 5.3428571428571425,
+        "median_months_species_balanced": 4.428571428571429,
+        "mean_R_species_balanced": 0.6091883499448421,
+        "mean_longest_run_species_balanced": 4.3809523809523805,
+        "mean_covering_arc_species_balanced": 5.9714285714285715
+      },
+      "froth_potentially_exposed": {
+        "rows": 55,
+        "species": 13,
+        "studies": 33,
+        "mean_months_species_balanced": 4.526421404682274,
+        "median_months_species_balanced": 4.75,
+        "mean_R_species_balanced": 0.6992262180386466,
+        "mean_longest_run_species_balanced": 4.1678093645484955,
+        "mean_covering_arc_species_balanced": 4.904264214046823
+      },
+      "froth_sheltered": {
+        "rows": 47,
+        "species": 12,
+        "studies": 27,
+        "mean_months_species_balanced": 4.482638888888889,
+        "median_months_species_balanced": 4.770833333333334,
+        "mean_R_species_balanced": 0.72128106132876,
+        "mean_longest_run_species_balanced": 4.259722222222223,
+        "mean_covering_arc_species_balanced": 4.843055555555556
+      },
+      "froth_variable": {
+        "rows": 8,
+        "species": 2,
+        "studies": 8,
+        "mean_months_species_balanced": 6.666666666666666,
+        "median_months_species_balanced": 6.666666666666666,
+        "mean_R_species_balanced": 0.4974294072983205,
+        "mean_longest_run_species_balanced": 6,
+        "mean_covering_arc_species_balanced": 7.25
+      },
+      "no_documented_froth_or_bubble": {
+        "rows": 336,
+        "species": 88,
+        "studies": 58,
+        "mean_months_species_balanced": 6.14228896103896,
+        "median_months_species_balanced": 5.875,
+        "mean_R_species_balanced": 0.5278101406683509,
+        "mean_longest_run_species_balanced": 5.558734668109668,
+        "mean_covering_arc_species_balanced": 6.695098304473305
+      },
+      "unresolved": {
+        "rows": 284,
+        "species": 133,
+        "studies": 59,
+        "mean_months_species_balanced": 4.923851294903927,
+        "median_months_species_balanced": 4,
+        "mean_R_species_balanced": 0.6269765403278025,
+        "mean_longest_run_species_balanced": 4.353383458646617,
+        "mean_covering_arc_species_balanced": 5.568107769423558
+      }
+    },
+    "strict_E_summary": {
+      "froth_potentially_exposed": {
+        "rows": 52,
+        "species": 10,
+        "studies": 31,
+        "mean_months_species_balanced": 4.7843478260869565,
+        "median_months_species_balanced": 4.896739130434783,
+        "mean_R_species_balanced": 0.6995178972157892,
+        "mean_longest_run_species_balanced": 4.618152173913044,
+        "mean_covering_arc_species_balanced": 4.97554347826087
+      }
+    },
+    "leptodactylidae_summary": {
+      "froth_mixed_exposure": {
+        "rows": 13,
+        "species": 3,
+        "studies": 13,
+        "mean_months_species_balanced": 5.3428571428571425,
+        "median_months_species_balanced": 4.428571428571429,
+        "mean_R_species_balanced": 0.6091883499448421,
+        "mean_longest_run_species_balanced": 4.3809523809523805,
+        "mean_covering_arc_species_balanced": 5.9714285714285715
+      },
+      "froth_potentially_exposed": {
+        "rows": 55,
+        "species": 13,
+        "studies": 33,
+        "mean_months_species_balanced": 4.526421404682274,
+        "median_months_species_balanced": 4.75,
+        "mean_R_species_balanced": 0.6992262180386466,
+        "mean_longest_run_species_balanced": 4.1678093645484955,
+        "mean_covering_arc_species_balanced": 4.904264214046823
+      },
+      "froth_sheltered": {
+        "rows": 47,
+        "species": 12,
+        "studies": 27,
+        "mean_months_species_balanced": 4.482638888888889,
+        "median_months_species_balanced": 4.770833333333334,
+        "mean_R_species_balanced": 0.72128106132876,
+        "mean_longest_run_species_balanced": 4.259722222222223,
+        "mean_covering_arc_species_balanced": 4.843055555555556
+      },
+      "froth_variable": {
+        "rows": 8,
+        "species": 2,
+        "studies": 8,
+        "mean_months_species_balanced": 6.666666666666666,
+        "median_months_species_balanced": 6.666666666666666,
+        "mean_R_species_balanced": 0.4974294072983205,
+        "mean_longest_run_species_balanced": 6,
+        "mean_covering_arc_species_balanced": 7.25
+      },
+      "unresolved": {
+        "rows": 66,
+        "species": 31,
+        "studies": 31,
+        "mean_months_species_balanced": 4.6322580645161295,
+        "median_months_species_balanced": 4,
+        "mean_R_species_balanced": 0.6674728488525342,
+        "mean_longest_run_species_balanced": 4.0072580645161295,
+        "mean_covering_arc_species_balanced": 5.179569892473118
+      }
+    },
+    "paired": {
+      "municipality_original_all_genera_min1": {
+        "status": "descriptive_support",
+        "n_units": 25,
+        "n_studies": 25,
+        "species_E": 11,
+        "species_S": 12,
+        "positive_studies": 14,
+        "negative_studies": 10,
+        "zero_studies": 1,
+        "study_balanced_delta_months": 0.37799999999999995,
+        "unit_balanced_delta_months": 0.37799999999999995,
+        "study_balanced_delta_R": -0.029813569793861506,
+        "study_balanced_delta_longest_run": 0.37133333333333324,
+        "study_balanced_delta_arc": 0.22466666666666665,
+        "species_lists": {
+          "E": [
+            "Leptodactylus latrans",
+            "Leptodactylus macrosternum",
+            "Physalaemus cuvieri",
+            "Physalaemus gracilis",
+            "Physalaemus lisei",
+            "Physalaemus maximus",
+            "Physalaemus nanus",
+            "Physalaemus olfersii",
+            "Physalaemus signifer",
+            "Pleurodema bibroni",
+            "Pleurodema diplolister"
+          ],
+          "S": [
+            "Adenomera araucaria",
+            "Adenomera bokermanni",
+            "Adenomera marmorata",
+            "Leptodactylus cunicularius",
+            "Leptodactylus furnarius",
+            "Leptodactylus fuscus",
+            "Leptodactylus gracilis",
+            "Leptodactylus jolyi",
+            "Leptodactylus mystaceus",
+            "Leptodactylus mystacinus",
+            "Leptodactylus plaumanni",
+            "Leptodactylus troglodytes"
+          ]
+        },
+        "descriptive_study_bootstrap_interval": [
+          -0.36,
+          1.1346999999999998
+        ],
+        "leave_one_study_out_range": [
+          0.24097222222222217,
+          0.5187499999999999
+        ]
+      },
+      "municipality_strict_all_genera_min1": {
+        "status": "descriptive_support",
+        "n_units": 24,
+        "n_studies": 24,
+        "species_E": 9,
+        "species_S": 12,
+        "positive_studies": 14,
+        "negative_studies": 9,
+        "zero_studies": 1,
+        "study_balanced_delta_months": 0.44236111111111115,
+        "unit_balanced_delta_months": 0.44236111111111115,
+        "study_balanced_delta_R": -0.031766062666107965,
+        "study_balanced_delta_longest_run": 0.46319444444444446,
+        "study_balanced_delta_arc": 0.26875,
+        "species_lists": {
+          "E": [
+            "Leptodactylus latrans",
+            "Leptodactylus macrosternum",
+            "Physalaemus cuvieri",
+            "Physalaemus gracilis",
+            "Physalaemus lisei",
+            "Physalaemus maximus",
+            "Physalaemus olfersii",
+            "Pleurodema bibroni",
+            "Pleurodema diplolister"
+          ],
+          "S": [
+            "Adenomera araucaria",
+            "Adenomera bokermanni",
+            "Adenomera marmorata",
+            "Leptodactylus cunicularius",
+            "Leptodactylus furnarius",
+            "Leptodactylus fuscus",
+            "Leptodactylus gracilis",
+            "Leptodactylus jolyi",
+            "Leptodactylus mystaceus",
+            "Leptodactylus mystacinus",
+            "Leptodactylus plaumanni",
+            "Leptodactylus troglodytes"
+          ]
+        },
+        "descriptive_study_bootstrap_interval": [
+          -0.3194444444444445,
+          1.2159722222222225
+        ],
+        "leave_one_study_out_range": [
+          0.3021739130434783,
+          0.5920289855072464
+        ]
+      },
+      "coordinate_original_all_genera_min1": {
+        "status": "no_paired_support",
+        "n_units": 0,
+        "n_studies": 0
+      },
+      "coordinate_strict_all_genera_min1": {
+        "status": "no_paired_support",
+        "n_units": 0,
+        "n_studies": 0
+      },
+      "study_original_all_genera_min1": {
+        "status": "descriptive_support",
+        "n_units": 26,
+        "n_studies": 26,
+        "species_E": 11,
+        "species_S": 12,
+        "positive_studies": 14,
+        "negative_studies": 10,
+        "zero_studies": 2,
+        "study_balanced_delta_months": 0.36346153846153845,
+        "unit_balanced_delta_months": 0.36346153846153845,
+        "study_balanced_delta_R": -0.011771544735177318,
+        "study_balanced_delta_longest_run": 0.3955128205128205,
+        "study_balanced_delta_arc": 0.10064102564102566,
+        "species_lists": {
+          "E": [
+            "Leptodactylus latrans",
+            "Leptodactylus macrosternum",
+            "Physalaemus cuvieri",
+            "Physalaemus gracilis",
+            "Physalaemus lisei",
+            "Physalaemus maximus",
+            "Physalaemus nanus",
+            "Physalaemus olfersii",
+            "Physalaemus signifer",
+            "Pleurodema bibroni",
+            "Pleurodema diplolister"
+          ],
+          "S": [
+            "Adenomera araucaria",
+            "Adenomera bokermanni",
+            "Adenomera marmorata",
+            "Leptodactylus cunicularius",
+            "Leptodactylus furnarius",
+            "Leptodactylus fuscus",
+            "Leptodactylus gracilis",
+            "Leptodactylus jolyi",
+            "Leptodactylus mystaceus",
+            "Leptodactylus mystacinus",
+            "Leptodactylus plaumanni",
+            "Leptodactylus troglodytes"
+          ]
+        },
+        "descriptive_study_bootstrap_interval": [
+          -0.3609294871794872,
+          1.0904326923076917
+        ],
+        "leave_one_study_out_range": [
+          0.23133333333333328,
+          0.498
+        ]
+      },
+      "municipality_original_within_genus_min1": {
+        "status": "sparse_descriptive_only",
+        "n_units": 11,
+        "n_studies": 11,
+        "species_E": 2,
+        "species_S": 6,
+        "positive_studies": 2,
+        "negative_studies": 8,
+        "zero_studies": 1,
+        "study_balanced_delta_months": -1.2727272727272727,
+        "unit_balanced_delta_months": -1.2727272727272727,
+        "study_balanced_delta_R": 0.0704524363487344,
+        "study_balanced_delta_longest_run": -1.3636363636363635,
+        "study_balanced_delta_arc": -1.1818181818181819,
+        "species_lists": {
+          "E": [
+            "Leptodactylus latrans",
+            "Leptodactylus macrosternum"
+          ],
+          "S": [
+            "Leptodactylus fuscus",
+            "Leptodactylus gracilis",
+            "Leptodactylus jolyi",
+            "Leptodactylus mystaceus",
+            "Leptodactylus mystacinus",
+            "Leptodactylus troglodytes"
+          ]
+        },
+        "descriptive_study_bootstrap_interval": [
+          -2.409090909090909,
+          0
+        ],
+        "leave_one_study_out_range": [
+          -1.7,
+          -0.95
+        ]
+      },
+      "municipality_original_all_genera_min2": {
+        "status": "sparse_descriptive_only",
+        "n_units": 6,
+        "n_studies": 6,
+        "species_E": 9,
+        "species_S": 9,
+        "positive_studies": 4,
+        "negative_studies": 2,
+        "zero_studies": 0,
+        "study_balanced_delta_months": 0.37499999999999994,
+        "unit_balanced_delta_months": 0.37499999999999994,
+        "study_balanced_delta_R": -0.02809596275849774,
+        "study_balanced_delta_longest_run": 0.4305555555555555,
+        "study_balanced_delta_arc": 0.18055555555555558,
+        "species_lists": {
+          "E": [
+            "Leptodactylus latrans",
+            "Leptodactylus macrosternum",
+            "Physalaemus cuvieri",
+            "Physalaemus gracilis",
+            "Physalaemus lisei",
+            "Physalaemus nanus",
+            "Physalaemus olfersii",
+            "Pleurodema bibroni",
+            "Pleurodema diplolister"
+          ],
+          "S": [
+            "Adenomera araucaria",
+            "Adenomera bokermanni",
+            "Leptodactylus fuscus",
+            "Leptodactylus gracilis",
+            "Leptodactylus jolyi",
+            "Leptodactylus mystaceus",
+            "Leptodactylus mystacinus",
+            "Leptodactylus plaumanni",
+            "Leptodactylus troglodytes"
+          ]
+        },
+        "descriptive_study_bootstrap_interval": [
+          -0.6111111111111113,
+          1.361111111111111
+        ],
+        "leave_one_study_out_range": [
+          0.04999999999999991,
+          0.7499999999999999
+        ]
+      }
+    },
+    "limits": [
+      "Reported breeding months from literature, not detection-corrected durations; no sampling-month denominator available. Zero month means not reported, not confirmed nonbreeding.",
+      "Same publication+municipality comparison within Leptodactylidae reduces site/study and family confounding but may pool different ponds, years or survey schedules. Coordinate matching is approximate and some coordinates reconstructed by original authors.",
+      "Repeated species across studies and genus-specific trait conservatism violate simple independence. Bootstrap intervals descriptive, not phylogenetically corrected.",
+      "Ground excluded in strict E; actual accessible nest area/persistence unknown. No butterfly observation or fertilization endpoint."
+    ]
+  },
+  "decision": "No generalizable longer reported breeding season for exposed foam types. Original and no-ground comparisons are weak positive with intervals spanning zero; same-genus result reverses with sparse exposed species. Retain both; no trait-specific breeding-duration parameter for butterfly model. Coordinate format not parsed (0 valid pairs), so coordinate/climate matching unverified. No actual foam lifetime, exposed surface area, butterfly mating, or fertility data."
+}

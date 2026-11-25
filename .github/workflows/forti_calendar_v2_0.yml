@@ -1,0 +1,27 @@
+name: AECO v2.0 literature breeding calendar
+on:
+  pull_request:
+    branches: [analysis/foam-breeding-v1.9]
+    paths:
+      - 'scripts/forti_calendar_v2_0.py'
+      - '.github/workflows/forti_calendar_v2_0.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  calendar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install openpyxl==3.1.5 numpy pandas
+      - run: python scripts/forti_calendar_v2_0.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: v20-literature-calendar
+          path: results/v2.0/
+          if-no-files-found: error
