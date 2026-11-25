@@ -1,0 +1,44 @@
+name: AECO v1.4 global range and rainfall
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'scripts/global_range_v1_4.py'
+      - 'scripts/butterfly_source_v1_4.py'
+      - '.github/workflows/global_range_v1_4.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  frog-range:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install openpyxl pandas numpy pyreadr pyproj xarray netCDF4
+      - run: python scripts/global_range_v1_4.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: aeco-global-frog-grid-v1.4
+          path: results/v1.4/
+          if-no-files-found: error
+  butterfly-source:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install pandas
+      - run: python scripts/butterfly_source_v1_4.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: aeco-butterfly-source-v1.4
+          path: results/v1.4/butterfly_sources.json
+          if-no-files-found: error

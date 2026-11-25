@@ -1,0 +1,42 @@
+name: AECO v1.3 global source and occurrence audit
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'scripts/global_acquisition_v1_3.py'
+      - 'data/literature/foam_seed_species_v1.3.csv'
+      - '.github/workflows/global_acquisition_v1_3.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  source-audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 4
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install openpyxl==3.1.5
+      - run: python scripts/global_acquisition_v1_3.py --sources-only
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: aeco-source-schema-v1.3
+          path: results/v1.3_acquisition/source_schema.json
+  occurrence-audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 7
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install openpyxl==3.1.5
+      - run: python scripts/global_acquisition_v1_3.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: aeco-seed-occurrence-v1.3
+          path: results/v1.3_acquisition/

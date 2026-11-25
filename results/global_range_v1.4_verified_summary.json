@@ -1,0 +1,226 @@
+{
+  "status": "range_and_rainfall_complete",
+  "range_source": {
+    "source_ref": "8c007900ceb2679f8aee04aec4d936648df5191b",
+    "source_rows": 797577,
+    "unique_valid_rows": 797577,
+    "species": 6393,
+    "native_cells": 52710
+  },
+  "trait_coverage": {
+    "bubble_only": {
+      "source": 2,
+      "matched": 2,
+      "unmatched": 0
+    },
+    "froth_mixed_exposure": {
+      "source": 7,
+      "matched": 7,
+      "unmatched": 0
+    },
+    "froth_potentially_exposed": {
+      "source": 187,
+      "matched": 148,
+      "unmatched": 39
+    },
+    "froth_sheltered": {
+      "source": 33,
+      "matched": 31,
+      "unmatched": 2
+    },
+    "froth_variable": {
+      "source": 26,
+      "matched": 25,
+      "unmatched": 1
+    },
+    "no_documented_froth_or_bubble": {
+      "source": 1755,
+      "matched": 1485,
+      "unmatched": 270
+    }
+  },
+  "matched_species": 1698,
+  "matched_species_cell_rows": 145826,
+  "grid": {
+    "100": {
+      "cells_with_known_traits": 8900,
+      "cells_with_any_froth": 4718,
+      "cells_with_exposed": 4473,
+      "cells_with_sheltered": 1650,
+      "cells_with_both_exposed_sheltered": 1510,
+      "max_froth_richness": 17,
+      "max_exposed_richness": 12,
+      "max_sheltered_richness": 9,
+      "species_cell_pairs": 49938,
+      "family_exposed_sheltered_species": {
+        "froth_potentially_exposed": {
+          "Leptodactylidae": 38,
+          "Limnodynastidae": 3,
+          "Microhylidae": 16,
+          "Rhacophoridae": 91
+        },
+        "froth_sheltered": {
+          "Leptodactylidae": 17,
+          "Limnodynastidae": 0,
+          "Microhylidae": 13,
+          "Rhacophoridae": 1
+        }
+      }
+    },
+    "200": {
+      "cells_with_known_traits": 2587,
+      "cells_with_any_froth": 1395,
+      "cells_with_exposed": 1341,
+      "cells_with_sheltered": 457,
+      "cells_with_both_exposed_sheltered": 436,
+      "max_froth_richness": 18,
+      "max_exposed_richness": 14,
+      "max_sheltered_richness": 9,
+      "species_cell_pairs": 17740,
+      "family_exposed_sheltered_species": {
+        "froth_potentially_exposed": {
+          "Leptodactylidae": 38,
+          "Limnodynastidae": 3,
+          "Microhylidae": 16,
+          "Rhacophoridae": 91
+        },
+        "froth_sheltered": {
+          "Leptodactylidae": 17,
+          "Limnodynastidae": 0,
+          "Microhylidae": 13,
+          "Rhacophoridae": 1
+        }
+      }
+    }
+  },
+  "rainfall_source": {
+    "months": 144,
+    "native_resolution_deg": 2.5,
+    "variables": [
+      "annualized 2010–2021 monthly climatology precipitation (mm/year)",
+      "CV across 12 climatological monthly totals"
+    ],
+    "valid_native_cells": 10368,
+    "years": "2010–2021"
+  },
+  "climate": {
+    "species_weighted": [
+      {
+        "trait_class": "bubble_only",
+        "n_species": 2,
+        "median_rain_mm": 1643.0878611761095,
+        "median_rain_cv": 0.34856290521034317
+      },
+      {
+        "trait_class": "froth_mixed_exposure",
+        "n_species": 7,
+        "median_rain_mm": 1525.1858546063374,
+        "median_rain_cv": 0.4962059985387018
+      },
+      {
+        "trait_class": "froth_potentially_exposed",
+        "n_species": 148,
+        "median_rain_mm": 1708.513410118113,
+        "median_rain_cv": 0.6504294267328744
+      },
+      {
+        "trait_class": "froth_sheltered",
+        "n_species": 31,
+        "median_rain_mm": 1559.2799153079588,
+        "median_rain_cv": 0.7139187717448857
+      },
+      {
+        "trait_class": "froth_variable",
+        "n_species": 25,
+        "median_rain_mm": 999.1569940973598,
+        "median_rain_cv": 0.519511847709218
+      },
+      {
+        "trait_class": "no_documented_froth_or_bubble",
+        "n_species": 1485,
+        "median_rain_mm": 1514.454635594116,
+        "median_rain_cv": 0.5285782794234863
+      }
+    ],
+    "within_family_descriptive": [
+      {
+        "family_as_used": "Leptodactylidae",
+        "trait_class": "froth_potentially_exposed",
+        "n_species": 38,
+        "median_rain_mm": 1317.667092201671,
+        "median_rain_cv": 0.5394171691824479
+      },
+      {
+        "family_as_used": "Leptodactylidae",
+        "trait_class": "froth_sheltered",
+        "n_species": 17,
+        "median_rain_mm": 1515.1297577834082,
+        "median_rain_cv": 0.5566740265816472
+      },
+      {
+        "family_as_used": "Limnodynastidae",
+        "trait_class": "froth_potentially_exposed",
+        "n_species": 3,
+        "median_rain_mm": 838.6372588020031,
+        "median_rain_cv": 0.49227800753727124
+      },
+      {
+        "family_as_used": "Microhylidae",
+        "trait_class": "froth_potentially_exposed",
+        "n_species": 16,
+        "median_rain_mm": 1559.2799153079586,
+        "median_rain_cv": 0.8202998593941724
+      },
+      {
+        "family_as_used": "Microhylidae",
+        "trait_class": "froth_sheltered",
+        "n_species": 13,
+        "median_rain_mm": 1559.2799153079588,
+        "median_rain_cv": 0.8202998593941724
+      },
+      {
+        "family_as_used": "Rhacophoridae",
+        "trait_class": "froth_potentially_exposed",
+        "n_species": 91,
+        "median_rain_mm": 1936.8047265353052,
+        "median_rain_cv": 0.6514993103066558
+      },
+      {
+        "family_as_used": "Rhacophoridae",
+        "trait_class": "froth_sheltered",
+        "n_species": 1,
+        "median_rain_mm": 1883.2041088971914,
+        "median_rain_cv": 0.37166380757183753
+      }
+    ],
+    "species_with_climate": 1698,
+    "native_range_cell_rows_with_climate": 145826,
+    "distinct_gpcp_cells": 1728
+  },
+  "provenance": {
+    "nunes2021": {
+      "url": "https://www.salamandra-journal.com/salamandra/57-2021/57-3/57-3%2C%2012%20Nunes-de-Almeida%20et%20al%20Supplementary%20Table.xlsx",
+      "sha256": "3ec2b6ab0d457cf6bcd4bcbabd7bf51aa2ea3f1ec898d297f1f68a46a883b964",
+      "bytes": 572950
+    },
+    "amphibians_dist.rda": {
+      "url": "https://raw.githubusercontent.com/RS-eco/rasterSp/8c007900ceb2679f8aee04aec4d936648df5191b/data/amphibians_dist.rda",
+      "final_url": "https://raw.githubusercontent.com/RS-eco/rasterSp/8c007900ceb2679f8aee04aec4d936648df5191b/data/amphibians_dist.rda",
+      "bytes": 305884,
+      "sha256": "f197cff80d0de3f9b3b7e524540903db429a549c4dea2d5d462079cfac478f84"
+    },
+    "gpcp_monthly.nc": {
+      "url": "https://psl.noaa.gov/thredds/fileServer/Datasets/gpcp/precip.mon.mean.nc",
+      "final_url": "https://psl.noaa.gov/thredds/fileServer/Datasets/gpcp/precip.mon.mean.nc",
+      "bytes": 20357627,
+      "sha256": "f82d867432102665f9203ba01ef367c68463a37b81c23917f940dd1d8ccb8027"
+    }
+  },
+  "verified_run": {
+    "id": 45584079899,
+    "job": 139101096468,
+    "source_commit": "cef1fd86c3dc3d5abed885884004bd2cb24713fc",
+    "artifact_url": "https://github.com/zuizui0223/aeco/actions/runs/45584079899/artifacts/15008616157",
+    "extraction": "JSON result line from successful job log; raw source hashes included"
+  }
+}
