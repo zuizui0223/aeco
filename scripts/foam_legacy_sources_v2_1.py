@@ -30,7 +30,7 @@ def schema(name,b):
 def figshare():
     url="https://api.figshare.com/v2/articles/23667387"
     b,m=fetch(url,2000000);d=json.loads(b)
-    if d.get("id")!=23667387 or "Zhangixalus" not in d.get("title",""):raise ValueError("Figshare metadata mismatch")
+    if str(d.get("id"))!="23667387" or not str(d.get("doi","")).lower().startswith("10.6084/m9.figshare.23667387"):raise ValueError("Figshare DOI/id mismatch: "+str({k:d.get(k) for k in ("id","doi","title")}))
     result={"metadata":m,"title":d.get("title"),"doi":d.get("doi"),"license":d.get("license"),"files":[]}
     for f in d.get("files",[]):
         q={k:f.get(k) for k in ("id","name","size","computed_md5","supplied_md5","downloadUrl")}
@@ -62,7 +62,8 @@ def dryad(doi):
             if f.get("size",0)>15000000:raise ValueError("file over cap")
             b,m=fetch(link(f["_links"]["stash:download"]["href"]))
             if f.get("size") is not None and len(b)!=f["size"]:raise ValueError("size mismatch")
-            if f.get("digestType") in {"md5","sha256"} and f.get("digest")!=m[f["digestType"]]:raise ValueError("digest mismatch")
+            dt=str(f.get("digestType","")).lower().replace("-","")
+            if dt in {"md5","sha256"} and f.get("digest")!=m[dt]:raise ValueError("digest mismatch")
             q.update(status="acquired",provenance=m,schema=schema(name,b))
         except Exception as e:q.update(status="failed",error=repr(e))
         result["files"].append(q)
