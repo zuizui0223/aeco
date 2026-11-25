@@ -36,7 +36,7 @@ def figshare():
         q={k:f.get(k) for k in ("id","name","size","computed_md5","supplied_md5","downloadUrl")}
         try:
             if f["size"]>15000000:raise ValueError("file over cap")
-            b,m=fetch(f["downloadUrl"])
+            b,m=fetch(f.get("downloadUrl") or f.get("download_url") or "https://figshare.com/ndownloader/files/"+str(f["id"]))
             if len(b)!=f["size"] or (f.get("computed_md5") and m["md5"]!=f["computed_md5"]):raise ValueError("file checksum mismatch")
             q.update(status="acquired",provenance=m,schema=schema(f["name"],b))
         except Exception as e:q.update(status="failed",error=repr(e))
