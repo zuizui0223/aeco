@@ -1,0 +1,15 @@
+{
+  "status": "published_aggregate_recalculation_only",
+  "source": "https://doi.org/10.1007/s004420050770",
+  "forest_bait_visitors": 227,
+  "farmland_bait_visitors": 534,
+  "pooled_visitors": 761,
+  "pooled_males": 760,
+  "pooled_male_fraction": 0.9986859395532195,
+  "pooled_male_percent": 99.86859395532194,
+  "pieridae_specific": false,
+  "frog_treatment": false,
+  "mating_endpoint": false,
+  "interpretation": "Strong male bias in this pooled bait experiment; not evidence of female attraction, mating-site formation, or a frog-specific effect.",
+  "api_status": "not_run_successfully_local_dns_failure"
+}
