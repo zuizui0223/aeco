@@ -2,6 +2,14 @@
 
 **Status (2026-11-25): exploratory. No demonstrated frog-to-butterfly mating effect.**
 
+## v0.4 — frog-generated reproductive patches (2026-11-25)
+
+- [Frog-specific evidence audit, mechanism gates, and field protocol](docs/frog_link_v0.4.md)
+- [Competing-risk model](scripts/frog_competing_risk.py)
+- [35 illustrative scenarios](results/frog_competing_risk_v0.4.csv)
+
+Prioritize direct adult Pieridae contact with frog-generated substrates: naturally spent foam nests (especially Zhangixalus arboreus), excretion-conditioned wet margins, and opportunistic carrion observations. The literature supports frog-mediated nutrient heterogeneity and some adult butterfly predation; it does not demonstrate that frog substrates attract Pieridae or facilitate their mating or fertilization. Frog reproductive construction is a candidate temporally persistent cue, not a proven mechanism. The model distinguishes a hypothetical persistent cue from contemporaneous loss risk, with no empirical parameter calibration. No new raw data acquired; the amphibian Dryad DOI is identified but failed to resolve through the current access route. v0.4 is a targeted evidence review and model extension, not a completed empirical validation.
+
 ## v0.3 — coverage thresholds and female mobility (2026-11-25)
 
 - [Theory, literature constraints, and empirical gate](docs/fertilization_v0.3.md)
