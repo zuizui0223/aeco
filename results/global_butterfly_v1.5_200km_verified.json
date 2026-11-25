@@ -1,0 +1,840 @@
+{
+  "status": "verified_artifact_and_local_audit",
+  "source_commit": "4517b37988eb64c8e9412550f7aee16c91e1481b",
+  "run_id": 45585235439,
+  "job_id": 139105021587,
+  "artifact_id": 15008981974,
+  "artifact_zip_sha256": "fcc184b52538fd6c94eac32e67c8920d5c1ed740e2c3b7f1b87e009ff26d2e9a",
+  "artifact_sha256_matches_api": true,
+  "artifact_file_hashes": {
+    "frozen_sample.csv": "4b691e8a3d54f949f39a39f9daff68717c3b1c9c78fb07e9a9faadc701fd9e32",
+    "grid_butterfly_pilot.csv": "67e258bfbfe1099621c9165751a7d215cd29235031e69b2a9c78997d350b0986",
+    "summary.json": "58d57feae88c166c17e0fd5b5d674ee044c1cc3af00521ce6404805a409b383b"
+  },
+  "ci_actual_frozen_keys": [
+    [
+      -69,
+      31
+    ],
+    [
+      -60,
+      22
+    ],
+    [
+      -60,
+      28
+    ],
+    [
+      -59,
+      33
+    ],
+    [
+      -54,
+      17
+    ],
+    [
+      -53,
+      15
+    ],
+    [
+      -52,
+      15
+    ],
+    [
+      -52,
+      16
+    ],
+    [
+      -48,
+      14
+    ],
+    [
+      -48,
+      21
+    ],
+    [
+      -44,
+      8
+    ],
+    [
+      -40,
+      14
+    ],
+    [
+      -39,
+      -4
+    ],
+    [
+      -38,
+      14
+    ],
+    [
+      -38,
+      29
+    ],
+    [
+      -37,
+      -29
+    ],
+    [
+      -37,
+      -28
+    ],
+    [
+      -37,
+      -27
+    ],
+    [
+      -37,
+      -26
+    ],
+    [
+      -37,
+      12
+    ],
+    [
+      -36,
+      -10
+    ],
+    [
+      -35,
+      -22
+    ],
+    [
+      -35,
+      -19
+    ],
+    [
+      -35,
+      -10
+    ],
+    [
+      -35,
+      25
+    ],
+    [
+      -35,
+      29
+    ],
+    [
+      -34,
+      -26
+    ],
+    [
+      -33,
+      -20
+    ],
+    [
+      -33,
+      -4
+    ],
+    [
+      -32,
+      -25
+    ],
+    [
+      -32,
+      -19
+    ],
+    [
+      -31,
+      -26
+    ],
+    [
+      -30,
+      -19
+    ],
+    [
+      -30,
+      -15
+    ],
+    [
+      -30,
+      4
+    ],
+    [
+      -30,
+      6
+    ],
+    [
+      -29,
+      8
+    ],
+    [
+      -29,
+      27
+    ],
+    [
+      -28,
+      2
+    ],
+    [
+      -27,
+      -22
+    ],
+    [
+      -27,
+      -19
+    ],
+    [
+      -27,
+      -12
+    ],
+    [
+      -27,
+      28
+    ],
+    [
+      -26,
+      -18
+    ],
+    [
+      -26,
+      -17
+    ],
+    [
+      -26,
+      -7
+    ],
+    [
+      -25,
+      -14
+    ],
+    [
+      -24,
+      -16
+    ],
+    [
+      -9,
+      7
+    ],
+    [
+      -9,
+      8
+    ],
+    [
+      -5,
+      5
+    ],
+    [
+      -5,
+      8
+    ],
+    [
+      -4,
+      5
+    ],
+    [
+      -3,
+      4
+    ],
+    [
+      -3,
+      5
+    ],
+    [
+      -3,
+      23
+    ],
+    [
+      -2,
+      5
+    ],
+    [
+      -2,
+      21
+    ],
+    [
+      -1,
+      3
+    ],
+    [
+      1,
+      5
+    ],
+    [
+      4,
+      4
+    ],
+    [
+      6,
+      -8
+    ],
+    [
+      7,
+      -8
+    ],
+    [
+      7,
+      -4
+    ],
+    [
+      7,
+      -3
+    ],
+    [
+      9,
+      8
+    ],
+    [
+      10,
+      -21
+    ],
+    [
+      10,
+      2
+    ],
+    [
+      11,
+      -21
+    ],
+    [
+      11,
+      -8
+    ],
+    [
+      12,
+      -16
+    ],
+    [
+      13,
+      -18
+    ],
+    [
+      13,
+      -16
+    ],
+    [
+      14,
+      -20
+    ],
+    [
+      14,
+      -19
+    ],
+    [
+      14,
+      -18
+    ],
+    [
+      14,
+      -16
+    ],
+    [
+      14,
+      31
+    ],
+    [
+      15,
+      -19
+    ],
+    [
+      16,
+      -14
+    ],
+    [
+      20,
+      4
+    ],
+    [
+      21,
+      -12
+    ],
+    [
+      21,
+      -10
+    ],
+    [
+      22,
+      -16
+    ],
+    [
+      22,
+      -14
+    ],
+    [
+      22,
+      29
+    ],
+    [
+      23,
+      -13
+    ],
+    [
+      23,
+      -10
+    ],
+    [
+      25,
+      16
+    ],
+    [
+      25,
+      18
+    ],
+    [
+      32,
+      18
+    ],
+    [
+      37,
+      6
+    ],
+    [
+      37,
+      19
+    ],
+    [
+      38,
+      19
+    ],
+    [
+      40,
+      18
+    ],
+    [
+      41,
+      13
+    ],
+    [
+      43,
+      15
+    ],
+    [
+      50,
+      1
+    ],
+    [
+      51,
+      9
+    ],
+    [
+      52,
+      3
+    ],
+    [
+      52,
+      17
+    ],
+    [
+      53,
+      17
+    ],
+    [
+      54,
+      -17
+    ],
+    [
+      54,
+      -16
+    ],
+    [
+      55,
+      -21
+    ],
+    [
+      55,
+      -16
+    ],
+    [
+      55,
+      -15
+    ],
+    [
+      55,
+      -14
+    ],
+    [
+      55,
+      17
+    ],
+    [
+      56,
+      -22
+    ],
+    [
+      56,
+      -21
+    ],
+    [
+      56,
+      -16
+    ],
+    [
+      56,
+      -15
+    ],
+    [
+      57,
+      -18
+    ],
+    [
+      58,
+      -21
+    ],
+    [
+      58,
+      -20
+    ],
+    [
+      58,
+      -19
+    ],
+    [
+      58,
+      -17
+    ],
+    [
+      58,
+      15
+    ],
+    [
+      58,
+      16
+    ],
+    [
+      58,
+      17
+    ],
+    [
+      58,
+      19
+    ],
+    [
+      59,
+      -21
+    ],
+    [
+      59,
+      4
+    ],
+    [
+      60,
+      0
+    ],
+    [
+      60,
+      6
+    ],
+    [
+      61,
+      16
+    ],
+    [
+      62,
+      -10
+    ],
+    [
+      62,
+      16
+    ],
+    [
+      62,
+      17
+    ],
+    [
+      63,
+      -3
+    ],
+    [
+      64,
+      -17
+    ],
+    [
+      66,
+      -21
+    ],
+    [
+      66,
+      -5
+    ],
+    [
+      66,
+      -3
+    ],
+    [
+      66,
+      21
+    ],
+    [
+      67,
+      21
+    ],
+    [
+      67,
+      22
+    ],
+    [
+      68,
+      -21
+    ],
+    [
+      68,
+      -17
+    ],
+    [
+      68,
+      22
+    ],
+    [
+      70,
+      -10
+    ],
+    [
+      72,
+      -21
+    ],
+    [
+      74,
+      -17
+    ],
+    [
+      85,
+      -23
+    ]
+  ],
+  "ci_keys_compact_json_sha256": "de5c92ecb7adeb0fa95000b4bc76119e3f02111e56dc12bb2aadd5cb4acf1083",
+  "sampling_reproducibility": {
+    "local_prequery_n": 145,
+    "ci_n": 145,
+    "overlapping_keys": 34,
+    "ci_actual_blocks": 43,
+    "ci_frogs_ge5": 63,
+    "ci_both_exposed_sheltered": 23,
+    "ci_pandas": "3.1.1",
+    "ci_numpy": "2.5.5",
+    "local_pandas": "2.2.3",
+    "local_numpy": "2.3.5",
+    "interpretation": "Same stratum allocations but not same keys. Library/group-key representation or RNG difference suspected; exact cause not isolated. CI chose sample before queries. Use exact CI keys for repeat, not local preview."
+  },
+  "attrition": {
+    "total_hits": 265745,
+    "identified_species_hits": 254646,
+    "pieridae_hits": 35874,
+    "zero_hits": 22,
+    "positive_hits_but_identified_under50": 52,
+    "identified_ge50": 71,
+    "failed_all_species_coverage_given_ge50": 34,
+    "failed_pieridae_coverage_after_all_species_gate": 3,
+    "eligible_50": 34,
+    "eligible_100": 30,
+    "eligible_50_by_latitude": {
+      "north": 18,
+      "tropics": 10,
+      "south": 6
+    }
+  },
+  "local_recalculation": {
+    "original_coefficients_match_ci": true,
+    "local_blocked_cv_relative_gain": -0.18100198199315698,
+    "ci_blocked_cv_relative_gain": -0.20949755901646872,
+    "comment": "Different scikit-learn versions/group-fold ties; both show deterioration; fold assignments not frozen in original run.",
+    "temperature_adjusted_record_share": {
+      "n": 71,
+      "blocks": 34,
+      "exposed_effect_per_10pp": -0.005309770116128856,
+      "exposed_ci95": [
+        -0.010775508816196547,
+        0.00015596858393883555
+      ],
+      "exposed_p": 0.05651007526064064,
+      "sheltered_effect_per_10pp": 0.008263854418557521,
+      "sheltered_ci95": [
+        -0.009890432488967416,
+        0.026418141326082462
+      ],
+      "contrast_effect_per_10pp": -0.013573624534686376,
+      "contrast_ci95": [
+        -0.033043370833931995,
+        0.005896121764559243
+      ],
+      "contrast_p": 0.16545153396371445,
+      "blocked_cv_gain": -0.21433011740847863,
+      "scope": "additional exploratory sensitivity, not primary test"
+    },
+    "min5_frogs_record_share_n": 36,
+    "min5_frogs_status": "below 40-cell gate",
+    "all_95pct_record_share_n": 34,
+    "all_95pct_status": "below 40-cell gate"
+  },
+  "ci_result": {
+    "status": "sampled_grid_pilot_not_fertilization",
+    "scale_km": 200,
+    "sampling": {
+      "frame_cells": 2587,
+      "sample_cells": 145,
+      "strata": 40,
+      "temperature_status": "success",
+      "climate": {
+        "months": 144,
+        "native_resolution_deg": 2.5,
+        "variables": [
+          "annualized 2010–2021 monthly climatology precipitation (mm/year)",
+          "CV across 12 climatological monthly totals"
+        ],
+        "valid_native_cells": 10368,
+        "years": "2010–2021"
+      },
+      "source_provenance": {
+        "nunes2021": {
+          "url": "https://www.salamandra-journal.com/salamandra/57-2021/57-3/57-3%2C%2012%20Nunes-de-Almeida%20et%20al%20Supplementary%20Table.xlsx",
+          "sha256": "3ec2b6ab0d457cf6bcd4bcbabd7bf51aa2ea3f1ec898d297f1f68a46a883b964",
+          "bytes": 572950
+        },
+        "amphibians_dist.rda": {
+          "url": "https://raw.githubusercontent.com/RS-eco/rasterSp/8c007900ceb2679f8aee04aec4d936648df5191b/data/amphibians_dist.rda",
+          "final_url": "https://raw.githubusercontent.com/RS-eco/rasterSp/8c007900ceb2679f8aee04aec4d936648df5191b/data/amphibians_dist.rda",
+          "bytes": 305884,
+          "sha256": "f197cff80d0de3f9b3b7e524540903db429a549c4dea2d5d462079cfac478f84"
+        },
+        "gpcp_monthly.nc": {
+          "url": "https://psl.noaa.gov/thredds/fileServer/Datasets/gpcp/precip.mon.mean.nc",
+          "final_url": "https://psl.noaa.gov/thredds/fileServer/Datasets/gpcp/precip.mon.mean.nc",
+          "bytes": 20357627,
+          "sha256": "f82d867432102665f9203ba01ef367c68463a37b81c23917f940dd1d8ccb8027"
+        },
+        "temperature_ncss.nc": {
+          "url": "https://psl.noaa.gov/thredds/ncss/grid/Datasets/ncep.reanalysis.derived/surface/air.mon.mean.nc?var=air&north=90&south=-90&west=0&east=359.9&horizStride=1&time_start=2010-01-01T00%3A00%3A00Z&time_end=2021-12-01T00%3A00%3A00Z&timeStride=1&accept=netcdf",
+          "final_url": "https://psl.noaa.gov/thredds/ncss/grid/Datasets/ncep.reanalysis.derived/surface/air.mon.mean.nc?var=air&north=90&south=-90&west=0&east=359.9&horizStride=1&time_start=2010-01-01T00%3A00%3A00Z&time_end=2021-12-01T00%3A00%3A00Z&timeStride=1&accept=netcdf",
+          "bytes": 6059804,
+          "sha256": "9d8e6a569d1c402888aa70edda22ffeba78ae162dea30d8e009237c0c64309c6"
+        }
+      }
+    },
+    "taxonomy": {
+      "family_keys": {
+        "Hesperiidae": 6953,
+        "Papilionidae": 9417,
+        "Pieridae": 5481,
+        "Nymphalidae": 7017,
+        "Lycaenidae": 5473,
+        "Riodinidae": 1933999
+      },
+      "global_pieridae_species_keys": 702,
+      "global_pieridae_hits": 7702156,
+      "global_pieridae_species_resolved_hits": 7579855
+    },
+    "api_requests": 152,
+    "query_status": {
+      "retrieved": 145
+    },
+    "errors": {},
+    "n_50": 34,
+    "n_100": 30,
+    "total_hits": 265745,
+    "zero_hits": 22,
+    "strata_retention": {
+      "exposed_no_sheltered": {
+        "size": 44,
+        "count": 17
+      },
+      "no_froth": {
+        "size": 58,
+        "count": 11
+      },
+      "other_froth": {
+        "size": 18,
+        "count": 2
+      },
+      "sheltered_present": {
+        "size": 25,
+        "count": 4
+      }
+    },
+    "models": {
+      "50_rain_lat": {
+        "status": "insufficient_support",
+        "n": 34,
+        "blocks": 16
+      },
+      "50_temperature": {
+        "status": "insufficient_support",
+        "n": 34,
+        "blocks": 16
+      },
+      "100_rain_lat": {
+        "status": "insufficient_support",
+        "n": 30,
+        "blocks": 15
+      },
+      "100_temperature": {
+        "status": "insufficient_support",
+        "n": 30,
+        "blocks": 15
+      },
+      "record_share_rain_lat": {
+        "status": "exploratory_association",
+        "n": 71,
+        "blocks": 34,
+        "outcome": "record_share",
+        "temperature_included": false,
+        "coefficients": {
+          "exposed": {
+            "effect_per_10pp": -0.0052048673535098015,
+            "ci95": [
+              -0.010617430966274453,
+              0.00020769625925484982
+            ],
+            "p": 0.058919503908123796
+          },
+          "sheltered": {
+            "effect_per_10pp": 0.008431673150759364,
+            "ci95": [
+              -0.00927565660295941,
+              0.02613900290447814
+            ],
+            "p": 0.33970600328805095
+          },
+          "other_foam": {
+            "effect_per_10pp": -0.010714944063481745,
+            "ci95": [
+              -0.02000172090436835,
+              -0.0014281672225951365
+            ],
+            "p": 0.025054154800302625
+          }
+        },
+        "exposed_minus_sheltered_per_10pp": {
+          "effect": -0.013636540504269165,
+          "ci95": [
+            -0.03238331319128334,
+            0.005110232182745008
+          ],
+          "p": 0.1483785782156103
+        },
+        "blocked_cv_mse_base": 0.003551129992133271,
+        "blocked_cv_mse_full": 0.004295083057235363,
+        "blocked_cv_relative_mse_gain": -0.20949755901646872,
+        "folds": [
+          {
+            "n": 15,
+            "sse_base": 0.03931002896635965,
+            "sse_full": 0.034749636552444875
+          },
+          {
+            "n": 14,
+            "sse_base": 0.03012531776035488,
+            "sse_full": 0.032955846825466976
+          },
+          {
+            "n": 14,
+            "sse_base": 0.1004472173606533,
+            "sse_full": 0.1514392338676763
+          },
+          {
+            "n": 14,
+            "sse_base": 0.03650647357650008,
+            "sse_full": 0.03706825032657866
+          },
+          {
+            "n": 14,
+            "sse_base": 0.04574119177759433,
+            "sse_full": 0.04873792949154395
+          }
+        ],
+        "r2": 0.5698671481630544
+      }
+    }
+  },
+  "interpretation": "Primary rarefied richness cannot be tested (n<40). Secondary record share does not show positive exposed association or out-of-block predictive gain. Not evidence of direct foam visit, mating, fertility or absence. No 100-km outcome verified as of this save."
+}
