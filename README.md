@@ -2,6 +2,16 @@
 
 **Status (2026-11-25): exploratory. No demonstrated frog-to-butterfly mating effect.**
 
+## v0.3 — coverage thresholds and female mobility (2026-11-25)
+
+- [Theory, literature constraints, and empirical gate](docs/fertilization_v0.3.md)
+- [Exact two-state model](scripts/fertilization_thresholds.py)
+- [100 calculated scenarios](results/fertilization_thresholds_v0.3.csv)
+- [Conditional hatch benchmark acquisition and schema audit](scripts/benchmark_pieris.py)
+- [GitHub Actions benchmark](.github/workflows/fertility_benchmark.yml)
+
+The cumulative first-mating hazard must be distributed among females, not just increased in total. Under constant postmating success and no remating, heterogeneity in cumulative hazard lowers coverage at fixed mean (Jensen inequality). Female switching reduces the simulated hotspot occupancy threshold. This is conditional theory, not evidence for frogs. Dryad raw file access remains blocked locally; the added workflow has not been verified as completed. The benchmark measures hatch among postcopulatory records only.
+
 ## v0.2 — fertilization-centered extension (2026-11-25)
 
 The primary biological question is now **heterospecific-mediated fertilization opportunity**, not just mating-site formation. Track the proportion of initially unmated females producing at least one confirmed fertilized egg within a fixed horizon. Copulation, insemination, fertilization and hatch are distinct endpoints. The v0.1 observational audit remains useful for upstream mechanism discovery only.
