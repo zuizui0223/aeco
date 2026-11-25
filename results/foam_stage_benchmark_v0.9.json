@@ -1,0 +1,58 @@
+{
+  "status": "descriptive_literature_recalculation_not_new_field_data",
+  "frogfly": {
+    "n_infested": 20,
+    "early_infested_count": 17,
+    "early_share_among_infested": 0.85,
+    "mean_embryo_mortality_infested_reconstructed": 0.925,
+    "mean_embryo_mortality_uninfested_reported": 0.053,
+    "mortality_difference_percentage_points": 87.2,
+    "mortality_mean_ratio": 17.452830188679247,
+    "oviposition_duration_n": 6,
+    "oviposition_duration_mean": 14.333333333333334,
+    "oviposition_duration_median": 13,
+    "choice_trials": [
+      {
+        "comparison": "fresh_vs_whipped_egg_white",
+        "trials": 5,
+        "fresh_oviposition": 5,
+        "alternative_oviposition": 0,
+        "alternative_hover": 3
+      },
+      {
+        "comparison": "fresh_vs_decayed_beef",
+        "trials": 5,
+        "fresh_oviposition": 5,
+        "alternative_oviposition": 0,
+        "alternative_hover": null
+      },
+      {
+        "comparison": "fresh_vs_already_infested",
+        "trials": 5,
+        "fresh_oviposition": 5,
+        "alternative_oviposition": 0,
+        "alternative_hover": null
+      }
+    ]
+  },
+  "japanese_frog": {
+    "illustrative_total_visible_duration_days": [
+      21,
+      31
+    ],
+    "illustrative_post_departure_duration_fraction_range": [
+      0.5833333333333334,
+      0.75
+    ],
+    "scope": "arithmetic endpoint combinations only; no empirical frequency or confidence interval"
+  },
+  "caveats": [
+    "Three paired choice assays, each repeated five times; not 15 independently identified flies; trial-level identity and randomization unclear.",
+    "Whipped egg white differed in chemistry and texture as well as potential optical features. Hovering is not proof of purely visual attraction.",
+    "Stage distribution among infested nests lacks exposure denominators; not a stage-specific infestation probability.",
+    "Mortality comparison is observational with potential host/stage/collection confounding; not recipient fertilization.",
+    "Qualitative duration ranges at one historical study area, not distributional bounds or species-wide estimates.",
+    "The visible residue period does not establish chemical availability, continued insect use, or persistence after frog population-wide breeding cessation.",
+    "Seasonal count calibration includes repeated ponds/years and cannot be transferred without new validation."
+  ]
+}
