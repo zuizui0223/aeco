@@ -1,0 +1,78 @@
+{
+  "status": "published_aggregate_transcription_not_individual_data",
+  "source": "https://academic.oup.com/ee/article/33/4/1020/449418",
+  "text_crosscheck": "https://www.researchgate.net/publication/233665014_Resource_Specialization_in_Puddling_Lepidoptera",
+  "taxon_as_published": "Pieris napi (Colorado, 1995-1996; modern taxonomic assignment not resolved)",
+  "table1": [
+    {
+      "substrate": "mud",
+      "male_weight": 45.5,
+      "female_weight": 4.5
+    },
+    {
+      "substrate": "carnivore_dung",
+      "male_weight": 21.5,
+      "female_weight": 2.5
+    },
+    {
+      "substrate": "herbivore_dung",
+      "male_weight": 0,
+      "female_weight": 0
+    }
+  ],
+  "table4": [
+    {
+      "mM": 1,
+      "n": 28
+    },
+    {
+      "mM": 10,
+      "n": 13
+    },
+    {
+      "mM": 100,
+      "n": 8
+    },
+    {
+      "mM": 1000,
+      "n": 8
+    },
+    {
+      "mM": 5000,
+      "n": 9
+    }
+  ],
+  "table5": [
+    {
+      "substrate": "demineralized_water",
+      "sampling_only": 7,
+      "feeding": 0
+    },
+    {
+      "substrate": "100mM_NH4Cl",
+      "sampling_only": 6,
+      "feeding": 2
+    },
+    {
+      "substrate": "100mM_urea",
+      "sampling_only": 8,
+      "feeding": 2
+    },
+    {
+      "substrate": "10mM_uric_acid",
+      "sampling_only": 11,
+      "feeding": 0
+    }
+  ],
+  "text_salt_feeding": {
+    "feeding": 66,
+    "total_observed": 79
+  },
+  "caveats": [
+    "Table 1 assigns 0.5 to each substrate for individuals using two without preference; fractional values are weights, not individual counts.",
+    "Counts are published aggregates across years, not raw trials; no new individual-level inference, confidence intervals, or p-values.",
+    "Table 5 records feeding after observed contact; does not estimate long-distance attraction.",
+    "No frog substrate, copulation or fertilization endpoint in this experiment.",
+    "PDF screenshots failed; values cross-checked against independently indexed article text and table transcriptions."
+  ]
+}
