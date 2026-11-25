@@ -2,6 +2,16 @@
 
 **Status (2026-11-25): exploratory. No demonstrated frog-to-butterfly mating effect.**
 
+## v0.5 — direct resource-use evidence and published aggregate benchmark (2026-11-25)
+
+- [Evidence interpretation and revised field priority](docs/frog_link_v0.5.md)
+- [Source-level frog/butterfly interaction ledger](data/literature/frog_interaction_events_v0.5.csv)
+- [Boggs & Dau 2004 table transcription](data/literature/boggs_dau_2004_tables.json)
+- [Descriptive benchmark code](scripts/substrate_benchmark.py)
+- [Recalculated aggregate results](results/substrate_benchmark_v0.5.json)
+
+Downes (1973) documented six butterfly species from a frog carcass and qualitatively increased visits after vertebrate carrion additions to puddles. The named frog-carcass consumers were Lycaenidae and Nymphalidae, not Pieridae. Two further photographic sources record frog-carcass use by Nymphalidae. These are not systematic prevalence data. Boggs & Dau (2004) documented both sexes of the Colorado Pieris taxon at mud and carnivore dung; table weights imply 7/74 female visitors. Feeding fractions among observed butterflies were 66/79 on salt versus 4/36 on pooled other substrates. These are descriptive published aggregates, not frog treatment effects or direct mating/fertilization data. The female visitor sex ratio is not the fraction of the female population using a patch. Prioritize observation of naturally occurring frog-associated substrates; retain non-pierid comparator taxa and require direct Pieridae use before causal mating experiments. PDF screenshot verification failed; text and table transcriptions were cross-checked. No raw field dataset or verified workflow output acquired in v0.5.
+
 ## v0.4 — frog-generated reproductive patches (2026-11-25)
 
 - [Frog-specific evidence audit, mechanism gates, and field protocol](docs/frog_link_v0.4.md)
