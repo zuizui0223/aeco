@@ -1,0 +1,30 @@
+name: AECO fertility benchmark
+on:
+  push:
+    paths:
+      - 'scripts/benchmark_pieris.py'
+      - 'scripts/fertilization_thresholds.py'
+      - '.github/workflows/fertility_benchmark.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  benchmark:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python scripts/fertilization_thresholds.py
+      - run: python scripts/benchmark_pieris.py --self-test
+      - run: python scripts/benchmark_pieris.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: aeco-v03-benchmark
+          path: |
+            results/fertilization_thresholds_v0.3.csv
+            results/pieris_hatch_benchmark.json
+          retention-days: 14
