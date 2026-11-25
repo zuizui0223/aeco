@@ -45,11 +45,11 @@ def load_traits():
     assert len(t)==2010 and t.trait_class.str.startswith("froth_").sum()==253
     return t
 def read_ranges():
-    api="https://api.github.com/repos/RS-eco/rasterSp/commits?path=data/amphibians_dist.rda&per_page=1"
-    data,_,_=request(api)
-    ref=json.loads(data)[0]["sha"]
-    assert re.fullmatch(r"[0-9a-f]{40}",ref)
+    # Frozen verified v1.4 source (avoid a moving API query or rate-limit dependency).
+    ref="8c007900ceb2679f8aee04aec4d936648df5191b"
     path=get(f"https://raw.githubusercontent.com/RS-eco/rasterSp/{ref}/data/amphibians_dist.rda","amphibians_dist.rda",40_000_000)
+    if PROVENANCE["amphibians_dist.rda"]["sha256"]!="f197cff80d0de3f9b3b7e524540903db429a549c4dea2d5d462079cfac478f84":
+        raise ValueError("Frozen amphibian range bytes changed")
     o=pyreadr.read_r(str(path))
     assert len(o)==1,list(o)
     d=next(iter(o.values()))
