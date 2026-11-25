@@ -2,6 +2,15 @@
 
 **Status (2026-11-25): exploratory. No demonstrated frog-to-butterfly mating effect.**
 
+## v0.7 — foam as a fertilization environment; field observation gate (2026-11-25)
+
+- [Focused evidence review and noninvasive pilot protocol](docs/foam_nest_v0.7.md)
+- [Published aggregate and zero-detection calculations](scripts/foam_exposure.py)
+- [Calculated results](results/foam_exposure_v0.7.json)
+- [Header-only observation data template](data/templates/foam_observation_v0.7.csv)
+
+Muto & Kubota (2009) directly investigated sperm locomotion in the viscous foam-nest fertilization environment of Zhangixalus arboreus. This supports the provider-side concept; the proposed butterfly encounter effect remains untested. Byrne et al. (2026) found an association between male participation and nest volume in the African Chiromantis xerampelina, not a transferable Japanese estimate. The 134-nest summary is recalculated, with a discrepancy between reported failure count and printed percentage explicitly retained. Raw workbook download returned 403 and container DNS failure. Forest-edge Pieris melete is the priority candidate alongside P. rapae, based on published habitat and seasonal ranges, not verified co-use of nests. The next gate is standardized matched noninvasive filming of naturally formed nests and controls, with validated detection and clustered sampling. No direct adult Pieridae foam contact, mating, or fertilization evidence obtained. The local calculation script ran and its arithmetic was independently reproduced; the template contains no observations.
+
 ## v0.6 — foam nests as reproductive architecture (2026-11-25)
 
 - [Foam-nest literature and gated field/experimental protocol](docs/foam_nest_v0.6.md)
