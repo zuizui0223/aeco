@@ -1,0 +1,381 @@
+{
+  "status": "verified_frozen_pooled_month_replication",
+  "run_id": 45643302160,
+  "job_id": 139308134891,
+  "source_commit": "c5390545637bfd9a557c83450a4019c26916c6f3",
+  "artifact_id": 15034899366,
+  "artifact_sha256": "a94a670b44b0eb6dc99a4b2998dc099d619456fa0f7e21b54a0f77851345ecf7",
+  "artifact_members_sha256": {
+    "shard_0.jsonl": "bd0edc8481e9e89ca77c81993aadb6b534c3c7f16025a30eb34ad60558c44b06",
+    "shard_1.jsonl": "ac3e03f6d97174c1e92854269533183f9733d3f8c3f28b38f1d1fde778127ba5",
+    "shard_2.jsonl": "eb5830d6eac6d2c08842f5d6d1a3d9915c54a1614486e0116b59be11c9ff202a",
+    "cell_contrasts.json": "e3776497b59045d441f5e022e4c139838d66ffaa12a17110f6291319f1cba20a",
+    "summary.json": "b84421253dbd69b016fa4a1c5a1293ebacea668e07049f3ac4d12cf6c7fdc30f"
+  },
+  "local_audit": {
+    "zip_digest_matches_api": true,
+    "all_three_shard_zip_digests_match_api": true,
+    "all_25_frozen_keys_and_expected_counts_and_taxon_keys_verified": true,
+    "independent_overlap_formula": "1 - L1 distance / 2",
+    "all_primary_and_sensitivity_means_reproduced": true,
+    "primary_mean": 0.00232960824450774,
+    "previous_five_cells_mean": 0.05138378712829595,
+    "new_unique_taxon_keys_E": 19,
+    "new_unique_taxon_keys_S": 16,
+    "all_previous_E_and_S_keys_in_new_sample": true,
+    "old_and_new_grid_overlap": 0,
+    "old_blocks_shared": 3,
+    "observed_species_ge2_each": 19
+  },
+  "ci_result": {
+    "status": "pooled_month_replication_diagnostic_not_fertility",
+    "frozen_sha256": "a717c15075a71c67476f44e8a191c0c9b867e79b901453509116bf240bc84573",
+    "n_frozen": 25,
+    "n_completed": 25,
+    "n_all_retrieved": 25,
+    "n_exact_count_match": 25,
+    "attrition": {
+      "eligible_primary": 25
+    },
+    "total_dated_hits": {
+      "E": 11357,
+      "S": 3680,
+      "P": 3963,
+      "B": 53929
+    },
+    "primary": {
+      "n": 25,
+      "blocks": 5,
+      "status": "exploratory_support_gate_pass",
+      "block_balanced_mean": 0.002329608244507772,
+      "cell_mean": -0.0027495295339909276,
+      "positive_blocks": 3,
+      "negative_blocks": 2,
+      "block_means": {
+        "3_4": 0.0015897356673665874,
+        "3_5": 0.013627088767388162,
+        "4_2": 0.027739544680410566,
+        "4_3": -0.003621904038259016,
+        "4_4": -0.02768642385436744
+      },
+      "block_sizes": {
+        "3_4": 4,
+        "3_5": 2,
+        "4_2": 2,
+        "4_3": 13,
+        "4_4": 4
+      },
+      "leave_one_block_out": {
+        "3_4": 0.002514576388793068,
+        "3_5": -0.0004947618862123256,
+        "4_2": -0.0040228758644679265,
+        "4_3": 0.003817486315199469,
+        "4_4": 0.009833616269226575
+      },
+      "descriptive_block_bootstrap_interval_95": [
+        -0.014610817366794634,
+        0.018644763754072168
+      ],
+      "sign_flip_diagnostic_two_sided_p": 0.8125,
+      "sign_flip_diagnostic_one_sided_positive_p": 0.40625,
+      "sign_flip_patterns": 32
+    },
+    "secondary": {
+      "D0": {
+        "n": 25,
+        "blocks": 5,
+        "status": "exploratory_support_gate_pass",
+        "block_balanced_mean": -0.015138007283878038,
+        "cell_mean": -0.013607393129237848,
+        "positive_blocks": 0,
+        "negative_blocks": 5,
+        "block_means": {
+          "3_4": -0.01034353262121833,
+          "3_5": -0.013691289617419444,
+          "4_2": -0.02747649008503214,
+          "4_3": -0.013306693550920965,
+          "4_4": -0.010872030544799308
+        },
+        "block_sizes": {
+          "3_4": 4,
+          "3_5": 2,
+          "4_2": 2,
+          "4_3": 13,
+          "4_4": 4
+        },
+        "leave_one_block_out": {
+          "3_4": -0.016336625949542966,
+          "3_5": -0.015499686700492685,
+          "4_2": -0.012053386583589511,
+          "4_3": -0.015595835717117305,
+          "4_4": -0.01620450146864772
+        },
+        "descriptive_block_bootstrap_interval_95": [
+          -0.021398558083463033,
+          -0.011146844467305846
+        ],
+        "sign_flip_diagnostic_two_sided_p": 0.0625,
+        "sign_flip_diagnostic_one_sided_positive_p": 1,
+        "sign_flip_patterns": 32
+      },
+      "Dplus1": {
+        "n": 25,
+        "blocks": 5,
+        "status": "exploratory_support_gate_pass",
+        "block_balanced_mean": 0.01432261116754259,
+        "cell_mean": 0.008393116717004405,
+        "positive_blocks": 4,
+        "negative_blocks": 1,
+        "block_means": {
+          "3_4": 0.02188850164981515,
+          "3_5": 0.038786758507729696,
+          "4_2": 0.017640511971987738,
+          "4_3": 0.0040255817259659136,
+          "4_4": -0.010728298017785548
+        },
+        "block_sizes": {
+          "3_4": 4,
+          "3_5": 2,
+          "4_2": 2,
+          "4_3": 13,
+          "4_4": 4
+        },
+        "leave_one_block_out": {
+          "3_4": 0.01243113854697445,
+          "3_5": 0.008206574332495813,
+          "4_2": 0.013493135966431303,
+          "4_3": 0.01689686852793676,
+          "4_4": 0.020585338463874624
+        },
+        "descriptive_block_bootstrap_interval_95": [
+          -0.0008252867126824992,
+          0.028454871779794035
+        ],
+        "sign_flip_diagnostic_two_sided_p": 0.1875,
+        "sign_flip_diagnostic_one_sided_positive_p": 0.09375,
+        "sign_flip_patterns": 32
+      },
+      "Dminus1": {
+        "n": 25,
+        "blocks": 5,
+        "status": "exploratory_support_gate_pass",
+        "block_balanced_mean": 0.011993002923034818,
+        "cell_mean": 0.011142646250995335,
+        "positive_blocks": 4,
+        "negative_blocks": 1,
+        "block_means": {
+          "3_4": 0.020298765982448563,
+          "3_5": 0.025159669740341534,
+          "4_2": -0.010099032708422828,
+          "4_3": 0.007647485764224932,
+          "4_4": 0.01695812583658189
+        },
+        "block_sizes": {
+          "3_4": 4,
+          "3_5": 2,
+          "4_2": 2,
+          "4_3": 13,
+          "4_4": 4
+        },
+        "leave_one_block_out": {
+          "3_4": 0.009916562158181381,
+          "3_5": 0.008701336218708139,
+          "4_2": 0.01751601183089923,
+          "4_3": 0.01307938221273729,
+          "4_4": 0.01075172219464805
+        },
+        "descriptive_block_bootstrap_interval_95": [
+          0.0005020114758595963,
+          0.021574999456432417
+        ],
+        "sign_flip_diagnostic_two_sided_p": 0.1875,
+        "sign_flip_diagnostic_one_sided_positive_p": 0.09375,
+        "sign_flip_patterns": 32
+      },
+      "Dplus1_minus_D0": {
+        "n": 25,
+        "blocks": 5,
+        "status": "exploratory_support_gate_pass",
+        "block_balanced_mean": 0.029460618451420627,
+        "cell_mean": 0.022000509846242255,
+        "positive_blocks": 5,
+        "negative_blocks": 0,
+        "block_means": {
+          "3_4": 0.03223203427103348,
+          "3_5": 0.05247804812514914,
+          "4_2": 0.04511700205701988,
+          "4_3": 0.01733227527688688,
+          "4_4": 0.0001437325270137596
+        },
+        "block_sizes": {
+          "3_4": 4,
+          "3_5": 2,
+          "4_2": 2,
+          "4_3": 13,
+          "4_4": 4
+        },
+        "leave_one_block_out": {
+          "3_4": 0.028767764496517415,
+          "3_5": 0.0237062610329885,
+          "4_2": 0.025546522550020816,
+          "4_3": 0.03249270424505407,
+          "4_4": 0.03678983993252235
+        },
+        "descriptive_block_bootstrap_interval_95": [
+          0.012576094982989608,
+          0.04548442692707431
+        ],
+        "sign_flip_diagnostic_two_sided_p": 0.0625,
+        "sign_flip_diagnostic_one_sided_positive_p": 0.03125,
+        "sign_flip_patterns": 32
+      }
+    },
+    "sensitivity_50_each": {
+      "n": 16,
+      "blocks": 5,
+      "status": "insufficient_support_descriptive_only",
+      "block_balanced_mean": 0.021150431889130898,
+      "cell_mean": 0.02006032785928477,
+      "positive_blocks": 5,
+      "negative_blocks": 0,
+      "block_means": {
+        "3_4": 0.033704333439206896,
+        "3_5": 0.013627088767388162,
+        "4_2": 0.027739544680410566,
+        "4_3": 0.017517764926987027,
+        "4_4": 0.01316342763166184
+      },
+      "block_sizes": {
+        "3_4": 2,
+        "3_5": 2,
+        "4_2": 2,
+        "4_3": 9,
+        "4_4": 1
+      },
+      "leave_one_block_out": {
+        "3_4": 0.0180119565016119,
+        "3_5": 0.023031267669566584,
+        "4_2": 0.019503153691310983,
+        "4_3": 0.022058598629666866,
+        "4_4": 0.023147182953498165
+      },
+      "descriptive_block_bootstrap_interval_95": [
+        0.014219759545017408,
+        0.028495926753083885
+      ],
+      "sign_flip_diagnostic_two_sided_p": 0.0625,
+      "sign_flip_diagnostic_one_sided_positive_p": 0.03125,
+      "sign_flip_patterns": 32
+    },
+    "sensitivity_dominance80": {
+      "n": 10,
+      "blocks": 2,
+      "status": "insufficient_support_descriptive_only",
+      "block_balanced_mean": -0.06332613188832885,
+      "cell_mean": -0.0019664482320613436,
+      "positive_blocks": 1,
+      "negative_blocks": 1,
+      "block_means": {
+        "4_3": 0.013373472682005533,
+        "4_4": -0.14002573645866323
+      },
+      "block_sizes": {
+        "4_3": 9,
+        "4_4": 1
+      },
+      "leave_one_block_out": {
+        "4_3": -0.14002573645866323,
+        "4_4": 0.013373472682005533
+      },
+      "descriptive_block_bootstrap_interval_95": [
+        -0.14002573645866323,
+        0.013373472682005533
+      ],
+      "sign_flip_diagnostic_two_sided_p": 1,
+      "sign_flip_diagnostic_one_sided_positive_p": 0.75,
+      "sign_flip_patterns": 4
+    },
+    "sensitivity_two_observed_frog_species_each": {
+      "n": 19,
+      "blocks": 3,
+      "status": "insufficient_support_descriptive_only",
+      "block_balanced_mean": -0.0011895944040719632,
+      "cell_mean": -0.005386913608106098,
+      "positive_blocks": 1,
+      "negative_blocks": 2,
+      "block_means": {
+        "4_2": 0.027739544680410566,
+        "4_3": -0.003621904038259016,
+        "4_4": -0.02768642385436744
+      },
+      "block_sizes": {
+        "4_2": 2,
+        "4_3": 13,
+        "4_4": 4
+      },
+      "leave_one_block_out": {
+        "4_2": -0.015654163946313228,
+        "4_3": 0.000026560413021563256,
+        "4_4": 0.012058820321075775
+      },
+      "descriptive_block_bootstrap_interval_95": [
+        -0.02768642385436744,
+        0.027739544680410566
+      ],
+      "sign_flip_diagnostic_two_sided_p": 1,
+      "sign_flip_diagnostic_one_sided_positive_p": 0.625,
+      "sign_flip_patterns": 8
+    },
+    "sensitivity_current_index": {
+      "n": 25,
+      "blocks": 5,
+      "status": "exploratory_support_gate_pass",
+      "block_balanced_mean": 0.002329608244507772,
+      "cell_mean": -0.0027495295339909276,
+      "positive_blocks": 3,
+      "negative_blocks": 2,
+      "block_means": {
+        "3_4": 0.0015897356673665874,
+        "3_5": 0.013627088767388162,
+        "4_2": 0.027739544680410566,
+        "4_3": -0.003621904038259016,
+        "4_4": -0.02768642385436744
+      },
+      "block_sizes": {
+        "3_4": 4,
+        "3_5": 2,
+        "4_2": 2,
+        "4_3": 13,
+        "4_4": 4
+      },
+      "leave_one_block_out": {
+        "3_4": 0.002514576388793068,
+        "3_5": -0.0004947618862123256,
+        "4_2": -0.0040228758644679265,
+        "4_3": 0.003817486315199469,
+        "4_4": 0.009833616269226575
+      },
+      "descriptive_block_bootstrap_interval_95": [
+        -0.014610817366794634,
+        0.018644763754072168
+      ],
+      "sign_flip_diagnostic_two_sided_p": 0.8125,
+      "sign_flip_diagnostic_one_sided_positive_p": 0.40625,
+      "sign_flip_patterns": 32
+    },
+    "previous_v1_6_paired": {
+      "n": 5,
+      "blocks": 3,
+      "block_balanced_mean": 0.051383787128295964,
+      "status": "previous_underpowered_discovery"
+    },
+    "limits": [
+      "Prior-unsampled cells but shared geographic blocks and overlapping species; no independent continental replication.",
+      "Pooled calendar-month observations, not joint year-month, climate anomalies, actual frog breeding or recipient mating/fertilization.",
+      "Original provisional exposure types, no-ground sensitivity not identified by these queries.",
+      "Species and observer sampling bias; block bootstrap and sign flips descriptive with at most five blocks.",
+      "Exact expected-count gate separates live-index drift. No sample replacement."
+    ]
+  },
+  "decision": "Primary directional result does not replicate in the 25-cell sample at comparable magnitude; cell-balanced mean negative, block-balanced near zero, leave-one-block-out changes sign. Secondary +1 vs zero and >=50-hit sensitivity are positive across all five blocks, but reverse-lag contrast is also positive and species-dominance restrictions fail support. Retain as secondary exploratory patterns, not evidence for directional facilitation or fertilization. No annual test feasible under v1.7 gate; next prioritize independently behavior-coded data and strict exposure classification, rather than new threshold searches."
+}
