@@ -1,0 +1,27 @@
+name: AECO v2.1 physical persistence source audit
+on:
+  pull_request:
+    branches: [analysis/foam-calendar-v2.0]
+    paths:
+      - 'scripts/foam_legacy_sources_v2_1.py'
+      - '.github/workflows/foam_legacy_sources_v2_1.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install openpyxl==3.1.5
+      - run: python scripts/foam_legacy_sources_v2_1.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: v21-persistence-source-audit
+          path: results/v2.1_sources/
+          if-no-files-found: error

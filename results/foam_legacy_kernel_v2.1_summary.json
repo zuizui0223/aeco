@@ -1,0 +1,185 @@
+{
+  "status": "locally_executed_scenario_analysis_not_empirical_lifetime_estimation",
+  "input_artifact": 15034899366,
+  "input_zip_sha256": "a94a670b44b0eb6dc99a4b2998dc099d619456fa0f7e21b54a0f77851345ecf7",
+  "local_script_sha256": "3d3a82d1e9fe74ab9e51ded8fea96c1f751f37299770fa9558d19c233610f2cd",
+  "full_local_result_sha256": "1a48822078da2756d43664e9a79e592c4317fdc654950c1f8e7d63fa5b193f12",
+  "n_cells": 25,
+  "n_blocks": 5,
+  "previous_month_shift_primary_reproduced": 0.00232960824450774,
+  "previous_D0": -0.015138007283878019,
+  "n_scenarios_executed": 42,
+  "uniform_month_profiles": [
+    {
+      "transform": "exposed_only",
+      "window": "instant",
+      "directional": 0,
+      "forward_minus_zero": 0,
+      "reverse_minus_zero": 0,
+      "min50_directional": 0,
+      "positive_blocks": 0,
+      "negative_blocks": 0
+    },
+    {
+      "transform": "exposed_only",
+      "window": "occupied_7d",
+      "directional": 0.000078338,
+      "forward_minus_zero": -0.003327077,
+      "reverse_minus_zero": -0.003405415,
+      "min50_directional": 0.0014028,
+      "positive_blocks": 3,
+      "negative_blocks": 2
+    },
+    {
+      "transform": "exposed_only",
+      "window": "occupied_10d",
+      "directional": 0.000975878,
+      "forward_minus_zero": -0.003480946,
+      "reverse_minus_zero": -0.004456824,
+      "min50_directional": 0.001059341,
+      "positive_blocks": 3,
+      "negative_blocks": 2
+    },
+    {
+      "transform": "exposed_only",
+      "window": "total_21d",
+      "directional": -0.004088906,
+      "forward_minus_zero": -0.00571712,
+      "reverse_minus_zero": -0.001628215,
+      "min50_directional": -0.009736252,
+      "positive_blocks": 2,
+      "negative_blocks": 3
+    },
+    {
+      "transform": "exposed_only",
+      "window": "total_31d",
+      "directional": -0.004714132,
+      "forward_minus_zero": -0.00445783,
+      "reverse_minus_zero": 0.000256302,
+      "min50_directional": -0.011636469,
+      "positive_blocks": 1,
+      "negative_blocks": 4
+    },
+    {
+      "transform": "exposed_only",
+      "window": "residue_14d_after_7d",
+      "directional": -0.004803391,
+      "forward_minus_zero": -0.005311884,
+      "reverse_minus_zero": -0.000508493,
+      "min50_directional": -0.012413422,
+      "positive_blocks": 2,
+      "negative_blocks": 3
+    },
+    {
+      "transform": "exposed_only",
+      "window": "residue_21d_after_10d",
+      "directional": -0.005760493,
+      "forward_minus_zero": -0.000597159,
+      "reverse_minus_zero": 0.005163334,
+      "min50_directional": -0.011407343,
+      "positive_blocks": 1,
+      "negative_blocks": 4
+    },
+    {
+      "transform": "both_equal",
+      "window": "instant",
+      "directional": 0,
+      "forward_minus_zero": 0,
+      "reverse_minus_zero": 0,
+      "min50_directional": 0,
+      "positive_blocks": 0,
+      "negative_blocks": 0
+    },
+    {
+      "transform": "both_equal",
+      "window": "occupied_7d",
+      "directional": -0.000861395,
+      "forward_minus_zero": 0.000678419,
+      "reverse_minus_zero": 0.001539814,
+      "min50_directional": 0.006123636,
+      "positive_blocks": 2,
+      "negative_blocks": 3
+    },
+    {
+      "transform": "both_equal",
+      "window": "occupied_10d",
+      "directional": -0.000089334,
+      "forward_minus_zero": 0.001728253,
+      "reverse_minus_zero": 0.001817587,
+      "min50_directional": 0.006350554,
+      "positive_blocks": 2,
+      "negative_blocks": 3
+    },
+    {
+      "transform": "both_equal",
+      "window": "total_21d",
+      "directional": -0.00544666,
+      "forward_minus_zero": 0.003227131,
+      "reverse_minus_zero": 0.008673791,
+      "min50_directional": -0.003032054,
+      "positive_blocks": 2,
+      "negative_blocks": 3
+    },
+    {
+      "transform": "both_equal",
+      "window": "total_31d",
+      "directional": -0.004648914,
+      "forward_minus_zero": 0.007485381,
+      "reverse_minus_zero": 0.012134296,
+      "min50_directional": 0.000603148,
+      "positive_blocks": 3,
+      "negative_blocks": 2
+    },
+    {
+      "transform": "both_equal",
+      "window": "residue_14d_after_7d",
+      "directional": -0.005346353,
+      "forward_minus_zero": 0.006229857,
+      "reverse_minus_zero": 0.01157621,
+      "min50_directional": -0.003531406,
+      "positive_blocks": 3,
+      "negative_blocks": 2
+    },
+    {
+      "transform": "both_equal",
+      "window": "residue_21d_after_10d",
+      "directional": -0.000844599,
+      "forward_minus_zero": 0.013813484,
+      "reverse_minus_zero": 0.014658083,
+      "min50_directional": 0.011628639,
+      "positive_blocks": 2,
+      "negative_blocks": 3
+    }
+  ],
+  "extreme_placement_sensitivities": [
+    {
+      "transform": "exposed_only",
+      "window": "residue_14d_after_7d",
+      "first_day": -0.03391818555090209,
+      "uniform": -0.004803391,
+      "last_day": 0.03002365801182778
+    },
+    {
+      "transform": "exposed_only",
+      "window": "residue_21d_after_10d",
+      "first_day": -0.03263565129068459,
+      "uniform": -0.005760493,
+      "last_day": 0.03173506184550247
+    },
+    {
+      "transform": "both_equal",
+      "window": "residue_14d_after_7d",
+      "first_day": -0.02713101020691286,
+      "uniform": -0.005346353,
+      "last_day": 0.029460618451420652
+    },
+    {
+      "transform": "both_equal",
+      "window": "residue_21d_after_10d",
+      "first_day": -0.024609742792754585,
+      "uniform": -0.000844599,
+      "last_day": 0.02925038513473514
+    }
+  ],
+  "notes": "Rounded aggregate transcription from actual local execution of NumPy script, not CI execution. Full 42-scenario output reproduced with script and exact source ZIP. Monthly adult observations treated only as hypothetical production input; lifetime windows are scenario anchors, not calibrated South American nest persistence. First/last-day are illustrative extremes not exhaustive partial-identification bounds. No climate adjustment, absolute resource supply, actual breeding/recipient behavior or fertilization outcome."
+}
