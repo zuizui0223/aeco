@@ -67,8 +67,16 @@ def read_ranges():
     return d,{"source_ref":ref,"source_rows":before,"unique_valid_rows":len(d),"species":int(d.species.nunique()),"native_cells":len(d[["x","y"]].drop_duplicates())}
 def rainfall(d):
     p=get("https://psl.noaa.gov/thredds/fileServer/Datasets/gpcp/precip.mon.mean.nc","gpcp_monthly.nc",50_000_000)
-    with xr.open_dataset(p) as ds:
-        a=ds["precip"].sel(time=slice("2010-01-01","2021-12-31"))
+    with xr.open_dataset(p,decode_times=False) as ds:
+        # PSL file uses a non-standard timezone suffix "0:00". Decode the verified
+        # numeric day offset explicitly, and fail closed for a different epoch.
+        units=str(ds.time.attrs.get("units",""))
+        if not units.startswith("days since 1800-01-01"):
+            raise ValueError("Unexpected GPCP time units: "+units)
+        dates=pd.to_datetime(ds.time.values,unit="D",origin="1800-01-01")
+        assert pd.Index(dates).is_unique and dates.is_monotonic_increasing
+        a=ds["precip"].assign_coords(time=dates).sel(time=slice("2010-01-01","2021-12-31"))
+        assert list(pd.DatetimeIndex(a.time.values).to_period("M"))==list(pd.period_range("2010-01","2021-12",freq="M"))
         assert a.sizes["time"]==144 and a.sizes["lat"]==72 and a.sizes["lon"]==144,dict(a.sizes)
         assert a.attrs.get("units") in ("mm/day","mm/d","mm day-1"),a.attrs
         # Total rain per month, then climatology, at the native 2.5-degree scale.
