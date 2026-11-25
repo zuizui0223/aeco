@@ -1,0 +1,124 @@
+name: AECO v1.7 paired coverage census
+on:
+  pull_request:
+    branches: [analysis/foam-temporal-v1.6]
+    paths:
+      - 'scripts/foam_coverage_v1_7.py'
+      - '.github/workflows/foam_coverage_v1_7.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install openpyxl pandas numpy pyreadr pyproj xarray netCDF4
+      - run: python scripts/foam_coverage_v1_7.py prepare
+      - uses: actions/upload-artifact@v4
+        with:
+          name: v17-frame
+          path: results/v1.7/frame.json
+          if-no-files-found: error
+  coverage:
+    needs: prepare
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    strategy:
+      fail-fast: false
+      max-parallel: 4
+      matrix:
+        shard: [0,1,2,3]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install pandas numpy pyproj
+      - uses: actions/download-artifact@v4
+        with:
+          name: v17-frame
+          path: results/v1.7
+      - run: python scripts/foam_coverage_v1_7.py collect --shard ${{ matrix.shard }} --nshards 4
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: v17-coverage-${{ matrix.shard }}
+          path: results/v1.7/coverage_*.jsonl
+          if-no-files-found: error
+  stage1:
+    needs: [prepare,coverage]
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install pandas numpy pyproj
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: v17-*
+          merge-multiple: true
+          path: results/v1.7
+      - run: python scripts/foam_coverage_v1_7.py stage1
+      - uses: actions/upload-artifact@v4
+        with:
+          name: v17-stage1
+          path: results/v1.7/
+          if-no-files-found: error
+  annual:
+    needs: stage1
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    strategy:
+      fail-fast: false
+      max-parallel: 2
+      matrix:
+        shard: [0,1]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install pandas numpy pyproj
+      - uses: actions/download-artifact@v4
+        with:
+          name: v17-stage1
+          path: results/v1.7
+      - run: python scripts/foam_coverage_v1_7.py annual --shard ${{ matrix.shard }} --nshards 2
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: v17-annual-${{ matrix.shard }}
+          path: results/v1.7/annual_*.jsonl
+          if-no-files-found: error
+  finish:
+    needs: [stage1,annual]
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install pandas numpy pyproj
+      - uses: actions/download-artifact@v4
+        with:
+          name: v17-stage1
+          path: results/v1.7
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: v17-annual-*
+          merge-multiple: true
+          path: results/v1.7
+      - run: python scripts/foam_coverage_v1_7.py finish
+      - uses: actions/upload-artifact@v4
+        with:
+          name: v17-final
+          path: results/v1.7/
+          if-no-files-found: error

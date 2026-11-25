@@ -1,0 +1,462 @@
+{
+  "status": "complete_verified_coverage_census",
+  "source_commit": "837f63733fca91a3569727581f9ed369e9086a22",
+  "run_id": 45599848032,
+  "stage1_job_id": 139157997558,
+  "finish_job_id": 139158553718,
+  "artifact": {
+    "id": 15015695860,
+    "zip_sha256": "3cc7ae47c8b2b6ece1afeb17ee6be0160eeba10ca37fc4104e69027887469717",
+    "members_sha256": {
+      "annual_0.jsonl": "de6ccba02414e2e46dddca4389718c1a0a20c43043291768ab2e71bca58d7dac",
+      "annual_1.jsonl": "fe5c2ea4db5ec09606822fa9693cb4281d89b9bbf612235fc878772faf0b20c4",
+      "annual_frame.json": "c2f38c072c73026bffecfb258fc2ece1c2eb96f7f42fd2c3ca46f1a56e75fd71",
+      "coverage_0.jsonl": "a2d49fbe02bf41e3dd59e18ee4c6a2efa58f7027157ec35231b7c7cc7e5b8926",
+      "coverage_1.jsonl": "30efe564a11c4f589a5962c0a40a9360f1fdd61d2338a02e3cc37dadec834453",
+      "coverage_2.jsonl": "4ad551d5cf43fef4d3599e0f477b7d0717bb096babf836dddd006aa27f786d57",
+      "coverage_3.jsonl": "32c20cbf651a5de68568186ae78ba1f54c82fb8b739b9520f61437eb56b314a5",
+      "coverage_summary.json": "9dd4522fb21e4657962cf32add5e2b42e31ba51b94ea88af8b574297a5925c6c",
+      "frame.json": "28ab83455da89f5a01934d9c1fdf02cee726d59d63914263e26d75a5d1f563ba",
+      "frozen_new_annual_support.json": "fb2989323b717f2e869a06272d8ee4b35b4e516d6a555f4ce3d19f9ee3606ff0",
+      "summary.json": "e8bd4325fc940d62ce46494c6ea55cab5d0f326fa80fcec7f6bfb003b672f5b9"
+    }
+  },
+  "local_audit": {
+    "all_408_cell_keys_and_prior_flags_reproduced": true,
+    "coverage_4_shard_digests_verified": true,
+    "annual_2_shard_digests_verified": true,
+    "final_zip_digest_verified": true,
+    "all_annual_candidates_recomputed": true,
+    "common_year_count_distribution_12": {
+      "0": 3,
+      "1": 3,
+      "2": 2,
+      "3": 1
+    },
+    "common_year_count_distribution_24": {
+      "0": 6,
+      "1": 1,
+      "2": 1,
+      "3": 1
+    },
+    "max_common_years": 3,
+    "taxonomy_pass_all": 396,
+    "taxonomy_pass_new": 349,
+    "source_E_class_strict_no_ground": 167,
+    "source_E_class_original": 187,
+    "source_S_class_Microhylidae_ambiguous": 13
+  },
+  "coverage": {
+    "status": "total_dated_support_census",
+    "frame": {
+      "status": "coverage_only_frame",
+      "n": 408,
+      "blocks": 8,
+      "previous_global_temporal_cells_in_frame": 53,
+      "new_cells": 355,
+      "taxonomy": {
+        "accepted_species_keys": 7832,
+        "ambiguous_names": 1,
+        "order_key": 952
+      },
+      "source_provenance": {
+        "nunes2021": {
+          "url": "https://www.salamandra-journal.com/salamandra/57-2021/57-3/57-3%2C%2012%20Nunes-de-Almeida%20et%20al%20Supplementary%20Table.xlsx",
+          "sha256": "3ec2b6ab0d457cf6bcd4bcbabd7bf51aa2ea3f1ec898d297f1f68a46a883b964",
+          "bytes": 572950
+        },
+        "amphibians_dist.rda": {
+          "url": "https://raw.githubusercontent.com/RS-eco/rasterSp/8c007900ceb2679f8aee04aec4d936648df5191b/data/amphibians_dist.rda",
+          "final_url": "https://raw.githubusercontent.com/RS-eco/rasterSp/8c007900ceb2679f8aee04aec4d936648df5191b/data/amphibians_dist.rda",
+          "bytes": 305884,
+          "sha256": "f197cff80d0de3f9b3b7e524540903db429a549c4dea2d5d462079cfac478f84"
+        }
+      },
+      "criteria": {
+        "total_dated_hits_each": 30,
+        "minimum_taxonomic_fraction": 0.8,
+        "common_years": 6,
+        "hits_per_group_per_common_year": 12,
+        "strong_hits_per_group_per_common_year": 24,
+        "minimum_new_cells": 20,
+        "minimum_new_blocks": 5
+      }
+    },
+    "all": {
+      "n": 408,
+      "blocks": 8,
+      "eligibility": {
+        "dated_hits_below_30": 365,
+        "total_support_pass": 31,
+        "taxonomy_below_80pct": 12
+      },
+      "all_query_success": 408,
+      "annual_candidates": 9,
+      "annual_candidate_blocks": 4,
+      "total_supported_blocks": 5,
+      "below30_by_group": {
+        "E": 341,
+        "S": 350,
+        "P": 332,
+        "B": 180
+      },
+      "zero_by_group": {
+        "E": 212,
+        "S": 160,
+        "P": 141,
+        "B": 48
+      },
+      "dated_hits": {
+        "E": 16274,
+        "S": 7639,
+        "P": 10949,
+        "B": 155002
+      }
+    },
+    "previous": {
+      "n": 53,
+      "blocks": 8,
+      "eligibility": {
+        "dated_hits_below_30": 41,
+        "total_support_pass": 6,
+        "taxonomy_below_80pct": 6
+      },
+      "all_query_success": 53,
+      "annual_candidates": 0,
+      "annual_candidate_blocks": 0,
+      "total_supported_blocks": 4,
+      "below30_by_group": {
+        "E": 43,
+        "S": 46,
+        "P": 37,
+        "B": 16
+      },
+      "zero_by_group": {
+        "E": 32,
+        "S": 24,
+        "P": 12,
+        "B": 5
+      },
+      "dated_hits": {
+        "E": 1436,
+        "S": 743,
+        "P": 2100,
+        "B": 27365
+      }
+    },
+    "untouched": {
+      "n": 355,
+      "blocks": 8,
+      "eligibility": {
+        "dated_hits_below_30": 324,
+        "total_support_pass": 25,
+        "taxonomy_below_80pct": 6
+      },
+      "all_query_success": 355,
+      "annual_candidates": 9,
+      "annual_candidate_blocks": 4,
+      "total_supported_blocks": 5,
+      "below30_by_group": {
+        "E": 298,
+        "S": 304,
+        "P": 295,
+        "B": 164
+      },
+      "zero_by_group": {
+        "E": 180,
+        "S": 136,
+        "P": 129,
+        "B": 43
+      },
+      "dated_hits": {
+        "E": 14838,
+        "S": 6896,
+        "P": 8849,
+        "B": 127637
+      }
+    },
+    "by_block": {
+      "3_2": {
+        "n": 14,
+        "blocks": 1,
+        "eligibility": {
+          "dated_hits_below_30": 14
+        },
+        "all_query_success": 14,
+        "annual_candidates": 0,
+        "annual_candidate_blocks": 0,
+        "total_supported_blocks": 0,
+        "below30_by_group": {
+          "E": 14,
+          "S": 14,
+          "P": 9,
+          "B": 0
+        },
+        "zero_by_group": {
+          "E": 11,
+          "S": 7,
+          "P": 0,
+          "B": 0
+        },
+        "dated_hits": {
+          "E": 15,
+          "S": 52,
+          "P": 686,
+          "B": 5344
+        }
+      },
+      "3_3": {
+        "n": 48,
+        "blocks": 1,
+        "eligibility": {
+          "dated_hits_below_30": 48
+        },
+        "all_query_success": 48,
+        "annual_candidates": 0,
+        "annual_candidate_blocks": 0,
+        "total_supported_blocks": 0,
+        "below30_by_group": {
+          "E": 47,
+          "S": 47,
+          "P": 42,
+          "B": 23
+        },
+        "zero_by_group": {
+          "E": 37,
+          "S": 31,
+          "P": 14,
+          "B": 1
+        },
+        "dated_hits": {
+          "E": 68,
+          "S": 75,
+          "P": 525,
+          "B": 6640
+        }
+      },
+      "3_4": {
+        "n": 101,
+        "blocks": 1,
+        "eligibility": {
+          "dated_hits_below_30": 96,
+          "total_support_pass": 5
+        },
+        "all_query_success": 101,
+        "annual_candidates": 1,
+        "annual_candidate_blocks": 1,
+        "total_supported_blocks": 1,
+        "below30_by_group": {
+          "E": 93,
+          "S": 90,
+          "P": 85,
+          "B": 54
+        },
+        "zero_by_group": {
+          "E": 69,
+          "S": 58,
+          "P": 51,
+          "B": 26
+        },
+        "dated_hits": {
+          "E": 6171,
+          "S": 2456,
+          "P": 3604,
+          "B": 52024
+        }
+      },
+      "3_5": {
+        "n": 13,
+        "blocks": 1,
+        "eligibility": {
+          "total_support_pass": 3,
+          "dated_hits_below_30": 10
+        },
+        "all_query_success": 13,
+        "annual_candidates": 2,
+        "annual_candidate_blocks": 1,
+        "total_supported_blocks": 1,
+        "below30_by_group": {
+          "E": 9,
+          "S": 10,
+          "P": 6,
+          "B": 4
+        },
+        "zero_by_group": {
+          "E": 2,
+          "S": 7,
+          "P": 2,
+          "B": 0
+        },
+        "dated_hits": {
+          "E": 3323,
+          "S": 624,
+          "P": 937,
+          "B": 7672
+        }
+      },
+      "4_2": {
+        "n": 17,
+        "blocks": 1,
+        "eligibility": {
+          "dated_hits_below_30": 15,
+          "total_support_pass": 2
+        },
+        "all_query_success": 17,
+        "annual_candidates": 1,
+        "annual_candidate_blocks": 1,
+        "total_supported_blocks": 1,
+        "below30_by_group": {
+          "E": 13,
+          "S": 13,
+          "P": 10,
+          "B": 1
+        },
+        "zero_by_group": {
+          "E": 5,
+          "S": 1,
+          "P": 1,
+          "B": 0
+        },
+        "dated_hits": {
+          "E": 1006,
+          "S": 468,
+          "P": 1006,
+          "B": 13207
+        }
+      },
+      "4_3": {
+        "n": 116,
+        "blocks": 1,
+        "eligibility": {
+          "dated_hits_below_30": 100,
+          "total_support_pass": 16
+        },
+        "all_query_success": 116,
+        "annual_candidates": 5,
+        "annual_candidate_blocks": 1,
+        "total_supported_blocks": 1,
+        "below30_by_group": {
+          "E": 78,
+          "S": 86,
+          "P": 91,
+          "B": 41
+        },
+        "zero_by_group": {
+          "E": 24,
+          "S": 15,
+          "P": 30,
+          "B": 8
+        },
+        "dated_hits": {
+          "E": 4900,
+          "S": 3076,
+          "P": 3434,
+          "B": 57955
+        }
+      },
+      "4_4": {
+        "n": 87,
+        "blocks": 1,
+        "eligibility": {
+          "dated_hits_below_30": 82,
+          "total_support_pass": 5
+        },
+        "all_query_success": 87,
+        "annual_candidates": 0,
+        "annual_candidate_blocks": 0,
+        "total_supported_blocks": 1,
+        "below30_by_group": {
+          "E": 75,
+          "S": 78,
+          "P": 79,
+          "B": 53
+        },
+        "zero_by_group": {
+          "E": 52,
+          "S": 29,
+          "P": 42,
+          "B": 13
+        },
+        "dated_hits": {
+          "E": 791,
+          "S": 888,
+          "P": 609,
+          "B": 10443
+        }
+      },
+      "7_3": {
+        "n": 12,
+        "blocks": 1,
+        "eligibility": {
+          "taxonomy_below_80pct": 12
+        },
+        "all_query_success": 12,
+        "annual_candidates": 0,
+        "annual_candidate_blocks": 0,
+        "total_supported_blocks": 0,
+        "below30_by_group": {
+          "E": 12,
+          "S": 12,
+          "P": 10,
+          "B": 4
+        },
+        "zero_by_group": {
+          "E": 12,
+          "S": 12,
+          "P": 1,
+          "B": 0
+        },
+        "dated_hits": {
+          "E": 0,
+          "S": 0,
+          "P": 148,
+          "B": 1717
+        }
+      }
+    },
+    "errors": {}
+  },
+  "annual": {
+    "status": "annual_support_gate_only",
+    "annual_all": {
+      "n": 9,
+      "status": {
+        "retrieved": 9
+      },
+      "passes_12": 0,
+      "blocks_12": 0,
+      "passes_24": 0,
+      "blocks_24": 0,
+      "cell_years_12": 0
+    },
+    "annual_previous": {
+      "n": 0,
+      "status": {},
+      "passes_12": 0,
+      "blocks_12": 0,
+      "passes_24": 0,
+      "blocks_24": 0,
+      "cell_years_12": 0
+    },
+    "annual_untouched": {
+      "n": 9,
+      "status": {
+        "retrieved": 9
+      },
+      "passes_12": 0,
+      "blocks_12": 0,
+      "passes_24": 0,
+      "blocks_24": 0,
+      "cell_years_12": 0
+    },
+    "new_blocks_with_annual_support": [],
+    "year_month_gate": false,
+    "limitations": [
+      "Annual record coverage is necessary, not sufficient for monthly analysis. No joint year-month outcomes, seasonal direction, climate correction, or foam/mating/fertilization inference.",
+      "Prior unsampled cells share geographic blocks and are not independent continent-level replications.",
+      "Range taxa are exact accepted-name matches from an historical distribution panel; absence from mapped records is not biological absence.",
+      "Live GBIF index counts and date filters are snapshots; mismatches retained."
+    ]
+  },
+  "decision": "Annual threshold not reached anywhere; no year-month directional or climate model. Separately freeze all 25 previously unsampled total-support passing cells for a pooled-month replication diagnostic (not a year-month test, not independent geographic blocks). No monthly outcome retrieved in v1.7."
+}
