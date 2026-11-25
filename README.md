@@ -2,6 +2,15 @@
 
 **Status (2026-11-25): exploratory. No demonstrated frog-to-butterfly mating effect.**
 
+## v0.6 — foam nests as reproductive architecture (2026-11-25)
+
+- [Foam-nest literature and gated field/experimental protocol](docs/foam_nest_v0.6.md)
+- [Published placement and nest-date table transcription](data/literature/foam_nest_placement_tables_v0.6.json)
+- [Descriptive benchmark script](scripts/foam_nest_benchmark.py)
+- [Recalculated frog-nest results](results/foam_nest_benchmark_v0.6.json)
+
+The focal provider is now the frog foam nest, particularly Zhangixalus arboreus, not generic frog presence or carrion. Natural records show 17/132 ground nests (2019: 15/65; 2020: 2/67). A separate experimental table gives a median 13 days between discovery and the reported hatching/collapse monitoring endpoint (9 nests; not post-abandonment persistence). Compare visual/UV landmark, measured chemical resource, age-dependent cue, social attraction and diversion/risk mechanisms. Do not assume foam is a female-wing mimic or that proteins imply attraction. Prioritize noninvasive matched observations and inert visual/chemistry controls; the final endpoint remains confirmed fertilization across initially unmated females. No direct foam-to-Pieridae link demonstrated and no raw Figshare or verified new butterfly data acquired. No active nest manipulation is proposed.
+
 ## v0.5 — direct resource-use evidence and published aggregate benchmark (2026-11-25)
 
 - [Evidence interpretation and revised field priority](docs/frog_link_v0.5.md)
