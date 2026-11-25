@@ -110,7 +110,7 @@ def analyze():
 def test():
     assert overlap([1]+[0]*11,[0,1]+[0]*10,1)==1
     a=[1]+[0]*11;b=[0,1]+[0]*10
-    r={"E":{"months":a},"S":{"months":b},"P":{"months":b},"B":{"months":a}}
+    r={"E":{"months":a},"S":{"months":[1]*12},"P":{"months":b},"B":{"months":[1]*12}}
     q=contrasts(r,"S")
     assert q["directional_D"]>0
     r["S"]=r["E"];assert all(v==0 for k,v in contrasts(r,"S").items() if k.startswith("D") or k=="directional_D")
