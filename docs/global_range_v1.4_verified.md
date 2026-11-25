@@ -46,3 +46,18 @@ NOAA GPCP v2.3 monthly 2.5 degree, https://psl.noaa.gov/thredds/catalog/Datasets
 
 ## Next analysis gate
 Use recipient species/family taxonomy and georeferenced observations or range polygons; define effort and spatial blocks, never use butterfly country checklists as 100 km occupancy. Range overlap is only potential exposure, not breeding phenology, mating or fertility. For environmental analysis, retain native GPCP resolution and distinguish range-climate descriptions from a new trait-evolution result. No claim of a frog-mediated reproductive effect.
+
+## Successful rainfall integration (run 3)
+
+https://github.com/zuizui0223/aeco/actions/runs/45584079899/job/139101096468 succeeded. All 144 months (2010–2021), 1,698 matched species and 145,826 native species-cell rows received annualized climatology and monthly-total CV; 1,728 distinct native 2.5-degree GPCP cells underlie the join. Corrected explicit time decoding; range summaries reproduced. Source file hash unchanged. Final artifact: https://github.com/zuizui0223/aeco/actions/runs/45584079899/artifacts/15008616157 . Machine-readable verified result: [JSON](../results/global_range_v1.4_verified_summary.json).
+
+| Class | n species | Median species range precipitation (mm/year) | Median species range mean monthly CV |
+|---|---:|---:|---:|
+| Potentially exposed | 148 | 1708.51 | 0.65043 |
+| Sheltered | 31 | 1559.28 | 0.71392 |
+| Variable | 25 | 999.16 | 0.51951 |
+| Mixed | 7 | 1525.19 | 0.49621 |
+| No documented froth/bubble | 1485 | 1514.45 | 0.52858 |
+| Bubble only | 2 | 1643.09 | 0.34856 |
+
+Within Leptodactylidae exposed/sheltered median rainfall 1317.67/1515.13, CV .53942/.55667. Within Microhylidae both median rainfall ~1559.28 and CV ~.82030. Rhacophoridae sheltered n=1; no meaningful pooled within-family replication. The pooled rainfall contrast does not reproduce consistently within the two well-represented families. Descriptive comparison only, no inferential test or correction for phylogeny, spatial dependence, taxonomic mismatch, range size or source age. These climate metrics describe range-wide climatology, not actual dates of frog reproduction, rainy-season exposure or recipient activity. The source climate grid is 2.5 degrees; no claim of 100-km climate resolution. No butterfly grid association or fertilization result.
