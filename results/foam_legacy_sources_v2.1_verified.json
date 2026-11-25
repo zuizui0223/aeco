@@ -1,0 +1,128 @@
+{
+  "status": "source_acquisition_audited",
+  "run_id": 45658892449,
+  "job_id": 139363009899,
+  "source_commit": "37acf7c391d3e30820e0f274d712541f06027444",
+  "japan": {
+    "doi": "10.6084/m9.figshare.23667387.v1",
+    "license": "CC BY 4.0",
+    "file_id": 41534736,
+    "bytes": 399803,
+    "md5": "a426d6c058926846959e1aa797efa463",
+    "sha256": "f15f470e06a05ddd0de4ac1954e16517741463951a2b0eb6657a2ef8c8b77176",
+    "sheets": [
+      {
+        "name": "➀Thermal data-arboreal",
+        "rows_including_header": 1930,
+        "columns": 7
+      },
+      {
+        "name": "➁Thermal data-terrestrial",
+        "rows_including_header": 1965,
+        "columns": 7
+      },
+      {
+        "name": "➂Survival data for each eggs",
+        "rows_including_header": 3598,
+        "columns": 3
+      },
+      {
+        "name": "④Survival data for each nests",
+        "rows_including_header": 10,
+        "columns": 6
+      },
+      {
+        "name": "Figure 2a",
+        "rows_including_header": 1930,
+        "columns": 2
+      },
+      {
+        "name": "Figure 2b",
+        "rows_including_header": 1965,
+        "columns": 2
+      },
+      {
+        "name": "Figure 3a",
+        "rows_including_header": 1930,
+        "columns": 2
+      },
+      {
+        "name": "Figure 3b",
+        "rows_including_header": 1965,
+        "columns": 2
+      },
+      {
+        "name": "Figure 4",
+        "rows_including_header": 1834,
+        "columns": 5
+      },
+      {
+        "name": "Figure 5",
+        "rows_including_header": 10,
+        "columns": 2
+      }
+    ],
+    "scope": "Thermal recordings and hatching/egg survival; figures contain repeated derivative rows. No separately documented postdeparture decay measurements identified by schema. Do not treat row count as independent nests."
+  },
+  "dryad": {
+    "panama_hydration": {
+      "identifier": "doi:10.5061/dryad.866t1g1r2",
+      "files": [
+        {
+          "path": "Along_development_all_species_E_E.xlsx",
+          "size": 61057,
+          "digest": "73f2b8c4fcd195b0c3a9b0848ef10f6c2be79df05e6a0bf061622d551429d453",
+          "digestType": "sha-256",
+          "status": "failed",
+          "error": "<HTTPError 401: 'Unauthorized'>"
+        },
+        {
+          "path": "Amount_of_nitrogen_excretion_at_latest_day_all_species.xlsx",
+          "size": 54681,
+          "digest": "40ab238f329e2e23a7847f27850406c3e30726e83df3551094722bd18f4e1bf4",
+          "digestType": "sha-256",
+          "status": "failed",
+          "error": "<HTTPError 401: 'Unauthorized'>"
+        },
+        {
+          "path": "LC50_toxicity_experiment_all_species.xlsx",
+          "size": 66194,
+          "digest": "9604ba04a25f5d32dfb2dcbe06545de9efd7a9e9ed04b589626426896b056afb",
+          "digestType": "sha-256",
+          "status": "failed",
+          "error": "<HTTPError 401: 'Unauthorized'>"
+        },
+        {
+          "path": "README.txt",
+          "size": 1342,
+          "digest": "983ca628095555a07b2f17eae27d5f53fbaad50dedc50187559336c7dcd951b0",
+          "digestType": "sha-256",
+          "status": "failed",
+          "error": "<HTTPError 401: 'Unauthorized'>"
+        }
+      ]
+    },
+    "africa_nest_geometry": {
+      "identifier": "doi:10.5061/dryad.9s4mw6mx8",
+      "files": [
+        {
+          "path": "NEW_Dryad-_all_data_Microsoft_Excel_Worksheet_-_Copy_-_Copy_-_Copy.xlsx",
+          "size": 97853,
+          "digest": "aee49e2bea7417805a9be50097c26959165fafac4ac273c2e201efef552b0c02",
+          "digestType": "sha-256",
+          "status": "failed",
+          "error": "<HTTPError 401: 'Unauthorized'>"
+        },
+        {
+          "path": "README.md",
+          "size": 9566,
+          "digest": "b6fc7071e74c00cd3cc6477d5763db2436738a56f50164031ead83cdf39ac38e",
+          "digestType": "sha-256",
+          "status": "failed",
+          "error": "<HTTPError 401: 'Unauthorized'>"
+        }
+      ]
+    }
+  },
+  "limitations": "Raw Japanese workbook acquired and schema audited in CI. Not analyzed in full or independently downloaded locally. Dryad metadata retrieved but file payloads returned 401. No transient signed download URLs stored here."
+}
