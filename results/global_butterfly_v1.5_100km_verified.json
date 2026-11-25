@@ -1,0 +1,822 @@
+{
+  "status": "verified_artifact_and_local_audit",
+  "source_commit": "8b63cc538bf599ab43145d96793113124d73039d",
+  "run_id": 45585783825,
+  "job_id": 139106901385,
+  "artifact_id": 15008049514,
+  "artifact_zip_sha256": "f2299a12289969131aa9a5cff91082bddf46b6d6d84697a2f662e32bc678482c",
+  "artifact_sha256_matches_api": true,
+  "artifact_file_hashes": {
+    "frozen_sample.csv": "0c42284a30f2f5d2bc6d532e80c0cd73b7b4fdcf9a65f7e10fe6f8eee3b476ca",
+    "grid_butterfly_pilot.csv": "440248dae1e8921894d5871ea64227a04f150ae54e24e0ab1ca051f56d4f20a6",
+    "recipient_facets_before_climate.csv": "925f1c8a07323d6a01b8a94fb3e674ea70dcd645de620f9e2642a2326ac1ef24",
+    "summary.json": "932993cdc05b3487cdd1a3f14ac1eb37da6f1e2ef9652f28d7370c406372389d"
+  },
+  "ci_actual_frozen_keys": [
+    [
+      -145,
+      63
+    ],
+    [
+      -127,
+      63
+    ],
+    [
+      -125,
+      62
+    ],
+    [
+      -117,
+      64
+    ],
+    [
+      -107,
+      34
+    ],
+    [
+      -105,
+      30
+    ],
+    [
+      -105,
+      32
+    ],
+    [
+      -104,
+      32
+    ],
+    [
+      -97,
+      27
+    ],
+    [
+      -95,
+      28
+    ],
+    [
+      -93,
+      22
+    ],
+    [
+      -91,
+      51
+    ],
+    [
+      -88,
+      24
+    ],
+    [
+      -86,
+      60
+    ],
+    [
+      -81,
+      13
+    ],
+    [
+      -77,
+      48
+    ],
+    [
+      -76,
+      -9
+    ],
+    [
+      -76,
+      -8
+    ],
+    [
+      -76,
+      -7
+    ],
+    [
+      -76,
+      27
+    ],
+    [
+      -74,
+      -55
+    ],
+    [
+      -74,
+      55
+    ],
+    [
+      -73,
+      -58
+    ],
+    [
+      -73,
+      -52
+    ],
+    [
+      -72,
+      -54
+    ],
+    [
+      -72,
+      -52
+    ],
+    [
+      -72,
+      -15
+    ],
+    [
+      -72,
+      25
+    ],
+    [
+      -71,
+      -12
+    ],
+    [
+      -71,
+      11
+    ],
+    [
+      -70,
+      -48
+    ],
+    [
+      -70,
+      -16
+    ],
+    [
+      -69,
+      -13
+    ],
+    [
+      -68,
+      -43
+    ],
+    [
+      -66,
+      -36
+    ],
+    [
+      -64,
+      -49
+    ],
+    [
+      -63,
+      -32
+    ],
+    [
+      -63,
+      -21
+    ],
+    [
+      -61,
+      -37
+    ],
+    [
+      -59,
+      -33
+    ],
+    [
+      -58,
+      -41
+    ],
+    [
+      -58,
+      1
+    ],
+    [
+      -56,
+      -33
+    ],
+    [
+      -55,
+      -40
+    ],
+    [
+      -54,
+      -6
+    ],
+    [
+      -53,
+      -43
+    ],
+    [
+      -52,
+      -12
+    ],
+    [
+      -51,
+      -37
+    ],
+    [
+      -47,
+      -35
+    ],
+    [
+      -43,
+      -6
+    ],
+    [
+      -14,
+      12
+    ],
+    [
+      -12,
+      10
+    ],
+    [
+      -12,
+      15
+    ],
+    [
+      -9,
+      11
+    ],
+    [
+      -9,
+      48
+    ],
+    [
+      -8,
+      11
+    ],
+    [
+      -6,
+      44
+    ],
+    [
+      -4,
+      6
+    ],
+    [
+      -4,
+      9
+    ],
+    [
+      -4,
+      10
+    ],
+    [
+      -4,
+      11
+    ],
+    [
+      -4,
+      46
+    ],
+    [
+      -3,
+      6
+    ],
+    [
+      -2,
+      12
+    ],
+    [
+      -2,
+      15
+    ],
+    [
+      -2,
+      48
+    ],
+    [
+      0,
+      11
+    ],
+    [
+      13,
+      -3
+    ],
+    [
+      14,
+      -27
+    ],
+    [
+      14,
+      -7
+    ],
+    [
+      17,
+      14
+    ],
+    [
+      22,
+      43
+    ],
+    [
+      26,
+      2
+    ],
+    [
+      26,
+      50
+    ],
+    [
+      27,
+      -40
+    ],
+    [
+      29,
+      -38
+    ],
+    [
+      29,
+      -37
+    ],
+    [
+      29,
+      -36
+    ],
+    [
+      29,
+      55
+    ],
+    [
+      30,
+      -34
+    ],
+    [
+      31,
+      -31
+    ],
+    [
+      31,
+      15
+    ],
+    [
+      33,
+      -32
+    ],
+    [
+      34,
+      -30
+    ],
+    [
+      34,
+      -29
+    ],
+    [
+      34,
+      -16
+    ],
+    [
+      37,
+      -9
+    ],
+    [
+      37,
+      16
+    ],
+    [
+      40,
+      -2
+    ],
+    [
+      43,
+      -32
+    ],
+    [
+      43,
+      -24
+    ],
+    [
+      44,
+      -32
+    ],
+    [
+      45,
+      -32
+    ],
+    [
+      45,
+      -31
+    ],
+    [
+      45,
+      -30
+    ],
+    [
+      46,
+      -27
+    ],
+    [
+      46,
+      53
+    ],
+    [
+      47,
+      -24
+    ],
+    [
+      47,
+      -18
+    ],
+    [
+      64,
+      38
+    ],
+    [
+      65,
+      37
+    ],
+    [
+      70,
+      20
+    ],
+    [
+      73,
+      30
+    ],
+    [
+      78,
+      19
+    ],
+    [
+      78,
+      29
+    ],
+    [
+      79,
+      37
+    ],
+    [
+      85,
+      34
+    ],
+    [
+      92,
+      2
+    ],
+    [
+      93,
+      31
+    ],
+    [
+      98,
+      31
+    ],
+    [
+      99,
+      31
+    ],
+    [
+      101,
+      1
+    ],
+    [
+      104,
+      15
+    ],
+    [
+      106,
+      24
+    ],
+    [
+      107,
+      39
+    ],
+    [
+      109,
+      -32
+    ],
+    [
+      110,
+      -35
+    ],
+    [
+      110,
+      -34
+    ],
+    [
+      110,
+      -33
+    ],
+    [
+      111,
+      -27
+    ],
+    [
+      114,
+      -39
+    ],
+    [
+      114,
+      -27
+    ],
+    [
+      115,
+      -41
+    ],
+    [
+      115,
+      -37
+    ],
+    [
+      115,
+      -34
+    ],
+    [
+      116,
+      -40
+    ],
+    [
+      116,
+      -38
+    ],
+    [
+      116,
+      15
+    ],
+    [
+      116,
+      36
+    ],
+    [
+      117,
+      -42
+    ],
+    [
+      117,
+      -1
+    ],
+    [
+      117,
+      35
+    ],
+    [
+      117,
+      37
+    ],
+    [
+      118,
+      -42
+    ],
+    [
+      118,
+      -34
+    ],
+    [
+      120,
+      -36
+    ],
+    [
+      121,
+      -21
+    ],
+    [
+      123,
+      -20
+    ],
+    [
+      123,
+      32
+    ],
+    [
+      123,
+      33
+    ],
+    [
+      124,
+      33
+    ],
+    [
+      124,
+      35
+    ],
+    [
+      125,
+      34
+    ],
+    [
+      125,
+      35
+    ],
+    [
+      125,
+      36
+    ],
+    [
+      127,
+      38
+    ],
+    [
+      127,
+      40
+    ],
+    [
+      128,
+      -33
+    ],
+    [
+      130,
+      42
+    ],
+    [
+      130,
+      43
+    ],
+    [
+      131,
+      -40
+    ],
+    [
+      133,
+      45
+    ],
+    [
+      136,
+      -10
+    ],
+    [
+      138,
+      -5
+    ],
+    [
+      140,
+      -50
+    ],
+    [
+      141,
+      -40
+    ],
+    [
+      141,
+      -8
+    ],
+    [
+      142,
+      -8
+    ],
+    [
+      144,
+      -45
+    ],
+    [
+      145,
+      -42
+    ]
+  ],
+  "ci_keys_compact_json_sha256": "2b8ce98cfe4ea7a6c4f3e11aef82b620931cca11104913ba68c82be6b60a5799",
+  "sampling_reproducibility": {
+    "local_prequery_n": 160,
+    "ci_n": 160,
+    "overlapping_keys": 32,
+    "ci_actual_blocks": 39,
+    "ci_frogs_ge5": 63,
+    "ci_both_exposed_sheltered": 23,
+    "interpretation": "Same stratum allocations, different keys across dependency versions; CI sample chosen before recipient queries. Use actual keys."
+  },
+  "attrition": {
+    "total_hits": 86695,
+    "identified_species_hits": 82925,
+    "pieridae_hits": 13388,
+    "zero_hits": 44,
+    "positive_hits_but_identified_under50": 75,
+    "identified_ge50": 41,
+    "failed_all_species_coverage_given_ge50": 14,
+    "failed_pieridae_coverage_after_all_species_gate": 1,
+    "eligible_50": 26,
+    "eligible_100": 20,
+    "eligible_50_by_latitude": {
+      "north": 15,
+      "tropics": 9,
+      "south": 2
+    }
+  },
+  "local_sensitivity": {
+    "scope": "exploratory temperature-adjusted secondary record share; no rainfall adjustment; not the primary rarefied richness endpoint",
+    "scale100": {
+      "n": 41,
+      "blocks": 22,
+      "exposed_effect_per_10pp": 0.0028218942791570566,
+      "exposed_ci95": [
+        -0.012752231796831036,
+        0.01839602035514515
+      ],
+      "exposed_p": 0.7100971588687673,
+      "sheltered_effect_per_10pp": -0.02747734749634507,
+      "sheltered_ci95": [
+        -0.07333031456747943,
+        0.018375619574789292
+      ],
+      "contrast_effect_per_10pp": 0.030299241775502125,
+      "contrast_ci95": [
+        -0.01843685948429879,
+        0.07903534303530305
+      ],
+      "contrast_p": 0.2100908145883998,
+      "blocked_cv_gain": -0.3356436165485184
+    },
+    "scale200_same_covariates": {
+      "n": 71,
+      "blocks": 34,
+      "exposed_effect_per_10pp": -0.0028402869806965526,
+      "exposed_ci95": [
+        -0.010403302491265204,
+        0.004722728529872099
+      ],
+      "exposed_p": 0.45025963230513394,
+      "sheltered_effect_per_10pp": -0.010586806722584958,
+      "sheltered_ci95": [
+        -0.033293456025386504,
+        0.012119842586304467
+      ],
+      "contrast_effect_per_10pp": 0.007746519741888405,
+      "contrast_ci95": [
+        -0.01708084852827708,
+        0.03257388301205389
+      ],
+      "contrast_p": 0.5299358181455248,
+      "blocked_cv_gain": -0.539590477003838
+    },
+    "min5_frogs_record_share_n": 21
+  },
+  "ci_result": {
+    "status": "sampled_grid_pilot_not_fertilization",
+    "scale_km": 100,
+    "sampling": {
+      "frame_cells": 8900,
+      "sample_cells": 160,
+      "strata": 42,
+      "source_provenance": {
+        "nunes2021": {
+          "url": "https://www.salamandra-journal.com/salamandra/57-2021/57-3/57-3%2C%2012%20Nunes-de-Almeida%20et%20al%20Supplementary%20Table.xlsx",
+          "sha256": "3ec2b6ab0d457cf6bcd4bcbabd7bf51aa2ea3f1ec898d297f1f68a46a883b964",
+          "bytes": 572950
+        },
+        "amphibians_dist.rda": {
+          "url": "https://raw.githubusercontent.com/RS-eco/rasterSp/8c007900ceb2679f8aee04aec4d936648df5191b/data/amphibians_dist.rda",
+          "final_url": "https://raw.githubusercontent.com/RS-eco/rasterSp/8c007900ceb2679f8aee04aec4d936648df5191b/data/amphibians_dist.rda",
+          "bytes": 305884,
+          "sha256": "f197cff80d0de3f9b3b7e524540903db429a549c4dea2d5d462079cfac478f84"
+        },
+        "gpcp_monthly.nc": {
+          "url": "https://psl.noaa.gov/thredds/fileServer/Datasets/gpcp/precip.mon.mean.nc",
+          "final_url": "https://psl.noaa.gov/thredds/fileServer/Datasets/gpcp/precip.mon.mean.nc",
+          "bytes": 12457409,
+          "sha256": "85f4cc25292ec90a017b1dffebf9abb1f375376575a487d116289450dfa37c2e"
+        },
+        "temperature_ncss.nc": {
+          "url": "https://psl.noaa.gov/thredds/ncss/grid/Datasets/ncep.reanalysis.derived/surface/air.mon.mean.nc?var=air&north=90&south=-90&west=0&east=359.9&horizStride=1&time_start=2010-01-01T00%3A00%3A00Z&time_end=2021-12-01T00%3A00%3A00Z&timeStride=1&accept=netcdf",
+          "final_url": "https://psl.noaa.gov/thredds/ncss/grid/Datasets/ncep.reanalysis.derived/surface/air.mon.mean.nc?var=air&north=90&south=-90&west=0&east=359.9&horizStride=1&time_start=2010-01-01T00%3A00%3A00Z&time_end=2021-12-01T00%3A00%3A00Z&timeStride=1&accept=netcdf",
+          "bytes": 6059804,
+          "sha256": "67cd0e07b66747d67299fa10e3a910651061714e486bf5dc7e666b88b482063e"
+        }
+      },
+      "rainfall_status": "failed",
+      "rainfall_error": "OSError(-101, 'NetCDF: HDF error')",
+      "temperature_status": "success"
+    },
+    "taxonomy": {
+      "family_keys": {
+        "Hesperiidae": 6953,
+        "Papilionidae": 9417,
+        "Pieridae": 5481,
+        "Nymphalidae": 7017,
+        "Lycaenidae": 5473,
+        "Riodinidae": 1933999
+      },
+      "global_pieridae_species_keys": 702,
+      "global_pieridae_hits": 7702156,
+      "global_pieridae_species_resolved_hits": 7579855
+    },
+    "api_requests": 167,
+    "query_status": {
+      "retrieved": 160
+    },
+    "errors": {},
+    "n_50": 26,
+    "n_100": 20,
+    "total_hits": 86695,
+    "zero_hits": 44,
+    "strata_retention": {
+      "exposed_no_sheltered": {
+        "size": 44,
+        "count": 8
+      },
+      "no_froth": {
+        "size": 61,
+        "count": 12
+      },
+      "other_froth": {
+        "size": 28,
+        "count": 4
+      },
+      "sheltered_present": {
+        "size": 27,
+        "count": 2
+      }
+    },
+    "models": {
+      "50_geography_only": {
+        "status": "insufficient_support",
+        "n": 26,
+        "blocks": 13
+      },
+      "100_geography_only": {
+        "status": "insufficient_support",
+        "n": 20,
+        "blocks": 13
+      }
+    }
+  },
+  "interpretation": "100-km rarefied richness insufficient; rainfall file HDF error; recipient counts preserved. Secondary temperature-only comparison direction differs across grains and both blocked MSE worsens. No positive generalizable association or actual mating/ferility inference. Summed hits across scales may overlap and must not be represented as unique observations."
+}
