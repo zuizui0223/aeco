@@ -17,6 +17,69 @@ def request(url,max_bytes=15_000_000):
         raw=r.read(max_bytes+1)
         if len(raw)>max_bytes: raise ValueError("oversize")
         return raw,r.geturl(),r.headers.get("Content-Type")
+
+def normalize_nunes(w, source_sha):
+    """Parse one-hot documented modes, retaining all modes and uncertain rows."""
+    s=w["Table S1"]
+    rows=s.iter_rows(values_only=True)
+    next(rows)
+    header=next(rows)
+    assert tuple(header[:3])==("Group","Family","Species"), repr(header[:3])
+    cols={}
+    for i,v in enumerate(header):
+        if str(v).strip().isdigit():
+            code=int(str(v).strip())
+            if 1<=code<=74:
+                assert code not in cols, code
+                cols[code]=i
+    assert set(cols)==set(range(1,75)), sorted(cols)
+    cross={int(r["mode"]):r for r in csv.DictReader(Path("data/literature/foam_mode_crosswalk_v1.2.csv").open())}
+    assert set(cross)==set(range(44,66))
+    records=[]; anomalies=Counter(); marker_values=Counter(); excluded_groups=Counter()
+    for row in rows:
+        group=str(row[0] or "").strip()
+        if group.lower()!="anura":
+            if group: excluded_groups[group]+=1
+            continue
+        family=str(row[1] or "").strip()
+        name=str(row[2] or "").strip()
+        if not family or not name:
+            anomalies["missing_family_or_species"]+=1
+            continue
+        modes=[]; unusual=[]
+        for k,i in cols.items():
+            v=row[i] if i<len(row) else None
+            if v is None or str(v).strip()=="": continue
+            marker_values[str(v)]+=1
+            if str(v).strip() in {"1","1.0"}: modes.append(k)
+            elif str(v).strip() not in {"0","0.0"}: unusual.append(f"{k}:{v}")
+        froth=[k for k in modes if 44<=k<=64]
+        exposure=sorted({cross[k]["potential_exposure_class"] for k in froth})
+        if unusual: typ="unresolved_marker"
+        elif not modes: typ="unknown_mode"
+        elif froth:
+            typ="froth_"+(exposure[0] if len(exposure)==1 else "mixed_exposure")
+        elif 65 in modes: typ="bubble_only"
+        else: typ="no_documented_froth_or_bubble"
+        records.append(dict(species_as_used=name,family_as_used=family,modes=";".join(map(str,modes)),froth_modes=";".join(map(str,froth)),potential_exposure=";".join(exposure),trait_class=typ,unusual_markers=";".join(unusual)))
+    name_counts=Counter(r["species_as_used"] for r in records)
+    duplicate_names={k:v for k,v in name_counts.items() if v>1}
+    unique=[r for r in records if name_counts[r["species_as_used"]]==1]
+    by_class=Counter(r["trait_class"] for r in unique)
+    foam=[r for r in unique if r["trait_class"].startswith("froth_")]
+    mode_counts=Counter(int(m) for r in foam for m in r["froth_modes"].split(";") if m)
+    fam=Counter(r["family_as_used"] for r in foam)
+    n_known=sum(v for k,v in by_class.items() if k not in {"unresolved_marker","unknown_mode"})
+    report=dict(status="normalized_source_taxonomy",source_sha256=source_sha,anura_rows=len(records),unique_species_name_rows=len(unique),duplicate_names=duplicate_names,excluded_groups=dict(excluded_groups),anomalies=dict(anomalies),marker_values=dict(marker_values),trait_counts=dict(by_class),n_known_modes=n_known,n_strict_froth=len(foam),froth_by_family=dict(fam),froth_mode_counts=dict(sorted(mode_counts.items())),n_multiple_froth_modes=sum(";" in r["froth_modes"] for r in foam),notes="Documented reproductive modes, not global completeness or fixed exposure; duplicate names excluded from aggregate. No taxonomic harmonization, spatial or fertility inference.")
+    (ROOT/"nunes2021_trait_summary.json").write_text(json.dumps(report,ensure_ascii=False,indent=2))
+    if records:
+        with (ROOT/"nunes2021_traits.csv").open("w",newline="",encoding="utf-8") as fh:
+            out=csv.DictWriter(fh,fieldnames=list(records[0]))
+            out.writeheader()
+            out.writerows(records)
+    print("NUNES_NORMALIZED "+json.dumps(report,ensure_ascii=False))
+    return report
+
 def get_sources():
     report={}
     for name,(url,kind) in SOURCES.items():
@@ -31,6 +94,7 @@ def get_sources():
                 for s in w:
                     preview=[[str(v)[:100] if v is not None else None for v in r] for r in s.iter_rows(min_row=1,max_row=6,max_col=min(s.max_column or 25,25),values_only=True)]
                     entry["sheets"].append({"name":s.title,"rows":s.max_row,"cols":s.max_column,"preview":preview})
+                entry["trait_summary"]=normalize_nunes(w,entry["sha256"])
                 w.close()
             else:
                 with zipfile.ZipFile(io.BytesIO(raw)) as z:
@@ -42,7 +106,7 @@ def get_sources():
                         for tr in table.findall("./w:tr",ns):
                             rows.append([" ".join(t.text or "" for t in tc.findall(".//w:t",ns))[:100] for tc in tr.findall("./w:tc",ns)])
                         entry["tables"].append({"rows":len(rows),"preview":rows[:6]})
-            entry["status"]="schema_acquired_not_normalized"
+            entry["status"]="normalized_source_taxonomy" if kind=="xlsx" else "schema_acquired_not_normalized"
         except Exception as exc:
             entry.update(error=type(exc).__name__+": "+str(exc))
         report[name]=entry
