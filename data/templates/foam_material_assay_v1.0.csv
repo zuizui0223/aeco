@@ -1,0 +1,1 @@
+sample_id,nest_id,pond_code,material_type,confirmed_departure,stage,collection_date,collection_time_local,permit_record,sample_type,wet_mass_mg,dry_mass_mg,extraction_volume_ml,exposed_area_cm2,elapsed_since_wetting_min,analyte,method,value,unit,qualifier,lod,loq,blank_batch,calibration_batch,spike_recovery_pct,temperature_c,notes
