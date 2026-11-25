@@ -113,7 +113,7 @@ def test():
     r={"E":{"months":a},"S":{"months":[1]*12},"P":{"months":b},"B":{"months":[1]*12}}
     q=contrasts(r,"S")
     assert q["directional_D"]>0
-    r["S"]=r["E"];assert all(v==0 for k,v in contrasts(r,"S").items() if k.startswith("D") or k=="directional_D")
+    r["S"]=r["E"];assert all(abs(v)<1e-12 for k,v in contrasts(r,"S").items() if k.startswith("D") or k=="directional_D")
     m=block_summary([{"block":"a","directional_D":.1},{"block":"b","directional_D":-.1}],"directional_D")
     assert m["block_balanced_mean"]==0 and m["sign_flip_diagnostic_two_sided_p"]==1
     print("frozen frame and statistic checks",len(frame()))
