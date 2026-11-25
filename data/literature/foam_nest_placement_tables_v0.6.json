@@ -1,0 +1,124 @@
+{
+  "status": "published_table_transcription_not_butterfly_data",
+  "taxon": "Zhangixalus arboreus",
+  "natural_placement_source": "https://doi.org/10.5358/hsj.40.151",
+  "natural_counts": [
+    {
+      "year": 2019,
+      "arboreal": 50,
+      "terrestrial": 15
+    },
+    {
+      "year": 2020,
+      "arboreal": 65,
+      "terrestrial": 2
+    }
+  ],
+  "experiment_source": "https://doi.org/10.1002/ece3.10926",
+  "experiment_table_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10915495/#ece310926-tbl-0001",
+  "raw_data_doi": "https://doi.org/10.6084/m9.figshare.23667387",
+  "raw_data_status": "not_retrieved: DOI and API unavailable via web; container DNS failed",
+  "experiment": [
+    {
+      "id": 6,
+      "placement": "arboreal",
+      "discovery": "05-27",
+      "hatching": "06-20",
+      "eggs": 398,
+      "hatch_pct": 21.1,
+      "uncertain_construction": false,
+      "note": "many maggots found at dissection"
+    },
+    {
+      "id": 12,
+      "placement": "arboreal",
+      "discovery": "06-03",
+      "hatching": null,
+      "eggs": null,
+      "hatch_pct": null,
+      "uncertain_construction": false,
+      "note": "nest destroyed by predator; no hatch endpoint"
+    },
+    {
+      "id": 21,
+      "placement": "arboreal",
+      "discovery": "06-10",
+      "hatching": "06-25",
+      "eggs": 527,
+      "hatch_pct": 86.9,
+      "uncertain_construction": false
+    },
+    {
+      "id": 23,
+      "placement": "terrestrial",
+      "discovery": "06-13",
+      "hatching": "06-26",
+      "eggs": 377,
+      "hatch_pct": 94.4,
+      "uncertain_construction": true
+    },
+    {
+      "id": 28,
+      "placement": "terrestrial",
+      "discovery": "06-19",
+      "hatching": "06-29",
+      "eggs": 322,
+      "hatch_pct": 99.1,
+      "uncertain_construction": false
+    },
+    {
+      "id": 30,
+      "placement": "terrestrial",
+      "discovery": "06-23",
+      "hatching": "07-06",
+      "eggs": 361,
+      "hatch_pct": 85.6,
+      "uncertain_construction": false
+    },
+    {
+      "id": 31,
+      "placement": "terrestrial",
+      "discovery": "06-23",
+      "hatching": "07-06",
+      "eggs": 403,
+      "hatch_pct": 98.8,
+      "uncertain_construction": false
+    },
+    {
+      "id": 32,
+      "placement": "arboreal",
+      "discovery": "06-23",
+      "hatching": "07-06",
+      "eggs": 421,
+      "hatch_pct": 87.2,
+      "uncertain_construction": false
+    },
+    {
+      "id": 34,
+      "placement": "arboreal",
+      "discovery": "07-06",
+      "hatching": "07-15",
+      "eggs": 455,
+      "hatch_pct": 76.3,
+      "uncertain_construction": true,
+      "note": "recording dates in table begin before listed discovery; retain as printed"
+    },
+    {
+      "id": 35,
+      "placement": "terrestrial",
+      "discovery": "07-06",
+      "hatching": "07-14",
+      "eggs": 333,
+      "hatch_pct": 97.3,
+      "uncertain_construction": true,
+      "note": "recording dates in table begin before listed discovery; retain as printed"
+    }
+  ],
+  "caveats": [
+    "2021 natural observations: four ponds across two years; pooled counts are descriptive and not independent replicates for inference.",
+    "2024 placement experiment started from naturally arboreal nests; five assigned to each placement. These are not counts of natural site choice.",
+    "Table 1 hatching date is the paper's operational monitoring endpoint at nest collapse/hatchling movement; discovery-to-endpoint days are not embryonic development time, total foam persistence or duration of abandoned residue.",
+    "Three nests have uncertain construction dates (up to four days according to the article); recording dates for nests 34 and 35 precede listed discovery. Keep values as printed, report sensitivity excluding these three.",
+    "Hatching percentages are printed rounded; manuscript text differs from table by 0.1 percentage points in a few extrema. No egg-level inference or butterfly outcomes."
+  ]
+}
