@@ -2,6 +2,15 @@
 
 **Status (2026-11-25): exploratory. No demonstrated frog-to-butterfly mating effect.**
 
+## v0.9 — stage-dependent use and postdeparture foam legacy (2026-11-25)
+
+- [Focused literature and revised observation protocol](docs/foam_nest_v0.9.md)
+- [Published aggregate transcription](data/literature/foam_stage_evidence_v0.9.json)
+- [Reproducible arithmetic](scripts/foam_stage_benchmark.mjs)
+- [Computed results](results/foam_stage_benchmark_v0.9.json)
+
+Lin et al. (2000) report foam-nest selection by Taiwanese Caiusa coomani females: fresh nests accepted in each of three five-repeat paired assays; a whipped-egg-white mimic elicited hovering in three of five trials but no oviposition. This supports separating approach from substrate acceptance, not a pure visual mechanism or mating/fertilization result. Published embryo mortality among 20 infested nests averaged 92.5% vs 5.3% in 29 uninfested nests (descriptive, not randomized; no stage-specific risk denominators). Toda (2014), p.45, reports Japanese Z. arboreus dry nest residue persisting for 2–3 weeks after larval departure, adding an evidence-based temporal window for residue observations. Prioritize naturally abandoned foam, before/after comparisons, measured visibility and surface wetness, and daylight sampling across the day; never disturb active nests. Arithmetic executed in JavaScript and committed; individual-level data and independently verified butterfly visits remain unavailable. The primary target remains Pieris and confirmed fertilization per initially unmated female, not Caiusa oviposition.
+
 ## v0.8 — reported foam-associated insect mating; evidence-gated comparison (2026-11-25)
 
 - [Focused evidence and revised experimental gates](docs/foam_nest_v0.8.md)
