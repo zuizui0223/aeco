@@ -1,0 +1,158 @@
+{
+  "status": "theoretical_scenarios_not_empirical",
+  "K": 10,
+  "conditional_fertilization_probability": 0.8,
+  "assumptions": "equal patches, no migration, fixed abundance, local random mixing, first completed mating only, constant hazard and q",
+  "cases": [
+    {
+      "male_share": 0.1,
+      "female_share": 0.1,
+      "uniform_hazard": 0.05,
+      "q": 0.8,
+      "encounter_ratio": 1,
+      "fertilization_probability": 0.0390164603994288,
+      "uniform_fertilization_probability": 0.0390164603994288,
+      "fertilization_ratio": 1
+    },
+    {
+      "male_share": 0.1,
+      "female_share": 0.1,
+      "uniform_hazard": 0.5,
+      "q": 0.8,
+      "encounter_ratio": 1,
+      "fertilization_probability": 0.3147754722298933,
+      "uniform_fertilization_probability": 0.31477547222989327,
+      "fertilization_ratio": 1.0000000000000002
+    },
+    {
+      "male_share": 0.1,
+      "female_share": 0.1,
+      "uniform_hazard": 2,
+      "q": 0.8,
+      "encounter_ratio": 1,
+      "fertilization_probability": 0.6917317734107099,
+      "uniform_fertilization_probability": 0.6917317734107099,
+      "fertilization_ratio": 1
+    },
+    {
+      "male_share": 0.6,
+      "female_share": 0.05,
+      "uniform_hazard": 0.05,
+      "q": 0.8,
+      "encounter_ratio": 0.7222222222222221,
+      "fertilization_probability": 0.02706988808443486,
+      "uniform_fertilization_probability": 0.0390164603994288,
+      "fertilization_ratio": 0.6938068652898909
+    },
+    {
+      "male_share": 0.6,
+      "female_share": 0.05,
+      "uniform_hazard": 0.5,
+      "q": 0.8,
+      "encounter_ratio": 0.7222222222222221,
+      "fertilization_probability": 0.18944809104851132,
+      "uniform_fertilization_probability": 0.31477547222989327,
+      "fertilization_ratio": 0.6018515029346051
+    },
+    {
+      "male_share": 0.6,
+      "female_share": 0.05,
+      "uniform_hazard": 2,
+      "q": 0.8,
+      "encounter_ratio": 0.7222222222222221,
+      "fertilization_probability": 0.4875544134460434,
+      "uniform_fertilization_probability": 0.6917317734107099,
+      "fertilization_ratio": 0.7048316011885174
+    },
+    {
+      "male_share": 0.6,
+      "female_share": 0.1,
+      "uniform_hazard": 0.05,
+      "q": 0.8,
+      "encounter_ratio": 1,
+      "fertilization_probability": 0.03655807415655017,
+      "uniform_fertilization_probability": 0.0390164603994288,
+      "fertilization_ratio": 0.9369910489646924
+    },
+    {
+      "male_share": 0.6,
+      "female_share": 0.1,
+      "uniform_hazard": 0.5,
+      "q": 0.8,
+      "encounter_ratio": 1,
+      "fertilization_probability": 0.21948610443046912,
+      "uniform_fertilization_probability": 0.31477547222989327,
+      "fertilization_ratio": 0.6972782945113637
+    },
+    {
+      "male_share": 0.6,
+      "female_share": 0.1,
+      "uniform_hazard": 2,
+      "q": 0.8,
+      "encounter_ratio": 1,
+      "fertilization_probability": 0.5039986592978368,
+      "uniform_fertilization_probability": 0.6917317734107099,
+      "fertilization_ratio": 0.7286041767501575
+    },
+    {
+      "male_share": 0.6,
+      "female_share": 0.2,
+      "uniform_hazard": 0.05,
+      "q": 0.8,
+      "encounter_ratio": 1.5555555555555556,
+      "fertilization_probability": 0.05553444630078078,
+      "uniform_fertilization_probability": 0.0390164603994288,
+      "fertilization_ratio": 1.423359416314295
+    },
+    {
+      "male_share": 0.6,
+      "female_share": 0.2,
+      "uniform_hazard": 0.5,
+      "q": 0.8,
+      "encounter_ratio": 1.5555555555555556,
+      "fertilization_probability": 0.27956213119438467,
+      "uniform_fertilization_probability": 0.31477547222989327,
+      "fertilization_ratio": 0.8881318776648809
+    },
+    {
+      "male_share": 0.6,
+      "female_share": 0.2,
+      "uniform_hazard": 2,
+      "q": 0.8,
+      "encounter_ratio": 1.5555555555555556,
+      "fertilization_probability": 0.5368871510014236,
+      "uniform_fertilization_probability": 0.6917317734107099,
+      "fertilization_ratio": 0.7761493278734377
+    },
+    {
+      "male_share": 0.6,
+      "female_share": 0.4,
+      "uniform_hazard": 0.05,
+      "q": 0.8,
+      "encounter_ratio": 2.6666666666666665,
+      "fertilization_probability": 0.09348719058924201,
+      "uniform_fertilization_probability": 0.0390164603994288,
+      "fertilization_ratio": 2.396096151013501
+    },
+    {
+      "male_share": 0.6,
+      "female_share": 0.4,
+      "uniform_hazard": 0.5,
+      "q": 0.8,
+      "encounter_ratio": 2.6666666666666665,
+      "fertilization_probability": 0.3997141847222157,
+      "uniform_fertilization_probability": 0.31477547222989327,
+      "fertilization_ratio": 1.269839043971915
+    },
+    {
+      "male_share": 0.6,
+      "female_share": 0.4,
+      "uniform_hazard": 2,
+      "q": 0.8,
+      "encounter_ratio": 2.6666666666666665,
+      "fertilization_probability": 0.602664134408597,
+      "uniform_fertilization_probability": 0.6917317734107099,
+      "fertilization_ratio": 0.8712396301199977
+    }
+  ]
+}
