@@ -1,0 +1,10 @@
+id,year,doi_or_url,scope,observation,evidence_limit
+beck1999,1999,https://doi.org/10.1007/s004420050770,Bornean butterflies,"227 forest and 534 farmland bait visitors; all but one male; pierid and papilionid attraction to Eurema decoys","Pooled families; no frog treatment; no local copulation endpoint"
+lamie2025,2025,https://doi.org/10.1093/aesa/saaf007,Butterfly review,"Proposes testing female attraction to puddling aggregations; discusses female avoidance","Proposal not demonstrated mating-site effect"
+hirota2000a,2000,https://doi.org/10.2108/zsj.17.323,Pieris rapae crucivora,"Male feeding and mate search alternate; mate search morning-biased","Alternative to stationary mating-site hypothesis"
+hirota2000b,2000,https://doi.org/10.2108/zsj.17.1081,Pieris rapae crucivora,"Temperature and sunlight relevant to mate search","Shared-environment confounding"
+hirota2001,2001,https://doi.org/10.2108/zsj.18.475,Pieris rapae crucivora,"Female post-emergence flight increases male detection","Alternative female availability mechanism"
+inat_project,2026,https://www.inaturalist.org/projects/mating-behaviour,All taxa,"Mating behavior project exists","Taxon-specific counts unknown; project inclusion not proof of copulation"
+inat_field_17428,2026,https://www.inaturalist.org/observation_fields/17428,All butterflies,"Field page reports 538 Yes records for combined aggregation/roosting/puddling","Not Pieridae count; ambiguous behavior; not validated"
+inat_field_12551,2026,https://www.inaturalist.org/observation_fields/12551,All taxa,"Field page reports 652 Mating records","Not Pieridae count; not verified"
+inat_api,2026,https://www.inaturalist.org/pages/api%2Brecommended%2Bpractices,Data source,"Rate limited public API with keyset pagination","Local DNS failure; no API observations retrieved"
