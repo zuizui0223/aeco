@@ -2,6 +2,15 @@
 
 **Status (2026-11-25): exploratory. No demonstrated frog-to-butterfly mating effect.**
 
+## v1.2 — global macroecology of foam reproductive architecture (2026-11-25)
+
+- [Global study design and frozen evidence gates](docs/global_foam_macroecology_v1.2.md)
+- [Published 2021 froth/bubble reproductive-mode crosswalk](data/literature/foam_mode_crosswalk_v1.2.csv)
+- [Source workbook acquisition and schema audit](scripts/global_foam_traits.py)
+- [GitHub Actions acquisition workflow](.github/workflows/global_foam_traits.yml)
+
+Primary scale is now global, with Sado as a possible local validation system. Nunes-de-Almeida et al. (2021) sampled 2,012 anurans and defined modes 44–64 as froth and 65 as bubble. Crosswalk distinguishes potentially exposed versus sheltered and variable placement; exposure is not measured. Publisher directory lists the actual species-level supplementary workbook; web XLSX retrieval unsupported and container DNS failed. No workbook, species count of foam producers, global occurrence panel or raster acquired yet; workflow execution unverified. Global proposal uses 100 km equal-area grid, 50/200 km sensitivity, monthly 2010–2021 panel linked to JRC surface water, frog breeding evidence and Pieridae flight/mating evidence, with independent climate, effort and spatial controls. Co-occurrence and activity overlap are opportunity proxies, not fertilization. Previous macroclimate studies of frog reproductive modes are not novelty; focus on exposed reproductive structures and cross-taxon timing.
+
 ## v1.1 — remote-sensing feasibility and Sado nest architecture (2026-11-25)
 
 - [Remote-sensing evidence and design](docs/foam_remote_sensing_v1.1.md)
