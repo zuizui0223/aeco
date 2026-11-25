@@ -1,0 +1,81 @@
+{
+  "status": "published_dimensions_not_image_detections",
+  "source": "https://herpetologynotes.org/index.php/hn/article/download/315/144/2818",
+  "table": "Table 1, p.66, checked against page image",
+  "taxon": "Zhangixalus arboreus",
+  "region": "Sado Island, Japan",
+  "reported_cases": 7,
+  "measured_cases": 5,
+  "axes_mm": [
+    [
+      89,
+      92
+    ],
+    [
+      74,
+      103
+    ],
+    [
+      49,
+      68
+    ],
+    [
+      50,
+      90
+    ],
+    [
+      89,
+      120
+    ]
+  ],
+  "two_reported_burrow_depths_mm": [
+    40,
+    165
+  ],
+  "typical_arboreal_diameter_mm": [
+    100,
+    150
+  ],
+  "typical_size_source": "https://kotobank.jp/word/%E3%82%82%E3%82%8A%E3%81%82%E3%82%AC%E3%82%A8%E3%83%AB-3173372",
+  "height_reference": {
+    "n": 148,
+    "min_cm": 106,
+    "max_cm": 950,
+    "mean_cm": 434,
+    "source": "https://www.jstage.jst.go.jp/article/ceispapers/ceis23/0/ceis23_0_149/_article/-char/en"
+  },
+  "gsd_mm": [
+    {
+      "sensor": "Sentinel-2",
+      "gsd": 10000
+    },
+    {
+      "sensor": "WorldView-3 PAN",
+      "gsd": 310
+    },
+    {
+      "sensor": "GSI ortho 40 cm",
+      "gsd": 400
+    },
+    {
+      "sensor": "GSI ortho 20 cm",
+      "gsd": 200
+    },
+    {
+      "sensor": "UAV scenario 2 cm",
+      "gsd": 20
+    },
+    {
+      "sensor": "UAV scenario 1 cm",
+      "gsd": 10
+    },
+    {
+      "sensor": "UAV scenario 0.5 cm",
+      "gsd": 5
+    },
+    {
+      "sensor": "Close imagery scenario 0.25 cm",
+      "gsd": 2.5
+    }
+  ]
+}
