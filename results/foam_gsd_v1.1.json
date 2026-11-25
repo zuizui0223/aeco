@@ -1,0 +1,112 @@
+{
+  "status": "nominal_projection_only",
+  "short_axis_mm_range": [
+    49,
+    89
+  ],
+  "long_axis_mm_range": [
+    68,
+    120
+  ],
+  "all_measured_short_axis_5px_max_gsd_mm": 9.8,
+  "all_measured_short_axis_10px_max_gsd_mm": 4.9,
+  "rows": [
+    {
+      "sensor": "Sentinel-2",
+      "gsd": 10000,
+      "short_axis_pixels_min": 0.0049,
+      "short_axis_pixels_max": 0.0089,
+      "n_at_least_5px": 0,
+      "n_at_least_10px": 0,
+      "typical_arboreal_pixels": [
+        0.01,
+        0.015
+      ]
+    },
+    {
+      "sensor": "WorldView-3 PAN",
+      "gsd": 310,
+      "short_axis_pixels_min": 0.15806451612903225,
+      "short_axis_pixels_max": 0.2870967741935484,
+      "n_at_least_5px": 0,
+      "n_at_least_10px": 0,
+      "typical_arboreal_pixels": [
+        0.3225806451612903,
+        0.4838709677419355
+      ]
+    },
+    {
+      "sensor": "GSI ortho 40 cm",
+      "gsd": 400,
+      "short_axis_pixels_min": 0.1225,
+      "short_axis_pixels_max": 0.2225,
+      "n_at_least_5px": 0,
+      "n_at_least_10px": 0,
+      "typical_arboreal_pixels": [
+        0.25,
+        0.375
+      ]
+    },
+    {
+      "sensor": "GSI ortho 20 cm",
+      "gsd": 200,
+      "short_axis_pixels_min": 0.245,
+      "short_axis_pixels_max": 0.445,
+      "n_at_least_5px": 0,
+      "n_at_least_10px": 0,
+      "typical_arboreal_pixels": [
+        0.5,
+        0.75
+      ]
+    },
+    {
+      "sensor": "UAV scenario 2 cm",
+      "gsd": 20,
+      "short_axis_pixels_min": 2.45,
+      "short_axis_pixels_max": 4.45,
+      "n_at_least_5px": 0,
+      "n_at_least_10px": 0,
+      "typical_arboreal_pixels": [
+        5,
+        7.5
+      ]
+    },
+    {
+      "sensor": "UAV scenario 1 cm",
+      "gsd": 10,
+      "short_axis_pixels_min": 4.9,
+      "short_axis_pixels_max": 8.9,
+      "n_at_least_5px": 4,
+      "n_at_least_10px": 0,
+      "typical_arboreal_pixels": [
+        10,
+        15
+      ]
+    },
+    {
+      "sensor": "UAV scenario 0.5 cm",
+      "gsd": 5,
+      "short_axis_pixels_min": 9.8,
+      "short_axis_pixels_max": 17.8,
+      "n_at_least_5px": 5,
+      "n_at_least_10px": 4,
+      "typical_arboreal_pixels": [
+        20,
+        30
+      ]
+    },
+    {
+      "sensor": "Close imagery scenario 0.25 cm",
+      "gsd": 2.5,
+      "short_axis_pixels_min": 19.6,
+      "short_axis_pixels_max": 35.6,
+      "n_at_least_5px": 5,
+      "n_at_least_10px": 5,
+      "typical_arboreal_pixels": [
+        40,
+        60
+      ]
+    }
+  ],
+  "limits": "Full exposure, normal view, no blur or occlusion. Five and ten pixels are planning heuristics, not validated detection thresholds. Hidden nests may be invisible at any optical resolution."
+}
