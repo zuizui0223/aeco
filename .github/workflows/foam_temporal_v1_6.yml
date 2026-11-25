@@ -1,0 +1,73 @@
+name: AECO v1.6 temporal paired macro pilot
+on:
+  pull_request:
+    branches: [analysis/global-foam-v1.3]
+    paths:
+      - 'scripts/foam_temporal_v1_6.py'
+      - '.github/workflows/foam_temporal_v1_6.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install openpyxl pandas numpy pyreadr pyproj xarray netCDF4
+      - run: python scripts/foam_temporal_v1_6.py prepare
+      - uses: actions/upload-artifact@v4
+        with:
+          name: aeco-v16-sample
+          path: results/v1.6/sample.json
+          if-no-files-found: error
+  collect:
+    needs: prepare
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: [0,1,2]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install pandas numpy pyproj
+      - uses: actions/download-artifact@v4
+        with:
+          name: aeco-v16-sample
+          path: results/v1.6
+      - run: python scripts/foam_temporal_v1_6.py collect --shard ${{ matrix.shard }} --nshards 3
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: aeco-v16-shard-${{ matrix.shard }}
+          path: results/v1.6/shard_*.jsonl
+          if-no-files-found: warn
+  analyze:
+    needs: [prepare, collect]
+    if: ${{ always() && needs.prepare.result == 'success' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install pandas numpy pyproj
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: aeco-v16-*
+          merge-multiple: true
+          path: results/v1.6
+      - run: python scripts/foam_temporal_v1_6.py analyze
+      - uses: actions/upload-artifact@v4
+        with:
+          name: aeco-v16-results
+          path: results/v1.6/
+          if-no-files-found: error

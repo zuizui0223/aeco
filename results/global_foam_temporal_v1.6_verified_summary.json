@@ -1,0 +1,402 @@
+{
+  "status": "verified_completed_temporal_pilot",
+  "run_id": 45593754389,
+  "job_id": 139136448090,
+  "source_commit": "10724115981c86877ed21132f741bb1886c07409",
+  "artifact_id": 15012187437,
+  "artifact_zip_sha256": "375cecd79cf40393a3dc6deded18e4a3cebb7717f8eef844c25f1cf11cae95f4",
+  "artifact_sha256_matches_api": true,
+  "artifact_members_sha256": {
+    "paired_cell_contrasts.csv": "78f699babe930d0583aeec42f2f45aa92bf2e77bb694869941c0dd0a585ad032",
+    "sample.json": "79d7ea2149b67acfe6f3f440fc6e0c2d5c8c3c79e9dd5dc82289c30ae4c2b885",
+    "shard_0.jsonl": "1df7e86ae25888d0f2f46cde9f9b5d6eefbc77daabb1dcce27923b0df4dafbfb",
+    "shard_1.jsonl": "0de668a5d6d3e33c35d8424039760eff698b96efd35e0642212f1c6d5856d970",
+    "shard_2.jsonl": "b8c7b0ef8cfafd781604df9999e5390509791962e15059f00a4a4303eca4b7f4",
+    "summary.json": "c2179ebb6cab807628edccd23a22134e8f1a015c917a88b5244f0fa92149bba6"
+  },
+  "local_audit": {
+    "all_sample_keys_reproduced": true,
+    "all_105_grid_source_pairs_present_once": true,
+    "three_shard_digests_verified": true,
+    "all_butterfly_support_queries_succeeded": 105,
+    "all_attempted_group_api_queries_succeeded": true,
+    "no_mapped_taxa_are_separate_from_zero_or_failure": true,
+    "monthly_primary_contrasts_recalculated": true,
+    "local_block_means": {
+      "broad": -0.02649010469345342,
+      "paired": 0.051383787128295944,
+      "calling_AU": -0.06846103534284854
+    },
+    "global": {
+      "grid_cells": 90,
+      "all_butterfly_hits": 161435,
+      "pass_all_butterfly_screen": 64,
+      "partition_verified": 64,
+      "queried_group_hits": {
+        "Pieridae": 19267,
+        "other_butterflies": 141756,
+        "exposed_frogs": 31067,
+        "sheltered_frogs": 770,
+        "no_documented_foam_frogs": 55464
+      }
+    },
+    "calling_AU": {
+      "grid_cells": 15,
+      "all_butterfly_hits": 23595,
+      "pass_all_butterfly_screen": 15,
+      "partition_verified": 15,
+      "queried_group_hits": {
+        "Pieridae": 4049,
+        "other_butterflies": 19546,
+        "exposed_frog_calls": 15947,
+        "no_documented_foam_frog_calls": 2918
+      }
+    },
+    "scope": "Search-hit counts conditional on screens and group mapping, not unique biological events; cohorts and periods may overlap, never add them as unique records."
+  },
+  "ci_result": {
+    "status": "monthly_observation_climatology_only",
+    "prequery_sample": {
+      "status": "prequery_sample",
+      "frame_broad": 921,
+      "frame_paired": 408,
+      "broad_blocks": 26,
+      "paired_blocks": 8,
+      "cohort_sizes": {
+        "broad": 50,
+        "paired": 48,
+        "calling_AU": 15
+      },
+      "n_grid_source_pairs": 105,
+      "global_taxonomy": {
+        "accepted_species_keys": 7832,
+        "ambiguous_names": 1,
+        "order_key": 952
+      },
+      "matched_range_species_in_backbone": 1566,
+      "source_provenance": {
+        "nunes2021": {
+          "url": "https://www.salamandra-journal.com/salamandra/57-2021/57-3/57-3%2C%2012%20Nunes-de-Almeida%20et%20al%20Supplementary%20Table.xlsx",
+          "sha256": "3ec2b6ab0d457cf6bcd4bcbabd7bf51aa2ea3f1ec898d297f1f68a46a883b964",
+          "bytes": 572950
+        },
+        "amphibians_dist.rda": {
+          "url": "https://raw.githubusercontent.com/RS-eco/rasterSp/8c007900ceb2679f8aee04aec4d936648df5191b/data/amphibians_dist.rda",
+          "final_url": "https://raw.githubusercontent.com/RS-eco/rasterSp/8c007900ceb2679f8aee04aec4d936648df5191b/data/amphibians_dist.rda",
+          "bytes": 305884,
+          "sha256": "f197cff80d0de3f9b3b7e524540903db429a549c4dea2d5d462079cfac478f84"
+        }
+      },
+      "design": "six paired per block, two broad per block, four calling-region per block; prior total observation support then deterministic SHA order. 2010–2021 global, 2018–2021 FrogID-AU. Not representative grid census."
+    },
+    "completed_cells": 105,
+    "expected_cells": 105,
+    "complete": true,
+    "cohorts": {
+      "broad": {
+        "source": "GBIF ordinary frog observations",
+        "n_queried": 50,
+        "blocks_queried": 26,
+        "attrition": {
+          "support_missing_E": 3,
+          "support_missing_P/E/N": 8,
+          "support_missing_N": 3,
+          "support_missing_P": 1,
+          "all_butterfly_support_below_60_or_query_failure": 10,
+          "support_missing_E/N": 15,
+          "frog_taxonomic_coverage_under80pct": 3,
+          "support_missing_P/B/E/N": 1,
+          "eligible": 6
+        },
+        "primary_directional": {
+          "status": "insufficient_support_descriptive_only",
+          "n": 6,
+          "blocks": 5,
+          "block_balanced_mean": -0.02649010469345342,
+          "cell_mean": -0.01705089250798954,
+          "block_bootstrap_interval_95": [
+            -0.07581449057599228,
+            0.02159494252515688
+          ],
+          "positive_blocks": 3,
+          "negative_blocks": 2
+        },
+        "secondary": {
+          "D0": {
+            "status": "insufficient_support_descriptive_only",
+            "n": 6,
+            "blocks": 5,
+            "block_balanced_mean": -0.006122696503297687,
+            "cell_mean": -0.00414900738469598,
+            "block_bootstrap_interval_95": [
+              -0.04935125981884227,
+              0.0371058668122469
+            ],
+            "positive_blocks": 3,
+            "negative_blocks": 2
+          },
+          "Dplus1": {
+            "status": "insufficient_support_descriptive_only",
+            "n": 6,
+            "blocks": 5,
+            "block_balanced_mean": -0.028684996648851935,
+            "cell_mean": -0.022845788287529745,
+            "block_bootstrap_interval_95": [
+              -0.0729273476492472,
+              0.026115029207240383
+            ],
+            "positive_blocks": 2,
+            "negative_blocks": 3
+          },
+          "Dminus1": {
+            "status": "insufficient_support_descriptive_only",
+            "n": 6,
+            "blocks": 5,
+            "block_balanced_mean": -0.0021948919553985147,
+            "cell_mean": -0.0057948957795402045,
+            "block_bootstrap_interval_95": [
+              -0.04762718838876008,
+              0.03563491936123279
+            ],
+            "positive_blocks": 3,
+            "negative_blocks": 2
+          },
+          "Dplus1_minus_D0": {
+            "status": "insufficient_support_descriptive_only",
+            "n": 6,
+            "blocks": 5,
+            "block_balanced_mean": -0.02256230014555425,
+            "cell_mean": -0.018696780902833766,
+            "block_bootstrap_interval_95": [
+              -0.06811667085251868,
+              0.0034320068549165915
+            ],
+            "positive_blocks": 3,
+            "negative_blocks": 2
+          }
+        },
+        "sensitivity_50_each": {
+          "status": "insufficient_support_descriptive_only",
+          "n": 6,
+          "blocks": 5,
+          "block_balanced_mean": -0.02649010469345342,
+          "cell_mean": -0.01705089250798954,
+          "block_bootstrap_interval_95": [
+            -0.07581449057599228,
+            0.02159494252515688
+          ],
+          "positive_blocks": 3,
+          "negative_blocks": 2
+        },
+        "sensitivity_species_dominance_80pct": {
+          "status": "insufficient_support_descriptive_only",
+          "n": 4,
+          "blocks": 3,
+          "block_balanced_mean": -0.016018110288049076,
+          "cell_mean": -0.004477290611204346,
+          "block_bootstrap_interval_95": [
+            -0.08321516407606838,
+            0.03014516841932985
+          ],
+          "positive_blocks": 2,
+          "negative_blocks": 1
+        }
+      },
+      "paired": {
+        "source": "GBIF ordinary frog observations",
+        "n_queried": 48,
+        "blocks_queried": 8,
+        "attrition": {
+          "support_missing_S": 2,
+          "all_butterfly_support_below_60_or_query_failure": 17,
+          "support_missing_E/S": 7,
+          "support_missing_P/E/S": 16,
+          "support_missing_P": 1,
+          "eligible": 5
+        },
+        "primary_directional": {
+          "status": "insufficient_support_descriptive_only",
+          "n": 5,
+          "blocks": 3,
+          "block_balanced_mean": 0.051383787128295964,
+          "cell_mean": 0.039942195722939645,
+          "block_bootstrap_interval_95": [
+            0.022779808614905177,
+            0.10553163182136605
+          ],
+          "positive_blocks": 3,
+          "negative_blocks": 0
+        },
+        "secondary": {
+          "D0": {
+            "status": "insufficient_support_descriptive_only",
+            "n": 5,
+            "blocks": 3,
+            "block_balanced_mean": -0.010534655587562248,
+            "cell_mean": -0.01042046436613936,
+            "block_bootstrap_interval_95": [
+              -0.06683501683501669,
+              0.045480227606334966
+            ],
+            "positive_blocks": 1,
+            "negative_blocks": 2
+          },
+          "Dplus1": {
+            "status": "insufficient_support_descriptive_only",
+            "n": 5,
+            "blocks": 3,
+            "block_balanced_mean": 0.015457190537392702,
+            "cell_mean": 0.014698120954590343,
+            "block_bootstrap_interval_95": [
+              0.005500900003244935,
+              0.027311155028546363
+            ],
+            "positive_blocks": 3,
+            "negative_blocks": 0
+          },
+          "Dminus1": {
+            "status": "insufficient_support_descriptive_only",
+            "n": 5,
+            "blocks": 3,
+            "block_balanced_mean": -0.035926596590903255,
+            "cell_mean": -0.0252440747683493,
+            "block_bootstrap_interval_95": [
+              -0.10003073181812111,
+              0.0014712340799297174
+            ],
+            "positive_blocks": 1,
+            "negative_blocks": 2
+          },
+          "Dplus1_minus_D0": {
+            "status": "insufficient_support_descriptive_only",
+            "n": 5,
+            "blocks": 3,
+            "block_balanced_mean": 0.02599184612495495,
+            "cell_mean": 0.025118585320729702,
+            "block_bootstrap_interval_95": [
+              -0.03997932760309003,
+              0.09414617186356306
+            ],
+            "positive_blocks": 2,
+            "negative_blocks": 1
+          }
+        },
+        "sensitivity_50_each": {
+          "status": "insufficient_support_descriptive_only",
+          "n": 3,
+          "blocks": 2,
+          "block_balanced_mean": 0.07426311038001497,
+          "cell_mean": 0.06384026989956461,
+          "block_bootstrap_interval_95": [
+            0.0429945889386639,
+            0.10553163182136605
+          ],
+          "positive_blocks": 2,
+          "negative_blocks": 0
+        },
+        "sensitivity_species_dominance_80pct": {
+          "status": "insufficient_support_descriptive_only",
+          "n": 4,
+          "blocks": 2,
+          "block_balanced_mean": 0.0641557202181356,
+          "cell_mean": 0.043467764416520394,
+          "block_bootstrap_interval_95": [
+            0.022779808614905177,
+            0.10553163182136605
+          ],
+          "positive_blocks": 2,
+          "negative_blocks": 0
+        }
+      },
+      "calling_AU": {
+        "source": "FrogID calling records",
+        "n_queried": 15,
+        "blocks_queried": 4,
+        "attrition": {
+          "support_missing_E/N": 3,
+          "frog_taxonomic_coverage_under80pct": 3,
+          "support_missing_N": 4,
+          "support_missing_P/E/N": 1,
+          "eligible": 4
+        },
+        "primary_directional": {
+          "status": "insufficient_support_descriptive_only",
+          "n": 4,
+          "blocks": 2,
+          "block_balanced_mean": -0.06846103534284842,
+          "cell_mean": -0.06846103534284842,
+          "block_bootstrap_interval_95": [
+            -0.10904032786229642,
+            -0.027881742823400404
+          ],
+          "positive_blocks": 0,
+          "negative_blocks": 2
+        },
+        "secondary": {
+          "D0": {
+            "status": "insufficient_support_descriptive_only",
+            "n": 4,
+            "blocks": 2,
+            "block_balanced_mean": 0.07510437414587709,
+            "cell_mean": 0.07510437414587709,
+            "block_bootstrap_interval_95": [
+              0.0667819461925752,
+              0.08342680209917896
+            ],
+            "positive_blocks": 2,
+            "negative_blocks": 0
+          },
+          "Dplus1": {
+            "status": "insufficient_support_descriptive_only",
+            "n": 4,
+            "blocks": 2,
+            "block_balanced_mean": -0.006646893348270136,
+            "cell_mean": -0.006646893348270136,
+            "block_bootstrap_interval_95": [
+              -0.06223041204558294,
+              0.04893662534904267
+            ],
+            "positive_blocks": 1,
+            "negative_blocks": 1
+          },
+          "Dminus1": {
+            "status": "insufficient_support_descriptive_only",
+            "n": 4,
+            "blocks": 2,
+            "block_balanced_mean": 0.06181414199457828,
+            "cell_mean": 0.06181414199457828,
+            "block_bootstrap_interval_95": [
+              0.04680991581671348,
+              0.07681836817244307
+            ],
+            "positive_blocks": 2,
+            "negative_blocks": 0
+          },
+          "Dplus1_minus_D0": {
+            "status": "insufficient_support_descriptive_only",
+            "n": 4,
+            "blocks": 2,
+            "block_balanced_mean": -0.08175126749414721,
+            "cell_mean": -0.08175126749414721,
+            "block_bootstrap_interval_95": [
+              -0.1456572141447619,
+              -0.017845320843532533
+            ],
+            "positive_blocks": 0,
+            "negative_blocks": 2
+          }
+        },
+        "sensitivity_50_each": {
+          "n": 1,
+          "blocks": 1,
+          "block_balanced_mean": -0.22000445913924616,
+          "status": "descriptive_only"
+        },
+        "sensitivity_species_dominance_80pct": {
+          "status": "no_eligible_pairs"
+        }
+      }
+    }
+  },
+  "decision": "All cohorts below pre-specified >=20 cell and >=5 block inferential support. Paired positive direction in 3 represented blocks, broad and call cohorts negative mean, no generalizable result. Bootstrap intervals from 2–5 blocks are descriptive, not evidence of significance. Pooled month climatology, no climate adjustment or mating/foam/fertilization evidence. Selection based on overall observation support prior to temporal outcomes; other prior v1.5 results were known. Next build observation-support census before new temporal outcome queries, using separate coverage-only selection ledger."
+}
