@@ -132,7 +132,25 @@ def frame(scale):
         z=v.sample(n=min(4,len(v)),random_state=seed).copy()
         z["stratum_population"]=len(v);z["stratum_sample"]=len(z);samples.append(z)
     f=pd.concat(samples).sort_values(["ix","iy"]).reset_index(drop=True)
-    return f,{"frame_cells":len(x),"sample_cells":len(f),"strata":len(samples),"source_provenance":PROVENANCE},native
+    # Replays use the original CI sample selected before recipient outcomes.
+    # Explicit keys avoid library-dependent RNG/group-key representations.
+    receipt=Path("results")/f"global_butterfly_v1.5_{scale}km_verified.json"
+    frozen=False
+    if receipt.exists():
+        rec=json.loads(receipt.read_text())
+        keys=rec["ci_actual_frozen_keys"]
+        compact=json.dumps(keys,separators=(",",":"))
+        assert hashlib.sha256(compact.encode()).hexdigest()==rec["ci_keys_compact_json_sha256"]
+        keys=pd.DataFrame(keys,columns=["ix","iy"])
+        assert not keys.duplicated().any()
+        f=keys.merge(x,on=["ix","iy"],how="left",validate="one_to_one",indicator=True)
+        assert f["_merge"].eq("both").all()
+        f=f.drop(columns="_merge")
+        pop=x.groupby(groups,observed=True).size().rename("stratum_population").reset_index()
+        n=f.groupby(groups,observed=True).size().rename("stratum_sample").reset_index()
+        f=f.merge(pop,on=groups,validate="many_to_one").merge(n,on=groups,validate="many_to_one").sort_values(["ix","iy"]).reset_index(drop=True)
+        frozen=True
+    return f,{"frame_cells":len(x),"sample_cells":len(f),"strata":len(f[groups].drop_duplicates()),"replay_frozen_ci_keys":frozen,"source_provenance":PROVENANCE},native
 
 def climate_after_recipient(native,sample,scale):
     """Do not block or lose actual butterfly facets when climate host is unavailable."""
