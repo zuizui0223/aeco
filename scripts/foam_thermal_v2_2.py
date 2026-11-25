@@ -15,7 +15,7 @@ A="arboreal";G="terrestrial"
 GROUPS=[A,G]
 def write(name,d): (OUT/name).write_text(json.dumps(d,ensure_ascii=False,indent=2,allow_nan=False)+"\n")
 def sheet(w,prefix):
-    n=[s for s in w.sheetnames if s.startswith(prefix)]
+    n=[s for s in w.sheetnames if s.startswith(prefix) or s.endswith(prefix)]
     assert len(n)==1,n
     it=w[n[0]].iter_rows(values_only=True);h=list(next(it))
     return pd.DataFrame(it,columns=h)
@@ -121,7 +121,7 @@ def main():
         base=mean(g.baseline_MSE);cal=mean(g.calibrated_MSE)
         cv_summary[place]={"n_nests":len(g),"n_test":int(g.n_test.sum()),"n_out_of_support":int(g.excluded_out_of_support.sum()),"equal_nest_RMSE_baseline":float(np.sqrt(base)),"equal_nest_RMSE_calibrated":float(np.sqrt(cal)),"relative_MSE_gain":1-cal/base}
     # Raw egg and nest outcome sheets independently reconcile with each other.
-    eggs=sheet(w,"➂");h=sheet(w,"➃");w.close()
+    eggs=sheet(w,"Survival data for each eggs");h=sheet(w,"Survival data for each nests");w.close()
     assert len(eggs)==3597 and len(h)==9
     eggs["nest"]=eggs["Foam nest eggs belonged to"].map(num)
     eggs["place"]=eggs["Nest place"].astype(str).str.lower().str.strip()
