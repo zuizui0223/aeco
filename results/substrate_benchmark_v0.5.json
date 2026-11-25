@@ -1,0 +1,41 @@
+{
+  "status": "descriptive_published_aggregate_reanalysis",
+  "source": "https://academic.oup.com/ee/article/33/4/1020/449418",
+  "natural_substrate_total_weight": 74,
+  "female_total_weight": 7,
+  "female_fraction": 0.0945945945945946,
+  "natural_substrates": [
+    {
+      "substrate": "mud",
+      "male_weight": 45.5,
+      "female_weight": 4.5,
+      "total_weight": 50,
+      "female_fraction": 0.09
+    },
+    {
+      "substrate": "carnivore_dung",
+      "male_weight": 21.5,
+      "female_weight": 2.5,
+      "total_weight": 24,
+      "female_fraction": 0.10416666666666667
+    },
+    {
+      "substrate": "herbivore_dung",
+      "male_weight": 0,
+      "female_weight": 0,
+      "total_weight": 0,
+      "female_fraction": null
+    }
+  ],
+  "low_salt_1_10mM_fraction": 0.6212121212121212,
+  "salt_feeding_given_observation": 0.8354430379746836,
+  "non_salt_feeding_given_observation": 0.1111111111111111,
+  "descriptive_feeding_fraction_ratio": 7.518987341772152,
+  "caveats": [
+    "Table 1 assigns 0.5 to each substrate for individuals using two without preference; fractional values are weights, not individual counts.",
+    "Counts are published aggregates across years, not raw trials; no new individual-level inference, confidence intervals, or p-values.",
+    "Table 5 records feeding after observed contact; does not estimate long-distance attraction.",
+    "No frog substrate, copulation or fertilization endpoint in this experiment.",
+    "PDF screenshots failed; values cross-checked against independently indexed article text and table transcriptions."
+  ]
+}
