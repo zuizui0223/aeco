@@ -2,6 +2,16 @@
 
 **Status (2026-11-25): exploratory. No demonstrated frog-to-butterfly mating effect.**
 
+## v0.8 — reported foam-associated insect mating; evidence-gated comparison (2026-11-25)
+
+- [Focused evidence and revised experimental gates](docs/foam_nest_v0.8.md)
+- [Source-level visitor event ledger](data/literature/foam_visitor_events_v0.8.csv)
+- [Published scorpionfly mating branch counts](data/literature/scorpionfly_mating_branches_v0.8.json)
+- [Descriptive calculation script](scripts/scorpionfly_benchmark.py)
+- [Recomputed benchmark](results/scorpionfly_benchmark_v0.8.json)
+
+New natural-history sources report a female Episyrphus balteatus licking a dry Zhangixalus arboreus foam nest (June 2023), and both sexes of Panorpa japonica gathering and a copulating pair on a foam nest (June 2024). Same-event media were deduplicated; an independent 2023 blog reports scorpionfly gathering but not mating. These are source descriptions, not independently reviewed footage or controlled evidence of mating-site formation. Published scorpionfly laboratory data describe 27/31 matings in bait-associated branches (40 pairs, no randomized resource or foam contrast). Recipient mating-system dependence is now an explicit hypothesis; retain Pieris as the primary target and Panorpa as a candidate positive comparator, not a substitute. Direct adult Pieridae foam use and confirmed recipient fertilization are still unverified. No original video/individual-level data retrieved; thesis page screenshot failed 429, numeric text and diagram extraction agree. Arithmetic reproduced in JavaScript. No claim of full video verification or Python execution in this update.
+
 ## v0.7 — foam as a fertilization environment; field observation gate (2026-11-25)
 
 - [Focused evidence review and noninvasive pilot protocol](docs/foam_nest_v0.7.md)
