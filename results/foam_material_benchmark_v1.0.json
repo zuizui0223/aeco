@@ -1,0 +1,89 @@
+{
+  "status": "published_descriptive_benchmarks_and_idealized_physics_only",
+  "japanese_foam": {
+    "sum_of_printed_residue_values": 999.8,
+    "reported_sum": 1000,
+    "rounding_difference": -0.20000000000004547,
+    "cysteine_ratio_to_cited_frog_meat": 4.020979020979021,
+    "eight_reported_essential_amino_acids_residue_fraction": 0.40409999999999996,
+    "accessible_sodium_mM": null,
+    "free_amino_acid_mM": null,
+    "interpretation": "hydrolyzed composition only, not insect-available nutrition"
+  },
+  "proboscis": {
+    "areal_uptake_ratio_Polygonia_over_Pieris": 1.8995815899581592,
+    "relative_reduction_Pieris_vs_Polygonia": 0.473568281938326,
+    "comparison_scope": "approximate rates in a laboratory liquid-film comparison; no inference to natural foam, feeding preference, mating, or fertility"
+  },
+  "neotropical_surface_tension": [
+    {
+      "taxon": "Physalaemus cuvieri",
+      "surface_tension_mN_m": 39.66,
+      "reduction_vs_approx_water_control": 0.4414084507042254
+    },
+    {
+      "taxon": "Leptodactylus vastus",
+      "surface_tension_mN_m": 45.34,
+      "reduction_vs_approx_water_control": 0.36140845070422534
+    },
+    {
+      "taxon": "Adenomera hylaedactyla",
+      "surface_tension_mN_m": 50.73,
+      "reduction_vs_approx_water_control": 0.28549295774647887
+    }
+  ],
+  "tungara_surface_tension": {
+    "ratio_to_water": 0.6756756756756757,
+    "reduction_vs_water": 0.32432432432432434
+  },
+  "idealized_equal_viscosity_washburn": {
+    "status": "illustration_not_calibration",
+    "threshold_water_angle_for_any_strict_increase_deg": 47.493357697293675,
+    "scenarios": [
+      {
+        "water_contact_angle_deg": 0,
+        "maximum_ratio_of_washburn_coefficient_equal_viscosity": 0.6756756756756757,
+        "foam_contact_angle_strict_improvement_possible": false,
+        "maximum_foam_contact_angle_deg_for_strict_improvement": null
+      },
+      {
+        "water_contact_angle_deg": 30,
+        "maximum_ratio_of_washburn_coefficient_equal_viscosity": 0.7802030664724672,
+        "foam_contact_angle_strict_improvement_possible": false,
+        "maximum_foam_contact_angle_deg_for_strict_improvement": null
+      },
+      {
+        "water_contact_angle_deg": 45,
+        "maximum_ratio_of_washburn_coefficient_equal_viscosity": 0.9555497043061452,
+        "foam_contact_angle_strict_improvement_possible": false,
+        "maximum_foam_contact_angle_deg_for_strict_improvement": null
+      },
+      {
+        "water_contact_angle_deg": 60,
+        "maximum_ratio_of_washburn_coefficient_equal_viscosity": 1.351351351351351,
+        "foam_contact_angle_strict_improvement_possible": true,
+        "maximum_foam_contact_angle_deg_for_strict_improvement": 42.26858442957245
+      },
+      {
+        "water_contact_angle_deg": 75,
+        "maximum_ratio_of_washburn_coefficient_equal_viscosity": 2.6106103413218062,
+        "foam_contact_angle_strict_improvement_possible": true,
+        "maximum_foam_contact_angle_deg_for_strict_improvement": 67.47712925044047
+      }
+    ],
+    "assumptions": "same pore radius, liquid reservoir, viscosity, geometry; constant contact angles; passive imbibition only; surface tension values from non-Japanese frog; not a prediction of butterfly suction or feeding"
+  },
+  "ion_reference": {
+    "pieris_napi_as_published_low_mM": [
+      1,
+      10
+    ],
+    "japanese_Papilio_preferred_in_test_mM": 10,
+    "japanese_Papilio_field_max_reported_mM": 6,
+    "caveats": [
+      "Colorado Pieris taxon as published, not P. melete.",
+      "Japanese Papilio results are not Pieridae estimates; field maximum is from the sampled sites, not universal.",
+      "These are solution concentrations, not dry mass composition or a recommended field treatment."
+    ]
+  }
+}
