@@ -103,11 +103,7 @@ def frame(scale):
     t=load_traits();d,_=read_ranges()
     j=d.merge(t[["species","trait_class","family_as_used"]],on="species",how="inner",validate="many_to_one")
     assert j.species.nunique()==1698
-    native,meta=rainfall(j)
-    try:
-        native["temperature_c"]=temperature(native); temp_status="success"
-    except Exception as e:
-        native["temperature_c"]=np.nan;temp_status=repr(e)
+    native=j[["x","y"]].drop_duplicates()
     g=grid_index(j,scale)
     u=g[["ix","iy","species","trait_class"]].drop_duplicates()
     x=u.groupby(["ix","iy","trait_class"]).size().unstack(fill_value=0).reindex(columns=CLASSES,fill_value=0).reset_index()
@@ -115,11 +111,7 @@ def frame(scale):
     x["n_froth"]=x[CLASSES[:4]].sum(axis=1)
     for col,new in zip(CLASSES[:4],["exposed","sheltered","variable","mixed"]):
         x[new]=x[col]/x.n_frogs
-    c=grid_index(native,scale);c["weight"]=np.cos(np.deg2rad(c.y))
-    for k in ["rain_annual_mm","rain_month_cv","temperature_c"]:
-        c[k+"_w"]=c[k]*c.weight
-    cg=c.groupby(["ix","iy"]).agg(native_centers=("weight","size"),w=("weight","sum"),rain=("rain_annual_mm_w","sum"),rain_cv=("rain_month_cv_w","sum"),temp=("temperature_c_w",lambda v:v.sum(min_count=len(v)))).reset_index()
-    for a in ["rain","rain_cv","temp"]:cg[a]/=cg.w
+    cg=grid_index(native,scale).groupby(["ix","iy"]).size().rename("native_centers").reset_index()
     x=x.merge(cg,on=["ix","iy"],validate="one_to_one")
     inv=pyproj.Transformer.from_crs(6933,4326,always_xy=True)
     x["lon"],x["lat"]=inv.transform((x.ix+.5).to_numpy()*scale*1000,(x.iy+.5).to_numpy()*scale*1000)
@@ -140,7 +132,29 @@ def frame(scale):
         z=v.sample(n=min(4,len(v)),random_state=seed).copy()
         z["stratum_population"]=len(v);z["stratum_sample"]=len(z);samples.append(z)
     f=pd.concat(samples).sort_values(["ix","iy"]).reset_index(drop=True)
-    return f,{"frame_cells":len(x),"sample_cells":len(f),"strata":len(samples),"temperature_status":temp_status,"climate":meta,"source_provenance":PROVENANCE}
+    return f,{"frame_cells":len(x),"sample_cells":len(f),"strata":len(samples),"source_provenance":PROVENANCE},native
+
+def climate_after_recipient(native,sample,scale):
+    """Do not block or lose actual butterfly facets when climate host is unavailable."""
+    c=grid_index(native,scale).merge(sample[["ix","iy"]],on=["ix","iy"],how="inner",validate="many_to_one")
+    c=c[["x","y"]].drop_duplicates()
+    report={}
+    try:
+        c,meta=rainfall(c)
+        report["rainfall_status"]="success";report["rainfall_metadata"]=meta
+    except Exception as e:
+        report["rainfall_status"]="failed";report["rainfall_error"]=repr(e)
+        c["rain_annual_mm"]=np.nan;c["rain_month_cv"]=np.nan
+    try:
+        c["temperature_c"]=temperature(c);report["temperature_status"]="success"
+    except Exception as e:
+        c["temperature_c"]=np.nan;report["temperature_status"]="failed";report["temperature_error"]=repr(e)
+    c=grid_index(c,scale);c["weight"]=np.cos(np.deg2rad(c.y))
+    for k in ["rain_annual_mm","rain_month_cv","temperature_c"]:c[k+"_w"]=c[k]*c.weight
+    g=c.groupby(["ix","iy"]).agg(w=("weight","sum"),rain=("rain_annual_mm_w",lambda v:v.sum(min_count=len(v))),rain_cv=("rain_month_cv_w",lambda v:v.sum(min_count=len(v))),temp=("temperature_c_w",lambda v:v.sum(min_count=len(v)))).reset_index()
+    for k in ["rain","rain_cv","temp"]:g[k]/=g.w
+    return g[["ix","iy","rain","rain_cv","temp"]],report
+
 def polygon(r,scale):
     inv=pyproj.Transformer.from_crs(6933,4326,always_xy=True)
     x0,y0=inv.transform(r.ix*scale*1000,r.iy*scale*1000)
@@ -173,12 +187,12 @@ def collect(r,scale,keys,pier):
                 result[f"rarefied_pieridae_{k}"]=float(w[isp].sum())
                 result[f"share_{k}"]=float(w[isp].sum()/w.sum())
     return result
-def fit(df,outcome,include_temp):
+def fit(df,outcome,include_temp=False,include_rain=True):
     f=df.copy()
     f["log_frogs"]=np.log1p(f.n_frogs);f["log_rain"]=np.log1p(f.rain);f["log_effort"]=np.log1p(f.identified_species_hits)
     f["abs_lat"]=f.lat.abs();f["sin_lon"]=np.sin(np.deg2rad(f.lon));f["cos_lon"]=np.cos(np.deg2rad(f.lon));f["log_support"]=np.log1p(f.native_centers)
     f["other_foam"]=f.variable+f.mixed
-    base=["log_frogs","log_rain","rain_cv","abs_lat","lat","sin_lon","cos_lon","log_effort","log_support"]+(["temp"] if include_temp else [])
+    base=["log_frogs","abs_lat","lat","sin_lon","cos_lon","log_effort","log_support"]+(["log_rain","rain_cv"] if include_rain else [])+(["temp"] if include_temp else [])
     extra=["exposed","sheltered","other_foam"]
     f=f.dropna(subset=[outcome,*base,*extra])
     n=len(f);b=f.block.nunique()
@@ -199,11 +213,11 @@ def fit(df,outcome,include_temp):
         p1=LinearRegression().fit(f.iloc[train][base+extra],y.iloc[train]).predict(f.iloc[test][base+extra])
         fold.append({"n":len(test),"sse_base":float(np.sum((yy-p0)**2)),"sse_full":float(np.sum((yy-p1)**2))})
     s0=sum(z["sse_base"] for z in fold);s1=sum(z["sse_full"] for z in fold)
-    return {"status":"exploratory_association","n":n,"blocks":b,"outcome":outcome,"temperature_included":include_temp,"coefficients":coefs,"exposed_minus_sheltered_per_10pp":{"effect":float(np.asarray(c.effect).item()),"ci95":ci.tolist(),"p":float(np.asarray(c.pvalue).item())},"blocked_cv_mse_base":s0/n,"blocked_cv_mse_full":s1/n,"blocked_cv_relative_mse_gain":1-s1/s0 if s0>0 else None,"folds":fold,"r2":float(mod.rsquared)}
+    return {"status":"exploratory_association","n":n,"blocks":b,"outcome":outcome,"temperature_included":include_temp,"rainfall_included":include_rain,"coefficients":coefs,"exposed_minus_sheltered_per_10pp":{"effect":float(np.asarray(c.effect).item()),"ci95":ci.tolist(),"p":float(np.asarray(c.pvalue).item())},"blocked_cv_mse_base":s0/n,"blocked_cv_mse_full":s1/n,"blocked_cv_relative_mse_gain":1-s1/s0 if s0>0 else None,"folds":fold,"r2":float(mod.rsquared)}
 def main():
     p=argparse.ArgumentParser();p.add_argument("--scale",type=int,choices=[100,200],required=True);a=p.parse_args()
     out=Path("results/v1.5")/str(a.scale);out.mkdir(parents=True,exist_ok=True)
-    f,meta=frame(a.scale);f.to_csv(out/"frozen_sample.csv",index=False)
+    f,meta,native=frame(a.scale);f.to_csv(out/"frozen_sample.csv",index=False)
     keys,pier,tax=taxonomy()
     print("PILOT_START "+json.dumps({"scale":a.scale,**meta,**tax},default=str),flush=True)
     rows=[]
@@ -213,15 +227,26 @@ def main():
         rows.append(z)
         if (i+1)%20==0:print("PILOT_PROGRESS",a.scale,i+1,len(f),flush=True)
     d=pd.concat([f,pd.DataFrame(rows)],axis=1)
+    d.to_csv(out/"recipient_facets_before_climate.csv",index=False)
+    # Preserve the occurrence output even when climate acquisition returns 429.
+    clim,clim_meta=climate_after_recipient(native,f,a.scale)
+    meta.update(clim_meta)
+    d=d.merge(clim,on=["ix","iy"],how="left",validate="one_to_one")
     d.to_csv(out/"grid_butterfly_pilot.csv",index=False)
     for k in ["share_50","share_100","identified_species_hits","hits","pieridae_hits"]:
         if k not in d:d[k]=np.nan
     d["record_share"]=d.pieridae_hits/d.hits.where(d.hits>0)
     report={"status":"sampled_grid_pilot_not_fertilization","scale_km":a.scale,"sampling":meta,"taxonomy":tax,"api_requests":CALLS,"query_status":dict(Counter(d.status)),"errors":dict(Counter(d.loc[d.status!="retrieved","error"])) if "error" in d else {},"n_50":int(d.share_50.notna().sum()),"n_100":int(d.share_100.notna().sum()),"total_hits":int(d.hits.sum()),"zero_hits":int((d.hits==0).sum()),"strata_retention":d.groupby("exposure_stratum").share_50.agg(["size","count"]).to_dict("index"),"models":{}}
     for k in [50,100]:
-        report["models"][str(k)+"_rain_lat"]=fit(d,"share_"+str(k),False)
-        if meta["temperature_status"]=="success":report["models"][str(k)+"_temperature"]=fit(d,"share_"+str(k),True)
-    report["models"]["record_share_rain_lat"]=fit(d.loc[d.identified_species_hits>=50],"record_share",False)
+        # Geography-only diagnostic explicitly not climate-adjusted.
+        report["models"][str(k)+"_geography_only"]=fit(d,"share_"+str(k),include_rain=False)
+        if meta["rainfall_status"]=="success":
+            report["models"][str(k)+"_rain_lat"]=fit(d,"share_"+str(k))
+            report["models"][str(k)+"_rain_lat_min5_frogs"]=fit(d.loc[d.n_frogs>=5],"share_"+str(k))
+            if meta["temperature_status"]=="success":
+                report["models"][str(k)+"_temperature"]=fit(d,"share_"+str(k),include_temp=True)
+    if meta["rainfall_status"]=="success":
+        report["models"]["record_share_rain_lat"]=fit(d.loc[d.identified_species_hits>=50],"record_share")
     (out/"summary.json").write_text(json.dumps(report,indent=2,ensure_ascii=False,default=str,allow_nan=False))
     print("BUTTERFLY_GRID_RESULT "+json.dumps(report,ensure_ascii=False,default=str,allow_nan=False),flush=True)
 if __name__=="__main__":main()
