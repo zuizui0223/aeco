@@ -1,0 +1,27 @@
+# AECO v1.6 — verified monthly phenology pilot (2026-11-25)
+
+## Design and execution
+
+Run https://github.com/zuizui0223/aeco/actions/runs/45593754389 completed all five jobs. Final artifact https://github.com/zuizui0223/aeco/actions/runs/45593754389/artifacts/15012187437, SHA256 375cecd79cf40393a3dc6deded18e4a3cebb7717f8eef844c25f1cf11cae95f4, verified locally along with all three shard digests. Machine-readable audit: ../results/global_foam_temporal_v1.6_verified_summary.json. Sample selection independently reproduced exactly using v1.4 and v1.5 artifacts. PR #2 remains draft, stacked on unmerged PR #1; no changes merged.
+
+From the 200-km frog panel, require >=5 trait-known frog species. Exposed plus sheltered eligible frame 408 cells / 8 blocks (mainly South America and Madagascar); exposed plus no documented froth/bubble 921 cells / 26 blocks. Prioritize previous overall butterfly observation support (>=50 species-resolved hits), then deterministic SHA order. Cohorts: broad 50, paired 48 (8 shared with broad), separate AU FrogID 15, total 90 global ordinary-observation cells plus 15 calling-source grid/source combinations. Previous v1.5 outcomes were known; selection formula did not use Pieridae share or estimated effects. Exact accepted GBIF backbone names matched 1,566/1,698 range-panel species; unresolved taxa remain unknown. No cross-class key conflict in preparation.
+
+GBIF calendar-month facets (2010–2021 global; 2018–2021 AU). FrogID DOI 10.15468/wazqft (CC BY-NC): expert-confirmed calling observations, not nest or spawning records. All six butterfly families' total hit count is screened first (>=60); then Pieridae and other five families are queried separately and partition checked. Require >=30 dated hits, >=90% month coverage, >=2 nonzero months in each of four groups, >=80% exact taxonomic coverage in each frog group. Compare exposed taxa against sheltered (paired) or no documented foam (broad/AU). No documented mode is not verified absence. Species pooling and record duplication/effort are limitations; grid/source hits are not unique organisms or events.
+
+## Verified results
+
+105/105 all-butterfly support queries succeeded. Global 90 cells: 161,435 six-family hits, 64 passed screen and partition check; 19,267 Pieridae and 141,756 other butterfly hits in those 64. Queried mapped frog group hits: 31,067 exposed, 770 sheltered, 55,464 no documented foam. AU 15 grid/source pairs: 23,595 butterfly hits; 4,049 Pieridae, 19,546 other; 15,947 exposed frog calling hits, 2,918 no documented foam calling hits. All 15 passed screen and partition. No attempted group API failures; no mapped taxa separately recorded, not zero. Cohorts and periods can overlap; do not add them as unique occurrences.
+
+Normalized monthly distributions; overlap is sum of minimum monthly fractions. D(lag) = overlap(E,P,lag)-overlap(E,B,lag)-overlap(C,P,lag)+overlap(C,B,lag). Primary directional contrast D(+1)-D(-1) (positive: exposed-specific relative temporal alignment is stronger when the frog curve leads by one calendar month than when it lags). Equal weight to observed spatial-block means, not record totals. Positive is not evidence of a fertility increase.
+
+| Cohort | Eligible / queried | Represented blocks | D0 | D(+1) | D(-1) | Directional contrast | Positive / negative blocks |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| Broad | 6/50 | 5 | -0.006123 | -0.028685 | -0.002195 | -0.026490 | 3/2 |
+| Paired | 5/48 | 3 | -0.010535 | +0.015457 | -0.035927 | +0.051384 | 3/0 |
+| FrogID AU | 4/15 | 2 | +0.075104 | -0.006647 | +0.061814 | -0.068461 | 0/2 |
+
+Independent local recalculation matches CI means. All cohorts miss the minimum >=20 cells AND >=5 blocks. AU was designed as a descriptive feasibility check (max 15 cells/4 blocks). Paired positive direction is limited to five cells/three blocks, not independent continents. Broad and AU are not directionally consistent with paired; differences in geography, period, comparator and data source preclude a direct head-to-head replication. Paired >=50 hits sensitivity n=3/2 blocks, <=80% dominant frog species n=4/2; both positive descriptive only. AU dominance sensitivity has no eligible pairs. Bootstrap intervals in JSON from 2–5 blocks are descriptive and should not be used to declare significance.
+
+## Decision and next step
+
+No adequately supported temporal test; do not interpret failure of support as proof of no effect. Prioritize coverage before querying a new temporal outcome: expand the 408-cell within-foam candidate frame with class-specific total dated-hit support and reserve independently chosen blocks/cells. Use separate coverage-only ledger; freeze groups and samples before phase-contrast computation. Broad comparisons require coverage outside South America/Madagascar; do not substitute a different comparator after seeing signs. Use species-balanced profiles where feasible and explicit taxonomic coverage. Only after support is adequate, acquire joint year-month (or finer) frog breeding/calling and butterfly behavior/flight data, matched meteorology and observer effort, and compare positive lag against reverse lag and shared climate/seasonal nulls. Monthly climatology pooled across years cannot resolve actual post-rain events, the persistence of abandoned foam, or fertilization. No climate adjustment in this pilot and no actual recipient mating/fertilization endpoint. Do not claim a mechanism or global positive result.
