@@ -2,6 +2,16 @@
 
 **Status (2026-11-25): exploratory. No demonstrated frog-to-butterfly mating effect.**
 
+## v1.1 — remote-sensing feasibility and Sado nest architecture (2026-11-25)
+
+- [Remote-sensing evidence and design](docs/foam_remote_sensing_v1.1.md)
+- [Published five measured fossorial nests](data/literature/sado_foam_dimensions_v1.1.json)
+- [Nominal GSD arithmetic](scripts/foam_gsd_benchmark.mjs)
+- [Calculated size-versus-resolution results](results/foam_gsd_v1.1.json)
+- [Earth Engine exploratory habitat predictor export](scripts/sado_habitat_screen_gee.js)
+
+Miyata et al. (2026) document seven case records of fossorial Z. arboreus nesting on Sado (five measured; one record spans repeated years). The measured short axes are 49–89 mm; at 5 mm GSD four of five span at least ten pixels under full exposure. Satellite and standard aerial imagery are unsuitable for individual nest identification; even close-range optics cannot resolve hidden nests. Satellite products can screen habitat strata; the 2010 Sado egg-mass/forest-cover study and government report already establish a landscape-model precedent. Novelty must concern exposed reproductive architecture and recipient encounters/fertilization. Geometry calculated and checked in JS; no empirical detection accuracy measured. The GEE script requires an authorized project and inland AOI and has not run; direct raster metadata connection failed DNS. No new raw raster/field images or direct butterfly event acquired.
+
 ## v1.0 — material accessibility as a reproductive-site gate (2026-11-25)
 
 - [Foam material evidence, physical limits and focused empirical protocol](docs/foam_nest_v1.0.md)
