@@ -1,0 +1,19 @@
+# AECO v1.9 — verified reproductive-behavior proxy diagnostic (2026-11-26 JST)
+
+Corrected CI [run 45653372913](https://github.com/zuizui0223/aeco/actions/runs/45653372913), job 139343477267, successful. [Artifact](https://github.com/zuizui0223/aeco/actions/runs/45653372913/artifacts/15040538384), SHA256 a207d368330104dc8cad75ac597577d506d1286ef7ce53224abfbf9c9627d975 matches API, all comparable 12-month resultant lengths independently recomputed. [Verified result](../results/forti_breeding_proxy_v1.9_verified_summary.json). [Pre-outcome design and provenance](forti_breeding_proxy_v1.9_preoutcome.md). Draft PR #5 unmerged.
+
+Source Forti et al. 2022 DOI 10.1111/ddi.13610; data 10.5281/zenodo.6811407, CC BY 4.0, MD5 1da34c8eda2252cfb2bb12a4e9055555 verified. Source workbook has 8,478 unique observation IDs, 760 literature rows. Initial parser did not recognize Portuguese S (sim); corrected before reporting biological result. N/n interpreted as negative, NA unknown. 662 adult-cue, 54 tadpole-only, 7759 no documented cue, 3 unclassified across full workbook. Adult-cue = union of airsac/vocalisation/amplexus flags; not necessarily actual spawning; no separate egg/nest flag available. Original article counts are differently defined; no claim to replicate original exactly. Date audit finds mixed Excel datetimes and MDY strings, years 1900–2029, and 172 parsed dates after paper's 28 April 2021 collection cutoff, 454 before 2010, 2 unparsed. Restrict 2010-01-01 through 2021-04-28 (prior macro period with source cutoff). Date-format sensitivity is descriptive; true dates of affected records not independently repaired. 7850 retained: 618 adult cue, 7183 no recorded cue, 46 tadpole-only, 3 unclassified. Historical exact species/family match yields 5088 records/127 species in period (5476/128 before date restriction); no genus-level filling or verified taxonomic synonym reconciliation.
+
+| Group | Adult cue n | No recorded cue n | R adult cue | R no recorded cue | Difference |
+|---|---:|---:|---:|---:|---:|
+| All | 618 | 7183 | .347252 | .203947 | .143305 |
+| Original potentially exposed | 43 | 466 | .372711 | .193572 | .179139 |
+| Sheltered | 25 | 265 | .636635 | .270653 | .365982 |
+| Strict no-ground exposed | 39 | 430 | .312309 | .187649 | .124660 |
+| No documented foam/bubble | 269 | 3840 | .383876 | .250025 | .133850 |
+| Excel datetime format | 251 | 3174 | .172925 | .102820 | .070104 |
+| MDY string format | 367 | 4009 | .483525 | .284026 | .199499 |
+
+R = circular resultant length of record-weighted normalized calendar month counts. Positive contrasts consistent in both date encodings, but magnitude differs. Small sample bias, species mixture, date encoding, climate and observation effort unresolved. Strict no-ground is a classification sensitivity, not measured exposure. No recorded cue is NOT a true biological negative. The source article itself already showed greater concentration of reproductive records. The new analysis is foam-trait-specific diagnostic, not a novel confirmed effect.
+
+Species x climate matched design (>=10 adult cue, >=20 no recorded cue, equal-N subsampling) yields exactly one species-climate unit (Dendropsophus minutus, Aw, 10/30, no documented foam; mean equal-N delta R +.1880). No foam-class unit meets this gate. Cannot infer exposed vs sheltered proxy calibration or promote pooled contrast as adjusted. The literature sheet has 760 rows/251 source names, 752 complete binary monthly rows, 472 exact trait-name matches; these are study/site calendars, not independent observational events. Next bounded test: use literature calendar data as a separate species-level breeding-season support panel, with study duplication/climate and date definitions audited; assess whether matched exposed and sheltered species can be compared without pretending literature zeros are absence. No new recipient behavior or fertility data; v1.8 directional result remains unreplicated. 

@@ -1,0 +1,962 @@
+{
+  "status": "verified_behavior_proxy_calibration",
+  "run_id": 45653372913,
+  "job_id": 139343477267,
+  "source_commit": "b67146e21fb9e4bced3b4e8b3f4fedad2cb730e0",
+  "artifact_id": 15040538384,
+  "artifact_zip_sha256": "a207d368330104dc8cad75ac597577d506d1286ef7ce53224abfbf9c9627d975",
+  "local_audit": {
+    "zip_digest_matches_api": true,
+    "member_sha256": {
+      "forti_analysis.json": "579b23905604232b617b5378d7799fbc061da0d473a104314b2a105dc90d0cab",
+      "forti_schema.json": "2392dda473e986feefef6e4e5efabece22b8fe347e5e5b19ea036a4ae1e1fd34",
+      "species_climate_descriptive.csv": "f8a206251946518acad6cdabdb11308768fb3b4ad8c4e7347dfcadaba77e5f6b"
+    },
+    "all_month_count_sums_and_comparable_R_values_recomputed": true,
+    "method": "Independent complex-exponential resultant calculation on artifact's aggregate 12-bin counts; raw workbook acquired in CI, not local re-read or independent flag adjudication.",
+    "all_delta_R": 0.14330504708422442,
+    "strict_E_delta_R": 0.12466049167064844,
+    "sole_matched_unit": "Dendropsophus minutus, Aw, 10 cue and 30 no-cue records; not foam-coded"
+  },
+  "ci_result": {
+    "status": "source_audit_and_descriptive_validation",
+    "provenance": {
+      "url": "https://zenodo.org/records/6811407/files/TableS2.xlsx?download=1",
+      "final_url": "https://zenodo.org/records/6811407/files/TableS2.xlsx?download=1",
+      "md5": "1da34c8eda2252cfb2bb12a4e9055555",
+      "sha256": "472ac7f596b16d09559295c622fa4b17de735391ddc88fd5d08a24ef70d81430",
+      "bytes": 1244067,
+      "previous_errors": []
+    },
+    "rows": 8478,
+    "literature_rows": 760,
+    "flag_raw_counts": {
+      "airsac": {
+        "N": 7928,
+        "NA": 287,
+        "S": 262,
+        "n": 1
+      },
+      "vocalisation": {
+        "N": 7944,
+        "S": 534
+      },
+      "amplexus": {
+        "N": 8362,
+        "S": 116
+      },
+      "tadpole": {
+        "N": 8420,
+        "S": 58
+      }
+    },
+    "unique_ids": 8478,
+    "duplicate_id_rows": 0,
+    "definitions": {
+      "adult_cue": "airsac OR vocalisation OR amplexus explicit positive; no direct nest flag",
+      "no_recorded_cue": "all four fields explicitly negative; not absence of reproduction",
+      "tadpole_only": "tadpole positive, adult fields negative",
+      "unclassified": "other/unknown flags"
+    },
+    "date_parse_status": {
+      "excel_datetime": 3785,
+      "mdy_slash": 4691,
+      "other_AA": 2
+    },
+    "year_counts_all_parsed": {
+      "1900": 1,
+      "1969": 3,
+      "1980": 2,
+      "1994": 1,
+      "1996": 3,
+      "1997": 2,
+      "2000": 9,
+      "2001": 6,
+      "2002": 10,
+      "2003": 10,
+      "2004": 40,
+      "2005": 35,
+      "2006": 63,
+      "2007": 72,
+      "2008": 90,
+      "2009": 107,
+      "2010": 202,
+      "2011": 322,
+      "2012": 199,
+      "2013": 155,
+      "2014": 239,
+      "2015": 326,
+      "2016": 376,
+      "2017": 486,
+      "2018": 967,
+      "2019": 1600,
+      "2020": 2332,
+      "2021": 817,
+      "2029": 1
+    },
+    "date_scope": {
+      "start": "2010-01-01",
+      "end": "2021-04-28",
+      "reason": "Prior macro period and source collection cutoff in paper methods; exclude future and implausible parsed years without imputation.",
+      "in_period": 7850,
+      "parsed_before_2010": 454,
+      "parsed_after_collection": 172,
+      "unparsed": 2
+    },
+    "dated_rows": 8476,
+    "dated_year_range": [
+      1900,
+      2029
+    ],
+    "unparsed_marker_counts": {
+      "airsac": 287,
+      "vocalisation": 0,
+      "amplexus": 0,
+      "tadpole": 0
+    },
+    "evidence_all_rows": {
+      "no_recorded_cue": 7759,
+      "adult_cue": 662,
+      "tadpole_only": 54,
+      "unclassified": 3
+    },
+    "species_total": 289,
+    "matched_trait_rows": 5476,
+    "matched_trait_species": 128,
+    "trait_counts_all_rows": {
+      "bubble_only": {
+        "n": 8,
+        "species": 1,
+        "adult_cue": 1
+      },
+      "froth_mixed_exposure": {
+        "n": 109,
+        "species": 4,
+        "adult_cue": 4
+      },
+      "froth_potentially_exposed": {
+        "n": 551,
+        "species": 13,
+        "adult_cue": 47
+      },
+      "froth_sheltered": {
+        "n": 314,
+        "species": 10,
+        "adult_cue": 26
+      },
+      "froth_variable": {
+        "n": 44,
+        "species": 3,
+        "adult_cue": 1
+      },
+      "no_documented_froth_or_bubble": {
+        "n": 4450,
+        "species": 97,
+        "adult_cue": 291
+      },
+      "unresolved": {
+        "n": 3002,
+        "species": 162,
+        "adult_cue": 292
+      }
+    },
+    "profiles_record_weighted": {
+      "bubble_only": {
+        "adult_cue": {
+          "n": 1,
+          "n_species": 1,
+          "month_counts": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "R": 1
+        },
+        "no_recorded_cue": {
+          "n": 6,
+          "n_species": 1,
+          "month_counts": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            0,
+            1,
+            2
+          ],
+          "R": 0.6220084679281462
+        }
+      },
+      "froth_mixed_exposure": {
+        "adult_cue": {
+          "n": 4,
+          "n_species": 3,
+          "month_counts": [
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            2
+          ],
+          "R": 0.5985425427428318
+        },
+        "no_recorded_cue": {
+          "n": 98,
+          "n_species": 4,
+          "month_counts": [
+            8,
+            3,
+            13,
+            6,
+            7,
+            4,
+            4,
+            11,
+            9,
+            16,
+            6,
+            11
+          ],
+          "R": 0.1424627481855681
+        },
+        "unclassified": {
+          "n": 1,
+          "n_species": 1,
+          "month_counts": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "R": 1
+        }
+      },
+      "froth_potentially_exposed": {
+        "adult_cue": {
+          "n": 43,
+          "n_species": 8,
+          "month_counts": [
+            3,
+            1,
+            3,
+            1,
+            3,
+            5,
+            0,
+            0,
+            2,
+            7,
+            7,
+            11
+          ],
+          "R": 0.3727111520440215
+        },
+        "no_recorded_cue": {
+          "n": 466,
+          "n_species": 12,
+          "month_counts": [
+            44,
+            38,
+            43,
+            32,
+            29,
+            27,
+            22,
+            22,
+            41,
+            59,
+            60,
+            49
+          ],
+          "R": 0.19357215858725035
+        },
+        "tadpole_only": {
+          "n": 3,
+          "n_species": 3,
+          "month_counts": [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1
+          ],
+          "R": 0.7980567236571092
+        },
+        "unclassified": {
+          "n": 1,
+          "n_species": 1,
+          "month_counts": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "R": 1
+        }
+      },
+      "froth_sheltered": {
+        "adult_cue": {
+          "n": 25,
+          "n_species": 8,
+          "month_counts": [
+            4,
+            5,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            2,
+            2,
+            5,
+            5
+          ],
+          "R": 0.6366353471802154
+        },
+        "no_recorded_cue": {
+          "n": 265,
+          "n_species": 10,
+          "month_counts": [
+            43,
+            28,
+            21,
+            30,
+            7,
+            10,
+            11,
+            13,
+            14,
+            40,
+            23,
+            25
+          ],
+          "R": 0.2706534128163078
+        }
+      },
+      "froth_variable": {
+        "adult_cue": {
+          "n": 1,
+          "n_species": 1,
+          "month_counts": [
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "R": 1
+        },
+        "no_recorded_cue": {
+          "n": 39,
+          "n_species": 3,
+          "month_counts": [
+            3,
+            0,
+            4,
+            5,
+            0,
+            2,
+            5,
+            3,
+            3,
+            6,
+            6,
+            2
+          ],
+          "R": 0.17738032044331378
+        },
+        "tadpole_only": {
+          "n": 1,
+          "n_species": 1,
+          "month_counts": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          "R": 1
+        }
+      },
+      "no_documented_froth_or_bubble": {
+        "adult_cue": {
+          "n": 269,
+          "n_species": 65,
+          "month_counts": [
+            36,
+            22,
+            18,
+            10,
+            7,
+            6,
+            14,
+            10,
+            34,
+            32,
+            45,
+            35
+          ],
+          "R": 0.3838756179811158
+        },
+        "no_recorded_cue": {
+          "n": 3840,
+          "n_species": 89,
+          "month_counts": [
+            434,
+            342,
+            295,
+            256,
+            165,
+            175,
+            201,
+            202,
+            356,
+            467,
+            410,
+            537
+          ],
+          "R": 0.2500251614164016
+        },
+        "tadpole_only": {
+          "n": 25,
+          "n_species": 12,
+          "month_counts": [
+            4,
+            2,
+            0,
+            2,
+            3,
+            1,
+            1,
+            0,
+            2,
+            4,
+            0,
+            6
+          ],
+          "R": 0.28284271247461895
+        }
+      },
+      "unresolved": {
+        "adult_cue": {
+          "n": 275,
+          "n_species": 99,
+          "month_counts": [
+            40,
+            22,
+            25,
+            7,
+            9,
+            10,
+            15,
+            25,
+            25,
+            30,
+            32,
+            35
+          ],
+          "R": 0.2892180860505833
+        },
+        "no_recorded_cue": {
+          "n": 2469,
+          "n_species": 147,
+          "month_counts": [
+            275,
+            188,
+            184,
+            220,
+            140,
+            170,
+            143,
+            163,
+            211,
+            280,
+            251,
+            244
+          ],
+          "R": 0.1337700665405765
+        },
+        "tadpole_only": {
+          "n": 17,
+          "n_species": 9,
+          "month_counts": [
+            1,
+            3,
+            3,
+            3,
+            2,
+            1,
+            0,
+            0,
+            1,
+            0,
+            2,
+            1
+          ],
+          "R": 0.4555720466251247
+        },
+        "unclassified": {
+          "n": 1,
+          "n_species": 1,
+          "month_counts": [
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "R": 1
+        }
+      }
+    },
+    "strict_exposed_profile": {
+      "adult_cue": {
+        "n": 39,
+        "n_species": 7,
+        "month_counts": [
+          3,
+          1,
+          3,
+          1,
+          3,
+          5,
+          0,
+          0,
+          2,
+          7,
+          7,
+          7
+        ],
+        "R": 0.3123091965275547
+      },
+      "no_recorded_cue": {
+        "n": 430,
+        "n_species": 9,
+        "month_counts": [
+          41,
+          36,
+          40,
+          31,
+          27,
+          24,
+          21,
+          21,
+          35,
+          57,
+          53,
+          44
+        ],
+        "R": 0.18764870485690624
+      },
+      "tadpole_only": {
+        "n": 2,
+        "n_species": 2,
+        "month_counts": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          1
+        ],
+        "R": 0.9659258262890684
+      }
+    },
+    "all_record_profiles": {
+      "adult_cue": {
+        "n": 618,
+        "n_species": 185,
+        "month_counts": [
+          83,
+          50,
+          47,
+          21,
+          19,
+          21,
+          29,
+          36,
+          63,
+          71,
+          90,
+          88
+        ],
+        "R": 0.34725159457398747
+      },
+      "no_recorded_cue": {
+        "n": 7183,
+        "n_species": 266,
+        "month_counts": [
+          808,
+          599,
+          560,
+          549,
+          348,
+          388,
+          386,
+          415,
+          635,
+          868,
+          757,
+          870
+        ],
+        "R": 0.20394654748976304
+      },
+      "tadpole_only": {
+        "n": 46,
+        "n_species": 25,
+        "month_counts": [
+          5,
+          6,
+          3,
+          5,
+          5,
+          2,
+          1,
+          0,
+          3,
+          5,
+          3,
+          8
+        ],
+        "R": 0.29356184725334705
+      },
+      "unclassified": {
+        "n": 3,
+        "n_species": 3,
+        "month_counts": [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "R": 0.1725460300683473
+      }
+    },
+    "date_format_sensitivity": {
+      "excel_datetime": {
+        "adult_cue": {
+          "n": 251,
+          "n_species": 107,
+          "month_counts": [
+            21,
+            18,
+            22,
+            12,
+            12,
+            13,
+            20,
+            24,
+            32,
+            20,
+            28,
+            29
+          ],
+          "R": 0.17292466605944973
+        },
+        "no_recorded_cue": {
+          "n": 3174,
+          "n_species": 234,
+          "month_counts": [
+            301,
+            273,
+            245,
+            252,
+            210,
+            237,
+            207,
+            213,
+            274,
+            333,
+            281,
+            348
+          ],
+          "R": 0.10282017082546492
+        },
+        "tadpole_only": {
+          "n": 10,
+          "n_species": 9,
+          "month_counts": [
+            1,
+            1,
+            0,
+            0,
+            4,
+            2,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "R": 0.4891646269945888
+        },
+        "unclassified": {
+          "n": 1,
+          "n_species": 1,
+          "month_counts": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "R": 1
+        }
+      },
+      "mdy_slash": {
+        "adult_cue": {
+          "n": 367,
+          "n_species": 148,
+          "month_counts": [
+            62,
+            32,
+            25,
+            9,
+            7,
+            8,
+            9,
+            12,
+            31,
+            51,
+            62,
+            59
+          ],
+          "R": 0.4835247773927472
+        },
+        "no_recorded_cue": {
+          "n": 4009,
+          "n_species": 242,
+          "month_counts": [
+            507,
+            326,
+            315,
+            297,
+            138,
+            151,
+            179,
+            202,
+            361,
+            535,
+            476,
+            522
+          ],
+          "R": 0.28402592523260956
+        },
+        "tadpole_only": {
+          "n": 36,
+          "n_species": 22,
+          "month_counts": [
+            4,
+            5,
+            3,
+            5,
+            1,
+            0,
+            0,
+            0,
+            3,
+            5,
+            3,
+            7
+          ],
+          "R": 0.434246855882196
+        },
+        "unclassified": {
+          "n": 2,
+          "n_species": 2,
+          "month_counts": [
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "R": 0.7071067811865476
+        }
+      }
+    },
+    "matched_trait_rows_in_period": 5088,
+    "matched_trait_species_in_period": 127,
+    "scope_evidence_counts": {
+      "no_recorded_cue": 7183,
+      "adult_cue": 618,
+      "tadpole_only": 46,
+      "unclassified": 3
+    },
+    "matched_species_climate_units": 1,
+    "matched_summary": {
+      "all": {
+        "n_units": 1,
+        "n_species": 1,
+        "n_climates": 1,
+        "mean_equal_n_delta_R_species_weighted": 0.1879649879246433,
+        "median_equal_n_delta_R_species_weighted": 0.1879649879246433,
+        "positive_species": 1,
+        "median_abs_phase_difference_months": 0.6168444653752754,
+        "median_monthly_overlap": 0.43333333333333335,
+        "status": "sparse_descriptive_only"
+      },
+      "froth_potentially_exposed": {
+        "n_units": 0,
+        "n_species": 0,
+        "status": "no_support"
+      },
+      "froth_sheltered": {
+        "n_units": 0,
+        "n_species": 0,
+        "status": "no_support"
+      },
+      "froth_variable": {
+        "n_units": 0,
+        "n_species": 0,
+        "status": "no_support"
+      },
+      "froth_mixed_exposure": {
+        "n_units": 0,
+        "n_species": 0,
+        "status": "no_support"
+      },
+      "bubble_only": {
+        "n_units": 0,
+        "n_species": 0,
+        "status": "no_support"
+      },
+      "no_documented_froth_or_bubble": {
+        "n_units": 1,
+        "n_species": 1,
+        "n_climates": 1,
+        "mean_equal_n_delta_R_species_weighted": 0.1879649879246433,
+        "median_equal_n_delta_R_species_weighted": 0.1879649879246433,
+        "positive_species": 1,
+        "median_abs_phase_difference_months": 0.6168444653752754,
+        "median_monthly_overlap": 0.43333333333333335,
+        "status": "sparse_descriptive_only"
+      },
+      "strict_exposed": {
+        "n_units": 0,
+        "n_species": 0,
+        "status": "no_support"
+      },
+      "Leptodactylidae_froth_potentially_exposed": {
+        "n_units": 0,
+        "n_species": 0,
+        "status": "no_support"
+      },
+      "Leptodactylidae_froth_sheltered": {
+        "n_units": 0,
+        "n_species": 0,
+        "status": "no_support"
+      }
+    },
+    "literature_audit": {
+      "rows": 760,
+      "unique_names": 251,
+      "complete_binary_month_rows": 752,
+      "exact_trait_name_matched_rows": 472,
+      "scope": "Study/site breeding calendars, potentially repeated species/study; not independent observation events. No inferred nonbreeding from missing."
+    },
+    "limitations": [
+      "No explicit nest/egg flag in source sheet; adult behavior and tadpole categories are not foam observations or fertilization.",
+      "Portuguese S/sim and N/não parsed as positive/negative; NA unknown; raw marker counts preserved. The data export may contain date-conversion errors; exclude dates beyond source collection cutoff and show encoding sensitivity.",
+      "Observational date/method and observer bias; no recorded cue is not a biological negative.",
+      "Exact binomial/family matching only, incomplete traits; no source data redistribution.",
+      "Equal-N descriptive within-species/climate comparison; not proof of actual abundance or cross-taxon causal relation."
+    ]
+  },
+  "decision": "Pooled recorded adult reproductive cues show higher monthly concentration in both date formats and both original foam exposure classes. This is descriptive and unequal sample sizes inflate small-sample R; only one matched species-climate unit meets fixed support gate, none for foam classes. Cannot calibrate exposed/sheltered differential or establish timing of foam production. No butterfly behavior/fertilization outcome. Preserve v1.8 nonreplication."
+}
