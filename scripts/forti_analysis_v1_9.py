@@ -15,7 +15,7 @@ MIN_CUE=10;MIN_NO_CUE=20;MIN_SPECIES_PER_GROUP=5
 def norm(x):return " ".join(str(x).strip().replace("_"," ").split()) if x is not None else ""
 def marker(x):
     s=norm(x).casefold()
-    if s in {"1","1.0","yes","y","true","t","sim","presence","present"}:return 1
+    if s in {"1","1.0","yes","y","true","t","sim","s","presence","present"}:return 1
     if s in {"0","0.0","no","n","false","f","não","nao","absence","absent"}:return 0
     return None
 def parsed_date(v):
@@ -63,6 +63,10 @@ def main():
     report["date_parse_status"]=dict(Counter(s for _,s in dates))
     d["month"]=[v.month if v else None for v,_ in dates]
     d["year"]=[v.year if v else None for v,_ in dates]
+    d["date_format"]=[k for _,k in dates]
+    d["valid_period"]=[v is not None and dt.date(2010,1,1)<=v<=dt.date(2021,4,28) for v,_ in dates]
+    report["year_counts_all_parsed"]={str(int(k)):int(n) for k,n in d.year.value_counts().sort_index().items()}
+    report["date_scope"]={"start":"2010-01-01","end":"2021-04-28","reason":"Prior macro period and source collection cutoff in paper methods; exclude future and implausible parsed years without imputation.","in_period":int(d.valid_period.sum()),"parsed_before_2010":sum(v is not None and v<dt.date(2010,1,1) for v,_ in dates),"parsed_after_collection":sum(v is not None and v>dt.date(2021,4,28) for v,_ in dates),"unparsed":sum(v is None for v,_ in dates)}
     report["dated_rows"]=int(d.month.notna().sum())
     report["dated_year_range"]=[int(d.year.min()),int(d.year.max())] if d.year.notna().any() else None
     print("FORTI_FLAGS "+json.dumps({k:report[k] for k in ("flag_raw_counts","unique_ids","duplicate_id_rows","date_parse_status","dated_rows","dated_year_range")},ensure_ascii=False),flush=True)
@@ -92,10 +96,14 @@ def main():
     report["matched_trait_rows"]=int((d.trait!="unresolved").sum())
     report["matched_trait_species"]=int(d.loc[d.trait!="unresolved","species"].nunique())
     report["trait_counts_all_rows"]={k:{"n":len(a),"species":int(a.species.nunique()),"adult_cue":int((a.evidence=="adult_cue").sum())} for k,a in d.groupby("trait")}
-    x=d.loc[d.month.notna()&~d.ID.duplicated(keep=False)].copy();x.month=x.month.astype(int)
+    x=d.loc[d.valid_period&~d.ID.duplicated(keep=False)].copy();x.month=x.month.astype(int)
     report["profiles_record_weighted"]=grouped_profiles(x)
     report["strict_exposed_profile"]={k:profile(a) for k,a in x.loc[x.strict_no_ground].groupby("evidence") if len(a)}
     report["all_record_profiles"]={k:profile(a) for k,a in x.groupby("evidence") if len(a)}
+    report["date_format_sensitivity"]={str(k):{k2:profile(b) for k2,b in a.groupby("evidence") if len(b)} for k,a in x.groupby("date_format")}
+    report["matched_trait_rows_in_period"]=int((x.trait!="unresolved").sum())
+    report["matched_trait_species_in_period"]=int(x.loc[x.trait!="unresolved","species"].nunique())
+    report["scope_evidence_counts"]={str(k):int(n) for k,n in x.evidence.value_counts().items()}
     # Match species AND climate category to reduce compositional confounding.
     # Equal-size random sampling of no-cue observations avoids small-n inflation in R.
     units=[];rng=np.random.default_rng(20261126)
@@ -128,7 +136,7 @@ def main():
     lit["species"]=lit[lm].map(norm);lv=lit[mc].apply(pd.to_numeric,errors="coerce")
     complete=lv.notna().all(axis=1)&lv.isin([0,1]).all(axis=1)
     report["literature_audit"]={"rows":len(lit),"unique_names":int(lit.species.nunique()),"complete_binary_month_rows":int(complete.sum()),"exact_trait_name_matched_rows":int(lit.species.isin(t.species).sum()),"scope":"Study/site breeding calendars, potentially repeated species/study; not independent observation events. No inferred nonbreeding from missing."}
-    report["limitations"]=["No explicit nest/egg flag in source sheet; adult behavior and tadpole categories are not foam observations or fertilization.","Marker encodings must be checked against source and unknown markers retained.","Observational date/method and observer bias; no recorded cue is not a biological negative.","Exact binomial/family matching only, incomplete traits; no source data redistribution.","Equal-N descriptive within-species/climate comparison; not proof of actual abundance or cross-taxon causal relation."]
+    report["limitations"]=["No explicit nest/egg flag in source sheet; adult behavior and tadpole categories are not foam observations or fertilization.","Portuguese S/sim and N/não parsed as positive/negative; NA unknown; raw marker counts preserved. The data export may contain date-conversion errors; exclude dates beyond source collection cutoff and show encoding sensitivity.","Observational date/method and observer bias; no recorded cue is not a biological negative.","Exact binomial/family matching only, incomplete traits; no source data redistribution.","Equal-N descriptive within-species/climate comparison; not proof of actual abundance or cross-taxon causal relation."]
     (OUT/"forti_analysis.json").write_text(json.dumps(report,ensure_ascii=False,indent=2,allow_nan=False)+"\n")
     if len(uu):uu.to_csv(OUT/"species_climate_descriptive.csv",index=False)
     print("FORTI_RESULT "+json.dumps(report,ensure_ascii=False,allow_nan=False),flush=True)
