@@ -1,0 +1,32 @@
+name: AECO feasibility pilot
+on:
+  push:
+    paths:
+      - 'scripts/audit_inat.py'
+      - '.github/workflows/pilot.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Synthetic schema test (not ecological evidence)
+        run: python scripts/audit_inat.py --self-test
+      - name: Live bounded candidate audit
+        run: python scripts/audit_inat.py --sample 50
+      - name: Upload aggregate evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: aeco-feasibility-pilot
+          path: |
+            results/inat_audit.json
+            results/literature_pilot.json
+          if-no-files-found: error
+          retention-days: 14
