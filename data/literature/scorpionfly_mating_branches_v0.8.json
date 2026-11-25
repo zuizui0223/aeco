@@ -1,0 +1,40 @@
+{
+  "status": "published_aggregate_not_foam_experiment",
+  "source": "https://ousar.lib.okayama-u.ac.jp/files/public/6/63652/20220616113237654504/K0006645_fulltext.pdf",
+  "location_in_source": "Ishihara 2022 dissertation Chapter 2, Fig. 2.3 and text pp.13–14",
+  "related_peer_reviewed": "https://doi.org/10.1007/s10164-020-00645-3",
+  "n_pairs": 40,
+  "branches": [
+    {
+      "category": "male_found_bait_released_pheromone",
+      "n": 21,
+      "mated": 15,
+      "resource_associated": true
+    },
+    {
+      "category": "male_found_feeding_female_without_pheromone",
+      "n": 13,
+      "mated": 12,
+      "resource_associated": true
+    },
+    {
+      "category": "male_found_nonfeeding_female_without_pheromone",
+      "n": 4,
+      "mated": 4,
+      "resource_associated": false
+    },
+    {
+      "category": "male_released_pheromone_without_female_or_bait",
+      "n": 2,
+      "mated": 0,
+      "resource_associated": false
+    }
+  ],
+  "caveats": [
+    "Bait-associated and non-bait branches reflect behavior after observation began, not randomized treatment.",
+    "All pairs in bait-containing laboratory setup; no bait-free treatment or frog foam exposure.",
+    "Only descriptive fractions; no causal contrast from branch-conditioned success.",
+    "Mating endpoint is not sperm transfer, paternity or fertilization.",
+    "Web PDF text and diagram extraction agree; page screenshot failed HTTP 429. No individual-level dataset or video frames independently analyzed."
+  ]
+}
