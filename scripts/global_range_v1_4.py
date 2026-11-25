@@ -71,7 +71,7 @@ def rainfall(d):
         # PSL file uses a non-standard timezone suffix "0:00". Decode the verified
         # numeric day offset explicitly, and fail closed for a different epoch.
         units=str(ds.time.attrs.get("units",""))
-        if not units.startswith("days since 1800-01-01"):
+        if not re.match(r"^days since 1800-0?1-0?1(?:\s|$)",units):
             raise ValueError("Unexpected GPCP time units: "+units)
         dates=pd.to_datetime(ds.time.values,unit="D",origin="1800-01-01")
         assert pd.Index(dates).is_unique and dates.is_monotonic_increasing
