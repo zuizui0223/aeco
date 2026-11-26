@@ -1,0 +1,119 @@
+{
+  "status": "local_executed_cross_structure_pilot",
+  "source_run_id": 45776020474,
+  "source_job_id": 139759754356,
+  "source_artifact_id": 15095728860,
+  "source_zip_sha256": "1ab5c727de1ad6e88e2e3cbb68d8de3e49d27effefac22c8cb326b6ff15c2d33",
+  "historical_egg_artifact_id": 15093723498,
+  "historical_zip_sha256": "e5f67ea337a7287cc968bf3873ade4ff605d941eb67baf540655060156c2ccda",
+  "local_executed_script_sha256": "85db820470897efda161499f0390cc4ba0ba93e529b1873b11bdf5651e7a882e",
+  "local_output_sha256": "4d89a94ebc9802599e5986a6828f7c2f5071e8042e37efd1b4bfedd2c460c687",
+  "new_queries": 8,
+  "success": 8,
+  "new_candidate_images": 20,
+  "new_measured_images": 18,
+  "old_measured_images": 18,
+  "total": 36,
+  "total_species": 12,
+  "new_group_counts": {
+    "white_flower": 6,
+    "colored_flower": 5,
+    "pale_fungus": 5,
+    "colored_fungus": 2
+  },
+  "species_unavailable": "Amanita muscaria: no licensed photo among bounded 40 records",
+  "exclusions": {
+    "10": "very small flower",
+    "20": "hand-held mushroom"
+  },
+  "groups": {
+    "foam": {
+      "n": 10,
+      "species": 3,
+      "C_manual": 0.7069810059052933,
+      "C_near": 0.6866091691213273,
+      "C_whole": 0.6739404222077031,
+      "chroma": 0.08226735944161273,
+      "chromaticity_distance_manual": 0.14524347626859188
+    },
+    "nonfoam_eggs": {
+      "n": 8,
+      "species": 2,
+      "C_manual": 0.10373978443995432,
+      "C_near": 0.1660045567157229,
+      "C_whole": 0.20903721767361794,
+      "chroma": 0.35544862715575587,
+      "chromaticity_distance_manual": 0.08876186834591805
+    },
+    "white_flower": {
+      "n": 6,
+      "species": 2,
+      "C_manual": 0.7122804509083325,
+      "C_near": 0.6495129559824058,
+      "C_whole": 0.6329029871621838,
+      "chroma": 0.0891416256490366,
+      "chromaticity_distance_manual": 0.2032116653801978
+    },
+    "colored_flower": {
+      "n": 5,
+      "species": 2,
+      "C_manual": 0.2810812590158362,
+      "C_near": 0.36255330638051186,
+      "C_whole": 0.31805958796348255,
+      "chroma": 0.45145878810866,
+      "chromaticity_distance_manual": 0.36620311420301166
+    },
+    "pale_fungus": {
+      "n": 5,
+      "species": 2,
+      "C_manual": 0.7374844553060516,
+      "C_near": 0.7930770329500008,
+      "C_whole": 0.7422608122665255,
+      "chroma": 0.13525342717451377,
+      "chromaticity_distance_manual": 0.13758311533807382
+    },
+    "colored_fungus": {
+      "n": 2,
+      "species": 1,
+      "C_manual": 0.6225670348363904,
+      "C_near": 0.5951998310249096,
+      "C_whole": 0.6657102542709066,
+      "chroma": 0.5211094683554425,
+      "chromaticity_distance_manual": 0.31739128944426154
+    }
+  },
+  "context_sensitivity_exclude_new_9_14_15_old_12_19": {
+    "foam": {
+      "n": 10,
+      "C": 0.7069810059052933,
+      "chroma": 0.08226735944161273
+    },
+    "nonfoam_eggs": {
+      "n": 6,
+      "C": 0.02624349913105265,
+      "chroma": 0.37729162288815443
+    },
+    "white_flower": {
+      "n": 6,
+      "C": 0.7122804509083325,
+      "chroma": 0.0891416256490366
+    },
+    "colored_flower": {
+      "n": 4,
+      "C": 0.3383205374930848,
+      "chroma": 0.4676839533642203
+    },
+    "pale_fungus": {
+      "n": 3,
+      "C": 0.716935211448332,
+      "chroma": 0.11560815312053228
+    },
+    "colored_fungus": {
+      "n": 2,
+      "C": 0.6225670348363904,
+      "chroma": 0.5211094683554425
+    }
+  },
+  "method": "Exact ZIP/PNG hash validation, visually reviewed interior masks; linearized sRGB; C=(median Ytarget - median Ycontext)/(sum); chroma per pixel max minus min of RGB proportions, median per target, then equal species weight. Nominal taxa strata rather than measured white label. Local actual execution; archived replay wrapper differs only in source-receipt checks and CLI and is not independently executed in repository.",
+  "decision": "Similar selected-photo luminance contrasts and RGB chroma for foam, white flowers and pale fungi; high contrast not unique to foam or white objects. No evidence for floral-specific mimicry, actual spectral similarity, attraction or reproductive effect. No shape inference from partial ROIs. Small nonrandom taxon samples with different camera/background conditions; no formal equivalence or between-group causal test."
+}
