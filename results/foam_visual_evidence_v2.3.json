@@ -1,0 +1,73 @@
+{
+  "status": "published_count_audit_not_new_behavior_experiment",
+  "martin2011": {
+    "doi": "10.1670/10-006.1",
+    "taxon_as_published": "Physalaemus pustulosus",
+    "current_genus": "Engystomops",
+    "endpoint": "approach to call speaker among responding females",
+    "visible": {
+      "nest": 16,
+      "control": 8,
+      "reported_p": 0.032,
+      "exact_binomial_two_sided_p": 0.15158963203430176,
+      "exact_one_sided_positive_p": 0.07579481601715088,
+      "exact_95_ci": [
+        0.44678038434039397,
+        0.8436977142909653
+      ]
+    },
+    "concealed": {
+      "nest": 12,
+      "control": 12,
+      "reported_p": 0.419,
+      "exact_binomial_two_sided_p": 1,
+      "exact_95_ci": [
+        0.29124177983621197,
+        0.7087582201637881
+      ]
+    },
+    "between_conditions_independent_fisher_diagnostic": {
+      "odds_ratio": 2,
+      "p_two_sided": 0.3801290435953905,
+      "assumption": "Only if cohorts are independent; individual reuse or pairing not identifiable from aggregate counts."
+    },
+    "notes": "Original paper reports significant preference; printed counts do not reproduce printed p values under standard exact binomial test. No claim that a difference of significance is evidence for interaction. No nest-only condition, chemical diffusion not independently quantified, no actual copulation/fertilization endpoint. PDF screenshots failed; text and figure extraction agree."
+  },
+  "lin2000": {
+    "doi": "10.6660/TESFE.2000027",
+    "receiver": "Caiusa coomani",
+    "host_as_published": [
+      "Rhacophorus prasinatus",
+      "Polypedates megacephalus"
+    ],
+    "endpoint": "approach/hover versus oviposition",
+    "mimic_trials": 5,
+    "mimic_hover": 3,
+    "mimic_oviposition": 0,
+    "fresh_oviposition_in_same_comparison": 5,
+    "exact_95_ci_mimic_hover": [
+      0.14663279963467254,
+      0.9472550494736843
+    ],
+    "exact_95_ci_mimic_oviposition": [
+      0,
+      0.5218237501049814
+    ],
+    "note": "Previously recorded v0.9. Egg-white foam resemblance and real nest differ in more than optics; no pure visual causality. Do not pool different comparisons or assume independent flies."
+  },
+  "optical_material": {
+    "species_as_published": "Polypedates leucomystax",
+    "observation": "pale fresh foam often develops blue-green pigmentation over hours to days",
+    "references": [
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC3313644/",
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC2225219/"
+    ],
+    "note": "Protein absorbance at 680–700 nm and 360 nm subsidiary band are not intact foam reflectance. Camouflage is a proposed function, not demonstrated. Historical species complex identity as published."
+  },
+  "butterfly_analogue": {
+    "doi": "10.1007/s004420050770",
+    "receiver": "Papilionidae/Pieridae and Lycaenidae",
+    "note": "Beck et al. 1999: conspicuous Eurema decoys attracted papilionids and pierids at puddling baits; lycaenids did not show the same decoy response. Decoys are not foam; shape, color and chemical effects not fully isolated. Previously recorded."
+  },
+  "decision": "Test heterospecific visual cue and subsequent acceptance separately; prioritize direct behavioral manipulations and calibrated optical measurements. No confirmed Pieridae foam visual response or fertilization."
+}
