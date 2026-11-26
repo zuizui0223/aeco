@@ -1,0 +1,26 @@
+name: AECO v2.3 licensed foam image pilot
+on:
+  pull_request:
+    branches: [analysis/foam-thermal-v2.2]
+    paths:
+      - 'scripts/foam_visual_candidates_v2_3.py'
+      - '.github/workflows/foam_visual_v2_3.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  candidates:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install pillow==11.3.0
+      - run: python scripts/foam_visual_candidates_v2_3.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: v23-licensed-foam-candidates
+          path: results/v2.3_visual/
+          if-no-files-found: error
