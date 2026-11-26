@@ -1,0 +1,102 @@
+{
+  "status": "locally_executed_camera_space_robustness_not_independent_replication",
+  "source_artifact_id": 15093209269,
+  "zip_sha256": "488d47a012853891a194fe7ef9980dcd3935337b9a0dd2341fadde0bf1b74882",
+  "local_script_sha256": "39f18df94ae712682f76ef14bd8416630b8c571f1deaea0300288ada185d5577",
+  "full_local_output_sha256": "186b2a39d7c6aeacd3cbdc0d8a8c9a0c85814aa31846b5f63c333530282ac783",
+  "groups": {
+    "manual_background": {
+      "n_images": 6,
+      "positive_median_contrast": 6,
+      "median_contrast": 0.6815918554727716,
+      "median_rank_AUC": 0.9876365081159313,
+      "AUC_above_half": 6,
+      "all_RGB_channel_means_higher": 6,
+      "target_median_above_bg_q90": 5,
+      "target_q10_above_bg_q90": 4,
+      "all_gain_scenarios_positive": 6,
+      "all_gamma_scenarios_positive": 6
+    },
+    "ring_near": {
+      "n_images": 6,
+      "positive_median_contrast": 6,
+      "median_contrast": 0.7064685244963844,
+      "median_rank_AUC": 0.9412472083326149,
+      "AUC_above_half": 6,
+      "all_RGB_channel_means_higher": 6,
+      "target_median_above_bg_q90": 5,
+      "target_q10_above_bg_q90": 3,
+      "all_gain_scenarios_positive": 6,
+      "all_gamma_scenarios_positive": 6
+    },
+    "ring_far": {
+      "n_images": 6,
+      "positive_median_contrast": 6,
+      "median_contrast": 0.7439547279885704,
+      "median_rank_AUC": 0.9777456764750769,
+      "AUC_above_half": 6,
+      "all_RGB_channel_means_higher": 6,
+      "target_median_above_bg_q90": 4,
+      "target_q10_above_bg_q90": 4,
+      "all_gain_scenarios_positive": 6,
+      "all_gamma_scenarios_positive": 6
+    },
+    "whole_nonROI": {
+      "n_images": 6,
+      "positive_median_contrast": 6,
+      "median_contrast": 0.6844265677118142,
+      "median_rank_AUC": 0.971430171413098,
+      "AUC_above_half": 6,
+      "all_RGB_channel_means_higher": 6,
+      "target_median_above_bg_q90": 4,
+      "target_q10_above_bg_q90": 4,
+      "all_gain_scenarios_positive": 6,
+      "all_gamma_scenarios_positive": 6
+    }
+  },
+  "rounded_image_contrasts": [
+    {
+      "id": 2,
+      "manual_background": 0.431,
+      "ring_near": 0.574,
+      "ring_far": 0.641,
+      "whole_nonROI": 0.531
+    },
+    {
+      "id": 8,
+      "manual_background": 0.936,
+      "ring_near": 0.947,
+      "ring_far": 0.978,
+      "whole_nonROI": 0.97
+    },
+    {
+      "id": 12,
+      "manual_background": 0.425,
+      "ring_near": 0.588,
+      "ring_far": 0.378,
+      "whole_nonROI": 0.288
+    },
+    {
+      "id": 16,
+      "manual_background": 0.937,
+      "ring_near": 0.949,
+      "ring_far": 0.968,
+      "whole_nonROI": 0.951
+    },
+    {
+      "id": 19,
+      "manual_background": 0.53,
+      "ring_near": 0.325,
+      "ring_far": 0.181,
+      "whole_nonROI": 0.168
+    },
+    {
+      "id": 20,
+      "manual_background": 0.833,
+      "ring_near": 0.825,
+      "ring_far": 0.847,
+      "whole_nonROI": 0.838
+    }
+  ],
+  "limits": "Six selected photos reused, not independent replicate. Surrounds not certified background; ROI partial. No camera spectral response, UV, surface reflectance, angular size, animal detection probability, causal effects or population prevalence. Synthetic gain and gamma sign tests cannot recover unknown local lighting or exposure. No pixel-level inference. Full result reproducible from script and original source ZIP; summary transcribed from actual local run."
+}
